@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>the life cycle of every civilization, i guess - Prof. Jiang Xueqin | Predictive History Wiki</title>
+  <style>
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #333;
+  --muted: #777;
+  --sidebar-width: 260px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: var(--primary); color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 a { color: white; }
+.search-bar { margin-top: 0.5rem; }
+.search-bar input { width: 100%; padding: 0.5rem; border: none; border-radius: 4px; font-size: 0.95rem; }
+.layout { display: flex; max-width: 1400px; margin: 0 auto; }
+.sidebar { width: var(--sidebar-width); background: white; border-right: 1px solid var(--border); height: calc(100vh - 60px); position: sticky; top: 60px; overflow-y: auto; padding: 1rem; }
+.sidebar h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.5rem; letter-spacing: 0.05em; }
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 0.25rem; }
+.sidebar a { display: block; padding: 0.3rem 0.5rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.15s; }
+.sidebar a:hover { background: #f0f0f0; text-decoration: none; }
+.topic-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; color: white; margin: 0.1rem; }
+.main { flex: 1; padding: 2rem; min-width: 0; }
+.video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.video-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.video-card h2 a { color: var(--primary); }
+.video-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.video-meta span { margin-right: 1rem; }
+.topic-list { margin: 0.75rem 0; }
+.intro-block { background: #f8f9fa; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 0.9rem; color: #555; border-radius: 0 4px 4px 0; }
+.intro-block .timestamp { font-family: monospace; color: var(--accent); font-size: 0.8rem; }
+.wiki-nav { margin-bottom: 2rem; }
+.wiki-nav a { margin-right: 1rem; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+.topic-header { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.topic-header h1 { color: var(--primary); margin-bottom: 0.5rem; }
+.cross-refs { background: #f0f4f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+.cross-refs h4 { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--muted); }
+.cross-ref-item { display: inline-block; margin: 0.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.timestamp-link { font-family: monospace; font-size: 0.8rem; color: var(--accent); background: #e8f4fc; padding: 0.1rem 0.4rem; border-radius: 3px; margin: 0 0.25rem; }
+.search-result { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.search-result:last-child { border: none; }
+.search-result h4 { margin-bottom: 0.25rem; }
+.search-result p { font-size: 0.85rem; color: var(--muted); }
+.footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="../index.html">📚 Predictive History Wiki</a></h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search wiki..." onkeydown="if(event.key==='Enter') window.location.search='?q='+encodeURIComponent(this.value)">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="topics/brics.html">BRICS</a></li>
+<li><a href="topics/bitcoin.html">Bitcoin</a></li>
+<li><a href="topics/china.html">China</a></li>
+<li><a href="topics/christianity.html">Christianity</a></li>
+<li><a href="topics/civil_war.html">Civil War</a></li>
+<li><a href="topics/civilization.html">Civilization</a></li>
+<li><a href="topics/cold_war.html">Cold War</a></li>
+<li><a href="topics/collapse.html">Collapse</a></li>
+<li><a href="topics/constitution.html">Constitution</a></li>
+<li><a href="topics/democracy.html">Democracy</a></li>
+<li><a href="topics/empire.html">Empire</a></li>
+<li><a href="topics/europe.html">Europe</a></li>
+<li><a href="topics/federal_reserve.html">Federal Reserve</a></li>
+<li><a href="topics/game_theory.html">Game Theory</a></li>
+<li><a href="topics/geopolitics.html">Geopolitics</a></li>
+<li><a href="topics/gold.html">Gold</a></li>
+<li><a href="topics/holy_roman_empire.html">Holy Roman Empire</a></li>
+<li><a href="topics/india.html">India</a></li>
+<li><a href="topics/iran.html">Iran</a></li>
+<li><a href="topics/islam.html">Islam</a></li>
+<li><a href="topics/israel.html">Israel</a></li>
+<li><a href="topics/japan.html">Japan</a></li>
+<li><a href="topics/judaism.html">Judaism</a></li>
+<li><a href="topics/middle_east.html">Middle East</a></li>
+<li><a href="topics/nato.html">NATO</a></li>
+<li><a href="topics/neocon.html">NeoCon</a></li>
+<li><a href="topics/nuclear.html">Nuclear</a></li>
+<li><a href="topics/roman_empire.html">Roman Empire</a></li>
+<li><a href="topics/russia.html">Russia</a></li>
+<li><a href="topics/saudi_arabia.html">Saudi Arabia</a></li>
+<li><a href="topics/secession.html">Secession</a></li>
+<li><a href="topics/silk_road.html">Silk Road</a></li>
+<li><a href="topics/south_china_sea.html">South China Sea</a></li>
+<li><a href="topics/strategy.html">Strategy</a></li>
+<li><a href="topics/taiwan.html">Taiwan</a></li>
+<li><a href="topics/trump.html">Trump</a></li>
+<li><a href="topics/ukraine.html">Ukraine</a></li>
+<li><a href="topics/united_states.html">United States</a></li>
+<li><a href="topics/war.html">War</a></li>
+<li><a href="topics/woke.html">Woke</a></li>
+<li><a href="topics/world_economic_forum.html">World Economic Forum</a></li>
+      </ul>
+      <h3>Recent Videos</h3>
+      <ul>
+        <li><a href="videos/eicb17dE1hI.html">THE GREAT AMERICAN SCAM: HOW DEMOCRATS &...</a></li>
+<li><a href="videos/3WQOCmMmsTA.html">If Prof. Jiang's Law of Proximity is rig...</a></li>
+<li><a href="videos/pUJUG4zc0Ms.html">STOP Watching Strikes — Watch The PATTER...</a></li>
+<li><a href="videos/CL6j5efojws.html">After the Silver Rally! What History Say...</a></li>
+<li><a href="videos/2rf3t33aERI.html">Why America is INCHES Away from Civil Wa...</a></li>
+<li><a href="videos/u3nTw4ReNx4.html">Iran Challenged U.S. NAVY Submarine l Pr...</a></li>
+<li><a href="videos/cBqDb4cCARs.html">"Trump Can't End This War — If He Loses ...</a></li>
+<li><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></li>
+<li><a href="videos/w6OVh4ic_RE.html">This WAR is Getting Out of Hand - Prof. ...</a></li>
+<li><a href="videos/9VfDaIOR9Cs.html">Strategic Secrets: Why Iran Is Impossibl...</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="wiki-nav">
+        <a href="../index.html">← Wiki Home</a>
+      </div>
+      <div class="video-card">
+        <h2>the life cycle of every civilization, i guess - Prof. Jiang Xueqin</h2>
+        <div class="video-meta">
+          <span>📅 <a href="https://www.youtube.com/watch?v=OSgG1MJ7B9A" target="_blank">2026-01-20</a></span>
+          <span>⏱ 19m 39s</span>
+          <span>🔗 <a href="https://www.youtube.com/watch?v=OSgG1MJ7B9A" target="_blank">Watch on YouTube ↗</a></span>
+        </div>
+        <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a></div>
+        
+        
+        <div class="intro-block">
+          <h4 style="margin-bottom:0.5rem;color:var(--primary)">Topics discussed (first mentions):</h4>
+          <div style="margin-bottom:0.5rem">
+              <strong>United States</strong>
+              <span class="timestamp">@ 18:17</span>
+              <div style="color:#555;font-size:0.85rem">happens is Well, the United States</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>China</strong>
+              <span class="timestamp">@ 4:18</span>
+              <div style="color:#555;font-size:0.85rem">what, guys? China's been around for</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>Empire</strong>
+              <span class="timestamp">@ 6:27</span>
+              <div style="color:#555;font-size:0.85rem">empire.</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>Civilization</strong>
+              <span class="timestamp">@ 3:33</span>
+              <div style="color:#555;font-size:0.85rem">for a civilization. Why? Because the</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>War</strong>
+              <span class="timestamp">@ 3:19</span>
+              <div style="color:#555;font-size:0.85rem">okay? And now you have the Warring</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>Game Theory</strong>
+              <span class="timestamp">@ 0:00</span>
+              <div style="color:#555;font-size:0.85rem">So, in the beginning, okay, game theory,</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>India</strong>
+              <span class="timestamp">@ 16:27</span>
+              <div style="color:#555;font-size:0.85rem">uh India,</div>
+            </div><div style="margin-bottom:0.5rem">
+              <strong>Japan</strong>
+              <span class="timestamp">@ 16:31</span>
+              <div style="color:#555;font-size:0.85rem">Japan.</div>
+            </div>
+        </div>
+      </div>
+
+      
+      <h2 class="section-title">Related Videos</h2>
+      <div class="grid">
+    <div class="video-card">
+      <h2><a href="../videos/uP9Fnq23lsA.html">Prof Jiang: Trump Can't End This War — If He Loses Power, He Goes to Prison</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 1h 55m</span>
+      </div>
+      <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a></div>
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">Shared topics: United States, China, Empire, Civilization, War, Game Theory, India, Japan</div>
+    </div>
+  
+    <div class="video-card">
+      <h2><a href="../videos/pyuZN07l0DQ.html">Professor Jiang is a TOTAL FRAUD</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-13</span>
+        <span>⏱ 51m 35s</span>
+      </div>
+      <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a></div>
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">Shared topics: United States, China, Empire, Civilization, War, Game Theory, India, Japan</div>
+    </div>
+  
+    <div class="video-card">
+      <h2><a href="../videos/o1DElACHNRo.html">SNEAKO Interviews Professor Jiang: The End of the World</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-09</span>
+        <span>⏱ 1h 57m</span>
+      </div>
+      <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/neocon.html" class="topic-badge" style="background:#8b0000">NeoCon</a></div>
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">Shared topics: United States, China, Empire, Civilization, War, Game Theory, India, Japan</div>
+    </div>
+  
+    <div class="video-card">
+      <h2><a href="../videos/PDwnz1YbU-g.html">Is Professor Jiang an Intelligence Asset?</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-06</span>
+        <span>⏱ 2h 39m</span>
+      </div>
+      <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a></div>
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">Shared topics: United States, China, Empire, Civilization, War, Game Theory, India, Japan</div>
+    </div>
+  
+    <div class="video-card">
+      <h2><a href="../videos/jIS2eB-rGv0.html">Game Theory #9:  The US-Iran War</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-03</span>
+        <span>⏱ 45m 25s</span>
+      </div>
+      <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a></div>
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">Shared topics: United States, China, Empire, Civilization, War, Game Theory, India, Japan</div>
+    </div>
+  
+    <div class="video-card">
+      <h2><a href="../videos/ybufqRY77PQ.html">Game Theory #5:  The World Game</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-20</span>
+        <span>⏱ 57m 16s</span>
+      </div>
+      <div class="topic-list"><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a></div>
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">Shared topics: United States, China, Empire, Civilization, War, Game Theory, India, Japan</div>
+    </div>
+  </div>
+      
+
+      <h2 class="section-title">Transcript</h2>
+      <div style="background:white;border:1px solid var(--border);border-radius:8px;padding:1.5rem;font-size:0.9rem;line-height:1.8;white-space:pre-wrap;max-height:80vh;overflow-y:auto">
+        So, in the beginning, okay, game theory, game. Okay, rise. Okay. In the beginning, you as a people need to come together and build a land in which you can all prosper or at least have food to eat, okay? Therefore, the game is cooperation. And the mechanism cooperation actually religion. So, in this first game, okay, what you're trying to do is you're trying to create a dynamic religion that motivates people to be energetic, to give them reason to work really hard. Okay? And the people who are best able to articulate this religion become the elite, okay? And this includes poets and priests. All right? Poets and priests. And at this point in history, especially at the start up, okay, everyone's enthusiastic, everyone's working hard, everyone feels as though they're making a positive contribution to the world. But over time, what happens is that the elite, okay, become hereditary. The game becomes how do I, the elite, pass on my privileges to my children? Okay? And the And the the way they do that is by changing the religion. Okay? The religion now becomes almost like a bureaucracy. So, in the first game, the religion is about energy, it's about creativity, it's about working together. Okay? But this In the second iteration, the the religion becomes like a bureaucracy, which is like you must follow the rules of the game, okay? The rules of the game are set, there's a hierarchy, and you must obey this hierarchy. Okay? Now [snorts] then, what happens is a process called elite over overproduction. Okay? The idea of elite overproduction is that, yes, these privileges are being passed on to the children, but now over time, they have their too many children. And so, what happens is that society breaks up into different factions, okay? And usually what happens is that these factions are divided according to the princes, okay? So, if there are four princes, okay, who are about to inherit the throne, there are four different factions that support them. That does That doesn't mean the prince is the leader of the faction, it just means that the prince is the symbol of the faction, okay? All right? And at this time in history, the way that they reduce the conflict is is the losing factions, what what they do is they move away, okay? They're exiled. Okay? And then they have to set up a new colony. And this is a process that continues where the losers of the game are forced into exile until there's no more place to colonize, okay? And now you have the Warring States period. Hey, the Warring States period. And in fact, what's interesting is that the Warring States period is a time of maximum creativity for a civilization. Why? Because the idea of open cooperative competition. Okay? So, back to the Qing, back to the Greeks, um the um Sumerians, they're different colonies, okay? And they're all competing against each other. And so, you need to be open and innovative if you if you if you're if you're to thrive, okay? At the same time, they're trading with each other, so they're sharing best practices, they're sharing innovations with each other. Okay? So, this leads to the idea of open cooperative competition, marks the height of the civilization. So, guess what, guys? China's been around for 5,000 years, but most of the innovations happened when? It happened during the Warring States period, this 100 years when we had Confucius, Mencius, uh Laozi, uh Zhuangzi, it's basically everyone, okay? All right? And And if you just [clears throat] look at um other civilizations, it's the same for other civilizations as well, where if you look at the Greeks, um during the classical period, they basically created everything that becomes the foundation for Western civilization, okay? That doesn't make sense. All right. Now, what's interesting is what happens next. Eventually, what happens is these city-states figure out that, you know what? Yes, the game is we compete against each other, but we can also choose to work together, okay? How do you work together? By intermarriage, okay? Intermarriage. And the idea of intermarriage creates the idea of equilibrium. And at this point in history, warfare becomes organized warfare. Okay? So, remember, uh before warfare was about innovation, but now, when these elites from different city-states, when they intermarry with each other, okay, they have a new equilibrium. So, they're above the above the state now, okay? That doesn't make sense, guys? All right? So, now when they fight, it's not really about fighting each other, it's about reducing the population to maintain control. Okay? It's a way to resolve the elite overproduction issue. We have too many people striving for too many status positions. And the way you do that is through population control, okay? So, warfare becomes a mechanism of population control. All right? So, even though these city-states are still in theory competing against each other, they essentially now have reached an equilibrium. And equilibrium And now equilibrium is basically the idea of empire. Okay? All right? So, now the game changes. Before, during Warring States period, it was a game to see which state would be the best, the most innovative. And that's why you invite people who um could contribute the most to your city-state, okay? That's That's why you were meritocracy, you you only promoted the best and the brightest. Once you reach an equilibrium, you don't have to do that, okay? All you have to do is just maintain the status quo. And so, what happens is you create this rigid hierarchy, and what matters is who reaches the top of this hierarchy. And as a result, you create court politics, right? Court politics. Or factional struggle, factions. Okay? Doesn't make sense, guys? All right? So, if you look at any court politics, the faction that triumphs is the one that's able to solve three problems, okay? Three problems. These three problems are secrecy, trust, and coordination. Remember, in theory, everyone has to obey the bureaucracy, right? But if you just play by the rules of the game, you're going to lose. So, what you want to do is you want to cheat in the game. The way you But if you want to cheat in the game, you have to do so secretly, okay? You have to do so secretly. But if you do so secretly, that creates a problem of like, how do you trust each other? If you don't If you And if you If you're doing it all in secret, the problem is like, how do you coordinate? How do you move together, right? Because you you can't have meetings where you take notes, because if you're discovered, you'll all be executed by the other factions, okay? So, historically, the way we resolve this issue is through the idea of secret societies. &gt;&gt; [snorts] &gt;&gt; Okay? So, um let's figure out how secret societies work. And this is true for China, this is true for the Greeks, this is true for the Aztecs, it's true for everyone, okay? But like, there's certain um aspects of secret societies. Okay? The first is the idea of secrecy, okay? How do you do that? Well, you do that through the idea of a hierarchy. Okay? Hierarchy. Or compartmentalization. And so, there are different So, within secret societies, there's a hierarchy as well, where only the people at the very top know know what's going on. And if you want to join, you're initiated, but you're put at the bottom, okay? And slowly, you climb the ladder, okay? And this is to maintain secrecy. Trust. How do you get people to trust each other? Well, you get people to trust each other through the idea of transgression. Okay? So, if we cheat on a test together, we are much more likely to trust each other. Do Does that make sense? Because if you're caught, you'll you'll you'll you'll get punished, okay? So, by breaking the law together, we can trust each other, okay? And the most basic type of transgression is the idea of ritual sacrifice. Okay, the idea of ritual sacrifice is you basically decide to go kill someone together, okay? You capture that person, then through some ritual you then kill that person, okay? Does that make sense? And then there's also the problem of coordination, you have the idea of eschatology. Eschatology is mythology, all right? Like why are you guys doing what you're doing? Okay? And the answer often is because you're trying to serve a higher god that wants to conquer the world and we are her servants in this quest to conquer the world and end the world to make it a paradise. Okay? So different secret societies have different eschatologies, but the system is the same. Okay? Does that make sense? Okay. And what happens is, and this is like really important, guys, every faction has to form their own secret society. And now the game empire becomes one of a struggle between different secret societies. Does that make sense? Meaning what? Meaning Meaning you don't care what happens to the empire. You don't care about the enemies of the empire. All you care about that you your team emerges on top of the game. Okay? And so what does that mean? It means that you become Sorry. Insular. All right? Okay? You become insular. You also become corrupt. Okay? Because you need resources to play this game. So what you do is you steal from the people, okay? It's all It's all about trying to steal as much as you can in order to feed your faction. You become insular, you become corrupt. Okay? Um and then divided. Okay? Do you understand? This is what happens of space because of different factions within the empire or the equilibrium. They become insular, they become corrupt, and they become uh divided, okay? Which is why they ultimately lose to the strong factions because the opposite of insular, of course, is open. The The um The opposite of corrupt is energetic. And the opposite of divided is, of course, cohesive. Cohesion, okay? Okay? Now you understand why ultimately the borderlands, the tribes in borderlands, are able to conquer the empire or the equilibrium, okay? Does that make sense, guys? All right? But there's actually more to this, okay? The And so what happens is that you have these different factions. Okay? Different secret societies fighting against each other. And again, from their perspective, all they care about is winning against the other factions. So what do they do? What they do is they invite other foreigners to come help them. Do you understand? Okay? So these are all called mercenaries. All right? And these mercenaries come into them and their leadership is absorbed into the secret societies through um eschatology, through transgression, through hierarchy, okay? All right? So this is what happens. These mercenaries are actually invited in, okay? And and and like but there's always contact, okay? Contact through trade, banditry, mercenary. Okay? Does that make sense? Because these people in these in the regions, they're so poor they'll do anything to survive. So they'll trade with you, but they'll also steal from you, and they'll also come and fight for you. Okay? What's important is that through trade they're becoming wealthier. Through banditry, they're becoming wealthier as well. And by By working as your mercenaries, they're develop They are learning your best technology, your best fighting skills, your best weapons. Okay? Right? And then what happens is that the mercenaries eventually take over. Okay? At first they merge, but then the mercenaries just kill everyone and then take over. And that's how what happens. That's why the Qing were able to conquer the warring states. Okay? They don't They don't teach you this in history class, but according to game theory, what happened was that different factions of these different states actually invited the Qing to help them in their political struggle. And then the Qing just basically conquered one by one by one. Does that make sense? Same thing happened with the Macedonians, right? The Macedonians came in and helped one city-state, then they conquered one city-state and then moved on to the next, okay? But it was always a certain part of that city-state, a certain faction of that city-state, which invited the Macedonians in the first place, okay? Does that make sense? Okay? And this is a pattern that repeats itself throughout human history. Okay? So if you want to know what's going to happen today, what's going to happen tomorrow, just figure out which areas of the world are the most energetic, most open, and most cohesive. And then figure out which empires are the most corrupt, most insular, and the most divided, okay? And then you'll figure out who will conquer who. All right? Does that make sense, guys? All right. So I'll give you two examples to better illustrate how this works. All right. So when I was in high school in Canada, we played a game called the world game. &gt;&gt; [snorts] &gt;&gt; And in this game, it's very simple. Okay, you're You're put into a team of maybe four or five players, okay? And then each team is assigned a country, like maybe USA, Britain, uh India, Pakistan, Japan. And then each team is given an envelope, okay? And then with within this envelope, you're given certain resources, okay? So basically, you know, paper, scissors, ruler, okay? And then there's there's an organization called the World Bank. And what you're trying to do is you're trying to become the wealthiest country in the world. The way you do that is you take your resources and you turn it into commodities that the World Bank buys from you. Okay? So maybe like triangles and circles and squares, okay? But to create these commodities, you need resources, right? You need scissors, you need rulers, you need paper, you need glue. Okay? But different countries will have different resource resources. So the States has everything, okay? And Pakistan is interesting because Pakistan usually gets nothing. Okay? They have no resources. But you're allowed to trade with each other, right? Okay? You're allowed to trade with each other. &gt;&gt; [snorts] &gt;&gt; Okay? So even though you have nothing, you can go to the States and beg and say, "Oh oh, could could I please borrow your ruler for for today, okay?" Then you you go to Pakistan and say, "Hey, can I Can Can I borrow your paper for today, okay?" Or "Hey, I'll come work for you for free." Right? You can trade. And so you play this for a for one day, and it's really interesting what happens, okay? Usually what happens I'm I'm not saying it all the time, but I've seen this happen a lot. At the end of the day, you You look at who are the wealthiest countries in the world, what happens is Well, the United States becomes number one, okay? Why? Because the United States just has everything in the world. It is the wealthiest country in the world. It just has too much resources, okay? But number two is interesting. You would think it would be Japan and Britain, but it's actually Pakistan, okay? The country that starts out with nothing at all. Why? Because they're forced to be the most energetic, the most open, and most cohesive. Team members have to go and beg to work for free. Okay? Other team members go and lie and cheat and steal, okay? They're forced to be resourceful and creative. Okay? The world game. And that's how the world works, guys. Just because you have the most resources, just because you have the most people, does not mean you'll win the game at the end. What matters is how energetic your people are, how open they are, how resourceful they are. That's what matters. Okay? And often they are we're open, energetic, and cohesive because they're poor. All right? It's that simple. Pakistan has nothing, so they're they're forced to be creative. Poverty leads to creativity. Okay?
+      </div>
+    </div>
+  </div>
+</body>
+</html>

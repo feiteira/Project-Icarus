@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Democracy | Predictive History Wiki</title>
+  <style>
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #333;
+  --muted: #777;
+  --sidebar-width: 260px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: var(--primary); color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 a { color: white; }
+.search-bar { margin-top: 0.5rem; }
+.search-bar input { width: 100%; padding: 0.5rem; border: none; border-radius: 4px; font-size: 0.95rem; }
+.layout { display: flex; max-width: 1400px; margin: 0 auto; }
+.sidebar { width: var(--sidebar-width); background: white; border-right: 1px solid var(--border); height: calc(100vh - 60px); position: sticky; top: 60px; overflow-y: auto; padding: 1rem; }
+.sidebar h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.5rem; letter-spacing: 0.05em; }
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 0.25rem; }
+.sidebar a { display: block; padding: 0.3rem 0.5rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.15s; }
+.sidebar a:hover { background: #f0f0f0; text-decoration: none; }
+.topic-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; color: white; margin: 0.1rem; }
+.main { flex: 1; padding: 2rem; min-width: 0; }
+.video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.video-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.video-card h2 a { color: var(--primary); }
+.video-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.video-meta span { margin-right: 1rem; }
+.topic-list { margin: 0.75rem 0; }
+.intro-block { background: #f8f9fa; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 0.9rem; color: #555; border-radius: 0 4px 4px 0; }
+.intro-block .timestamp { font-family: monospace; color: var(--accent); font-size: 0.8rem; }
+.wiki-nav { margin-bottom: 2rem; }
+.wiki-nav a { margin-right: 1rem; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+.topic-header { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.topic-header h1 { color: var(--primary); margin-bottom: 0.5rem; }
+.cross-refs { background: #f0f4f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+.cross-refs h4 { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--muted); }
+.cross-ref-item { display: inline-block; margin: 0.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.timestamp-link { font-family: monospace; font-size: 0.8rem; color: var(--accent); background: #e8f4fc; padding: 0.1rem 0.4rem; border-radius: 3px; margin: 0 0.25rem; }
+.search-result { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.search-result:last-child { border: none; }
+.search-result h4 { margin-bottom: 0.25rem; }
+.search-result p { font-size: 0.85rem; color: var(--muted); }
+.footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="../index.html">📚 Predictive History Wiki</a></h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search wiki..." onkeydown="if(event.key==='Enter') window.location.search='?q='+encodeURIComponent(this.value)">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="topics/brics.html">BRICS</a></li>
+<li><a href="topics/bitcoin.html">Bitcoin</a></li>
+<li><a href="topics/china.html">China</a></li>
+<li><a href="topics/christianity.html">Christianity</a></li>
+<li><a href="topics/civil_war.html">Civil War</a></li>
+<li><a href="topics/civilization.html">Civilization</a></li>
+<li><a href="topics/cold_war.html">Cold War</a></li>
+<li><a href="topics/collapse.html">Collapse</a></li>
+<li><a href="topics/constitution.html">Constitution</a></li>
+<li><a href="topics/democracy.html">Democracy</a></li>
+<li><a href="topics/empire.html">Empire</a></li>
+<li><a href="topics/europe.html">Europe</a></li>
+<li><a href="topics/federal_reserve.html">Federal Reserve</a></li>
+<li><a href="topics/game_theory.html">Game Theory</a></li>
+<li><a href="topics/geopolitics.html">Geopolitics</a></li>
+<li><a href="topics/gold.html">Gold</a></li>
+<li><a href="topics/holy_roman_empire.html">Holy Roman Empire</a></li>
+<li><a href="topics/india.html">India</a></li>
+<li><a href="topics/iran.html">Iran</a></li>
+<li><a href="topics/islam.html">Islam</a></li>
+<li><a href="topics/israel.html">Israel</a></li>
+<li><a href="topics/japan.html">Japan</a></li>
+<li><a href="topics/judaism.html">Judaism</a></li>
+<li><a href="topics/middle_east.html">Middle East</a></li>
+<li><a href="topics/nato.html">NATO</a></li>
+<li><a href="topics/neocon.html">NeoCon</a></li>
+<li><a href="topics/nuclear.html">Nuclear</a></li>
+<li><a href="topics/roman_empire.html">Roman Empire</a></li>
+<li><a href="topics/russia.html">Russia</a></li>
+<li><a href="topics/saudi_arabia.html">Saudi Arabia</a></li>
+<li><a href="topics/secession.html">Secession</a></li>
+<li><a href="topics/silk_road.html">Silk Road</a></li>
+<li><a href="topics/south_china_sea.html">South China Sea</a></li>
+<li><a href="topics/strategy.html">Strategy</a></li>
+<li><a href="topics/taiwan.html">Taiwan</a></li>
+<li><a href="topics/trump.html">Trump</a></li>
+<li><a href="topics/ukraine.html">Ukraine</a></li>
+<li><a href="topics/united_states.html">United States</a></li>
+<li><a href="topics/war.html">War</a></li>
+<li><a href="topics/woke.html">Woke</a></li>
+<li><a href="topics/world_economic_forum.html">World Economic Forum</a></li>
+      </ul>
+      <h3>Recent Videos</h3>
+      <ul>
+        <li><a href="videos/eicb17dE1hI.html">THE GREAT AMERICAN SCAM: HOW DEMOCRATS &...</a></li>
+<li><a href="videos/3WQOCmMmsTA.html">If Prof. Jiang's Law of Proximity is rig...</a></li>
+<li><a href="videos/pUJUG4zc0Ms.html">STOP Watching Strikes — Watch The PATTER...</a></li>
+<li><a href="videos/CL6j5efojws.html">After the Silver Rally! What History Say...</a></li>
+<li><a href="videos/2rf3t33aERI.html">Why America is INCHES Away from Civil Wa...</a></li>
+<li><a href="videos/u3nTw4ReNx4.html">Iran Challenged U.S. NAVY Submarine l Pr...</a></li>
+<li><a href="videos/cBqDb4cCARs.html">"Trump Can't End This War — If He Loses ...</a></li>
+<li><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></li>
+<li><a href="videos/w6OVh4ic_RE.html">This WAR is Getting Out of Hand - Prof. ...</a></li>
+<li><a href="videos/9VfDaIOR9Cs.html">Strategic Secrets: Why Iran Is Impossibl...</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="wiki-nav">
+        <a href="../index.html">← Wiki Home</a>
+      </div>
+      <div class="topic-header">
+        <h1><span style="display:inline-block;width:12px;height:12px;background:#4169e1;border-radius:50%;margin-right:0.5rem"></span>Democracy</h1>
+        <p>Democratic systems, elections, populism</p>
+        <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--muted)">
+          Appears in <strong>68</strong> videos
+        </div>
+        
+        <div class="cross-refs">
+          <h4>Related Topics (frequently co-occur)</h4>
+          <a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Videos covering "Democracy"</h2>
+      <div class="grid">
+    <div class="video-card">
+      <h2><a href="../videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 50m 25s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=nOQqGy4boBY" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/9VfDaIOR9Cs.html">Strategic Secrets: Why Iran Is Impossible to Conquer | Predictive History Jiang</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 12m 41s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=9VfDaIOR9Cs" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, Empire, War, Strategy, Middle East
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/xdotRJEeIPI.html">Professor Jiang’s Warning Comes True — The “Big Event” Begins as Qatar & Tel Aviv Are Hit</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 14m 52s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=xdotRJEeIPI" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, Collapse
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Ki5Yuq8HA24.html">Professor Jiang - Predictive History | Iran War, Freemasonic Plots, and What's Israel's Problem</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-18</span>
+        <span>⏱ 1h 25m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Ki5Yuq8HA24" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/rsi7cDRUrmE.html">Jiang Xueqin: Our True Wealth Is Our Consciousness | Endgame #259</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-16</span>
+        <span>⏱ 2h 0m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=rsi7cDRUrmE" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/cABdUwQclJM.html">America Can't Win This War — Here's Why | Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-12</span>
+        <span>⏱ 12m 26s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=cABdUwQclJM" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, China, Russia, Empire
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/6rTlI_Qwd1I.html">Jiang Xueqin: New World Order - Iran War Ends U.S. Empire</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-09</span>
+        <span>⏱ 56m 35s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=6rTlI_Qwd1I" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/0rIgZD-tk3s.html">Jiang Xueqin: The Iran War: The Watershed Moment That Changed the Middle East Forever</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-07</span>
+        <span>⏱ 1h 25m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=0rIgZD-tk3s" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/FzqlizEgC54.html">Is Predictive History a GRIFTER? Professor Jiang EXPOSED</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-06</span>
+        <span>⏱ 58m 23s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=FzqlizEgC54" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/PDwnz1YbU-g.html">Is Professor Jiang an Intelligence Asset?</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-06</span>
+        <span>⏱ 2h 39m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=PDwnz1YbU-g" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ahFZhh7St-Y.html">The Iran-USA-Israel War: Why The Interceptor Math Already Decided Everything</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-05</span>
+        <span>⏱ 12m 27s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ahFZhh7St-Y" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/gVrHpM5tnog.html">The Trap Waiting for America || If America Invades Iran… It Loses | Professor Jiang</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-02-24</span>
+        <span>⏱ 21m 30s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=gVrHpM5tnog" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Lma4p2GDxzM.html">SNEAKO X Professor Jiang: Predicting Iran War</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-02-15</span>
+        <span>⏱ 2h 17m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Lma4p2GDxzM" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/CRw5CCq8Uf4.html">Jiang Xueqin: Humanity's patterns, the nature of reality, and the battle for your mind.</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-02-06</span>
+        <span>⏱ 1h 6m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=CRw5CCq8Uf4" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/axqDLhWs93Q.html">Game Theory #8:  Communist Specter</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-29</span>
+        <span>⏱ 55m 25s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=axqDLhWs93Q" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, China, Russia, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ijnkCt1QK6k.html">Game Theory #7:  America's Game</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-27</span>
+        <span>⏱ 48m 31s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ijnkCt1QK6k" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Saudi Arabia, China, Russia, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/80jUKe0blAQ.html">Jiang Xueqin: Great Power Wars Over a New World Order</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-26</span>
+        <span>⏱ 57m 7s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=80jUKe0blAQ" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/world_economic_forum.html" class="topic-badge" style="background:#800080">World Economic Forum</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a><a href="topics/secession.html" class="topic-badge" style="background:#b22222">Secession</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/uYdY86KpFns.html">China will replace US dominance through win-win not warmongering. With Professor Jiang Xuejin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-25</span>
+        <span>⏱ 45m 18s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=uYdY86KpFns" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/world_economic_forum.html" class="topic-badge" style="background:#800080">World Economic Forum</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/south_china_sea.html" class="topic-badge" style="background:#000080">South China Sea</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/uHIdRgFypNo.html">Trump's War on Iran / Davos / Canada-China Relations w/ Prof. Jiang Xueqin of Predictive History</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-22</span>
+        <span>⏱ 41m 34s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=uHIdRgFypNo" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/neocon.html" class="topic-badge" style="background:#8b0000">NeoCon</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/XRP407WsA0w.html">Great Books #3:  Poets and Prophets</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-21</span>
+        <span>⏱ 43m 45s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=XRP407WsA0w" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Civilization, War, Trump
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Id4WHhYPcuY.html">Game Theory, Prophecy, and WW3 with Professor Jiang @PredictiveHistory</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-17</span>
+        <span>⏱ 1h 24m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Id4WHhYPcuY" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/brics.html" class="topic-badge" style="background:#daa520">BRICS</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/dhLr7ZYdlj8.html">The Derp With Kurp | 23 | @predictivehistory - The Multiverse of Madness</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-16</span>
+        <span>⏱ 1h 52m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=dhLr7ZYdlj8" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/MX93U4KzA28.html">Game Theory #3:  Rich Dad, Poor Dad</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-13</span>
+        <span>⏱ 53m 33s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=MX93U4KzA28" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Collapse, War, Strategy
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ERFdrhaxmzI.html">Who Will Replace the American Empire? Simon Dixon vs Professor Jiang (Official Re-upload)</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-12</span>
+        <span>⏱ 2h 2m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ERFdrhaxmzI" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/hE4l9WyLF3U.html">Game Theory #1:  The Dating Game</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-06</span>
+        <span>⏱ 49m 33s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=hE4l9WyLF3U" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/UmDd-NsGiG0.html">Jiang Xueqin (clip): Predicting World War III</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-12-21</span>
+        <span>⏱ 10m 24s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=UmDd-NsGiG0" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, Israel, China, Russia, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ZPrecJHUOUs.html">Secret History #27:  Empire of Evil</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-12-16</span>
+        <span>⏱ 1h 27m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ZPrecJHUOUs" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Israel, China, Russia, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/B5FtHagng8c.html">Secret History #25:  Capital of Evil</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-12-09</span>
+        <span>⏱ 1h 10m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=B5FtHagng8c" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Empire, Collapse, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/OazPxZhaz60.html">A Chinese Perspective on Imperialism and Racism | Professor Jiang (Predictive History)</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-12-07</span>
+        <span>⏱ 1h 1m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=OazPxZhaz60" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a><a href="topics/neocon.html" class="topic-badge" style="background:#8b0000">NeoCon</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/GSSIm9xNRAE.html">Jiang Xueqin: The West's Civilizational Collapse</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-11-24</span>
+        <span>⏱ 56m 53s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=GSSIm9xNRAE" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/z0AwFin83lo.html">Secret History #20:  The Hellenistic World</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-11-20</span>
+        <span>⏱ 1h 18m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=z0AwFin83lo" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, China, Empire, Civilization, Collapse
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Ao0bGTVSdls.html">How the Next 5–10 Years May Unfold - Prof. Jiang Xueqin | Predictive History</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-11-16</span>
+        <span>⏱ 13m 22s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Ao0bGTVSdls" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Collapse, War, Civil War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/JleJlzMum4g.html">Predicting Geopolitics w/ Professor Jiang</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-11-06</span>
+        <span>⏱ 1h 48m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=JleJlzMum4g" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/neocon.html" class="topic-badge" style="background:#8b0000">NeoCon</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/XRk5VSEzJ4Y.html">Professor Jiang Xueqin: The World Is About to Change</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-10-30</span>
+        <span>⏱ 38m 18s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=XRk5VSEzJ4Y" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Pul2i1womXg.html">Heading To War | Predictive History - Prof. Jiang</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-10-26</span>
+        <span>⏱ 1h 2m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Pul2i1womXg" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/hk_yhi3-prw.html">Secret History #8:  Death by Bureaucracy</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-10-11</span>
+        <span>⏱ 1h 3m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=hk_yhi3-prw" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Russia, Collapse, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/0wnKEV_18y0.html">Professor Jiang Xueqin | Predictive History, Western Collapse, & The Ivy League Issue</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-10-07</span>
+        <span>⏱ 1h 33m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=0wnKEV_18y0" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ENry-rDFzmA.html">America is an Anti-Civilization - Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-10-03</span>
+        <span>⏱ 19m 16s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ENry-rDFzmA" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: China, Civilization, War, Civil War, Constitution
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/5FvzbUFa_yo.html">⚡WW3: A Major War Begins In OCTOBER w/ Prof. Jiang</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-10-01</span>
+        <span>⏱ 1h 38m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=5FvzbUFa_yo" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/south_china_sea.html" class="topic-badge" style="background:#000080">South China Sea</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/0g3yo1DjiLM.html">Secret History #3:  Death by Gerontocracy</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-08-29</span>
+        <span>⏱ 49m 19s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=0g3yo1DjiLM" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Civilization, War, Nuclear
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/K-_l9jBGo74.html">Secret History #2:  How Societies Collapse</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-08-22</span>
+        <span>⏱ 56m 14s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=K-_l9jBGo74" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Israel, China, Ukraine, Empire
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/8XdL-7tAqnU.html">Geo-Strategy Update:  US-Iran War Incoming</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-06-18</span>
+        <span>⏱ 28m 31s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=8XdL-7tAqnU" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/_gH4PvIni5E.html">Civilization #END:  The Decline and Fall of the American Empire</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-06-12</span>
+        <span>⏱ 1h 6m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=_gH4PvIni5E" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/QtqfIjK1GAc.html">Civilization #59:  The Man of Steel</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-06-10</span>
+        <span>⏱ 1h 12m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=QtqfIjK1GAc" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, China, Russia, Ukraine, Empire
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/_3c3FjS57x4.html">Civilization #55:  Kant, Hegel, and the Theory of Everything</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-05-27</span>
+        <span>⏱ 1h 8m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=_3c3FjS57x4" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Civilization, Collapse, War, Christianity, Europe
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ea20aMYfT5I.html">Civilization #52:  Empire of Democracy</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-05-15</span>
+        <span>⏱ 1h 6m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ea20aMYfT5I" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Russia, Empire, Civilization
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/ef-Ch2LGDDI.html">Civilization #47:  The Passion of Robespierre</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-04-24</span>
+        <span>⏱ 1h 26m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=ef-Ch2LGDDI" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/secession.html" class="topic-badge" style="background:#b22222">Secession</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Russia, Collapse, War, Strategy, Gold
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/DiRJyy-8V54.html">Civilization #45:  The Gunpowder Revolution</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-04-10</span>
+        <span>⏱ 1h 11m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=DiRJyy-8V54" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/holy_roman_empire.html" class="topic-badge" style="background:#800000">Holy Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, China, Russia, Empire, Civilization
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/TcxlOiJz8V0.html">Civilization #42:  The Protestant Reformation and the Birth of Capitalism</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-03-27</span>
+        <span>⏱ 1h 23m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=TcxlOiJz8V0" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/holy_roman_empire.html" class="topic-badge" style="background:#800000">Holy Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, China, Empire, Civilization, Collapse
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/7k5XoLzwmls.html">Civilization #35:  The Viking Legacy</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-03-04</span>
+        <span>⏱ 1h 11m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=7k5XoLzwmls" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/holy_roman_empire.html" class="topic-badge" style="background:#800000">Holy Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/silk_road.html" class="topic-badge" style="background:#ff0000">Silk Road</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, China, Russia, Ukraine, Empire
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/abs6z7VPEMc.html">Civilization #33:  The Rise and Fall of the Byzantine Empire</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-02-25</span>
+        <span>⏱ 1h 5m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=abs6z7VPEMc" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/holy_roman_empire.html" class="topic-badge" style="background:#800000">Holy Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: China, Russia, Empire, Civilization, Collapse
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/_Io7-_RS8uE.html">Civilization #32:  Rome's Rise, Fall, and Legacy</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-02-20</span>
+        <span>⏱ 1h 6m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=_Io7-_RS8uE" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/HIoYQBbBllk.html">Civilization #31:  The Oceanic Currents of History</a></h2>
+      <div class="video-meta">
+        <span>📅 2025-02-18</span>
+        <span>⏱ 1h 10m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=HIoYQBbBllk" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/holy_roman_empire.html" class="topic-badge" style="background:#800000">Holy Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/GdbZBVUIVDE.html">Civilization #27:  Augustine's Empire of God</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-12-31</span>
+        <span>⏱ 52m 43s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=GdbZBVUIVDE" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: China, Empire, Civilization, War, Cold War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/F8qQgsEFGgc.html">Civilization #15:  The Myth-Making Genius of Julius Caesar</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-11-12</span>
+        <span>⏱ 1h 6m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=F8qQgsEFGgc" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Empire, War, Strategy, Civil War, Trump
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/TdcE7XGDayo.html">Civilization #14:  Hannibal Barca, Lucius Brutus, and the Triumph of Rome</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-11-07</span>
+        <span>⏱ 1h 13m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=TdcE7XGDayo" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/roman_empire.html" class="topic-badge" style="background:#8b0000">Roman Empire</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Empire, Civilization, War, Strategy, Roman Empire
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/WoTOxE4DTFA.html">Civilization #13:  Aristotle and the Greek Legacy</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-11-05</span>
+        <span>⏱ 54m 38s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=WoTOxE4DTFA" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, China, Empire, Civilization, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/l6AroD58jkE.html">Civilization #11:  The Greatness of Philip II of Macedon</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-10-24</span>
+        <span>⏱ 55m 16s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=l6AroD58jkE" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: China, Ukraine, Empire, Civilization, Collapse
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/LWlTtdNww_k.html">Civilization #10:  The Trial of Socrates and Plato's Allegory of the Cave</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-10-22</span>
+        <span>⏱ 42m 57s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=LWlTtdNww_k" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Empire, Civilization, War, Gold, Christianity
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/96hzWlozdHw.html">Civilization #9:  Aeschylus, Sophocles, and Euripides as Prophets of Democracy</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-10-17</span>
+        <span>⏱ 55m 7s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=96hzWlozdHw" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: China, Empire, War, Europe, India
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/NpNCQ_gNqdE.html">Civilization #8:  Rat Utopia and the Peloponnesian War</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-10-15</span>
+        <span>⏱ 1h 9m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=NpNCQ_gNqdE" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: Iran, China, Empire, Collapse, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/677rmlRgvLQ.html">Civilization #7:  Homer's Iliad and the Birth of Greek Civilization</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-10-10</span>
+        <span>⏱ 47m 22s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=677rmlRgvLQ" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: China, Russia, Civilization, Collapse, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Go1bMQKnJBQ.html">Geo-Strategy #11:  The Second American Civil War</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-06-07</span>
+        <span>⏱ 1h 8m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Go1bMQKnJBQ" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/secession.html" class="topic-badge" style="background:#b22222">Secession</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, Russia, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/AEPSUC-UQ5k.html">Geo-Strategy #9:  Putin's War for the Soul of Russia</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-05-31</span>
+        <span>⏱ 1h 5m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=AEPSUC-UQ5k" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, China, Russia, Ukraine
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/7y_hbz6loEo.html">Geo-Strategy #8:  The Iran Trap</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-05-29</span>
+        <span>⏱ 1h 5m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=7y_hbz6loEo" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/LsRGvKxfLts.html">Geo-Strategy #7:  Who Killed Iranian President Ebrahim Raisi?</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-05-24</span>
+        <span>⏱ 49m 32s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=LsRGvKxfLts" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, War
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/JieFC4Yww4o.html">Geo-Strategy #6:  America's Imperial Hubris</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-05-22</span>
+        <span>⏱ 56m 11s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=JieFC4Yww4o" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/exRK-85630k.html">Geo-Strategy #5:  Why Trump Will Win (And Pick Nikki Haley as VP)</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-05-17</span>
+        <span>⏱ 41m 31s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=exRK-85630k" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, Russia, Ukraine
+      </div>
+    </div></div>
+    </div>
+  </div>
+</body>
+</html>

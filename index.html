@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictive History Wiki | Prof. Jiang Xueqin</title>
+  <style>
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #333;
+  --muted: #777;
+  --sidebar-width: 260px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: var(--primary); color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 a { color: white; }
+.search-bar { margin-top: 0.5rem; }
+.search-bar input { width: 100%; padding: 0.5rem; border: none; border-radius: 4px; font-size: 0.95rem; }
+.layout { display: flex; max-width: 1400px; margin: 0 auto; }
+.sidebar { width: var(--sidebar-width); background: white; border-right: 1px solid var(--border); height: calc(100vh - 60px); position: sticky; top: 60px; overflow-y: auto; padding: 1rem; }
+.sidebar h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.5rem; letter-spacing: 0.05em; }
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 0.25rem; }
+.sidebar a { display: block; padding: 0.3rem 0.5rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.15s; }
+.sidebar a:hover { background: #f0f0f0; text-decoration: none; }
+.topic-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; color: white; margin: 0.1rem; }
+.main { flex: 1; padding: 2rem; min-width: 0; }
+.video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.video-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.video-card h2 a { color: var(--primary); }
+.video-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.video-meta span { margin-right: 1rem; }
+.topic-list { margin: 0.75rem 0; }
+.intro-block { background: #f8f9fa; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 0.9rem; color: #555; border-radius: 0 4px 4px 0; }
+.intro-block .timestamp { font-family: monospace; color: var(--accent); font-size: 0.8rem; }
+.wiki-nav { margin-bottom: 2rem; }
+.wiki-nav a { margin-right: 1rem; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+.topic-header { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.topic-header h1 { color: var(--primary); margin-bottom: 0.5rem; }
+.cross-refs { background: #f0f4f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+.cross-refs h4 { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--muted); }
+.cross-ref-item { display: inline-block; margin: 0.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.timestamp-link { font-family: monospace; font-size: 0.8rem; color: var(--accent); background: #e8f4fc; padding: 0.1rem 0.4rem; border-radius: 3px; margin: 0 0.25rem; }
+.search-result { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.search-result:last-child { border: none; }
+.search-result h4 { margin-bottom: 0.25rem; }
+.search-result p { font-size: 0.85rem; color: var(--muted); }
+.footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="index.html">📚 Predictive History Wiki</a></h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search wiki..." onkeydown="if(event.key==='Enter') window.location.search='?q='+encodeURIComponent(this.value)">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="topics/brics.html">BRICS</a></li>
+<li><a href="topics/bitcoin.html">Bitcoin</a></li>
+<li><a href="topics/china.html">China</a></li>
+<li><a href="topics/christianity.html">Christianity</a></li>
+<li><a href="topics/civil_war.html">Civil War</a></li>
+<li><a href="topics/civilization.html">Civilization</a></li>
+<li><a href="topics/cold_war.html">Cold War</a></li>
+<li><a href="topics/collapse.html">Collapse</a></li>
+<li><a href="topics/constitution.html">Constitution</a></li>
+<li><a href="topics/democracy.html">Democracy</a></li>
+<li><a href="topics/empire.html">Empire</a></li>
+<li><a href="topics/europe.html">Europe</a></li>
+<li><a href="topics/federal_reserve.html">Federal Reserve</a></li>
+<li><a href="topics/game_theory.html">Game Theory</a></li>
+<li><a href="topics/geopolitics.html">Geopolitics</a></li>
+<li><a href="topics/gold.html">Gold</a></li>
+<li><a href="topics/holy_roman_empire.html">Holy Roman Empire</a></li>
+<li><a href="topics/india.html">India</a></li>
+<li><a href="topics/iran.html">Iran</a></li>
+<li><a href="topics/islam.html">Islam</a></li>
+<li><a href="topics/israel.html">Israel</a></li>
+<li><a href="topics/japan.html">Japan</a></li>
+<li><a href="topics/judaism.html">Judaism</a></li>
+<li><a href="topics/middle_east.html">Middle East</a></li>
+<li><a href="topics/nato.html">NATO</a></li>
+<li><a href="topics/neocon.html">NeoCon</a></li>
+<li><a href="topics/nuclear.html">Nuclear</a></li>
+<li><a href="topics/roman_empire.html">Roman Empire</a></li>
+<li><a href="topics/russia.html">Russia</a></li>
+<li><a href="topics/saudi_arabia.html">Saudi Arabia</a></li>
+<li><a href="topics/secession.html">Secession</a></li>
+<li><a href="topics/silk_road.html">Silk Road</a></li>
+<li><a href="topics/south_china_sea.html">South China Sea</a></li>
+<li><a href="topics/strategy.html">Strategy</a></li>
+<li><a href="topics/taiwan.html">Taiwan</a></li>
+<li><a href="topics/trump.html">Trump</a></li>
+<li><a href="topics/ukraine.html">Ukraine</a></li>
+<li><a href="topics/united_states.html">United States</a></li>
+<li><a href="topics/war.html">War</a></li>
+<li><a href="topics/woke.html">Woke</a></li>
+<li><a href="topics/world_economic_forum.html">World Economic Forum</a></li>
+      </ul>
+      <h3>Recent Videos</h3>
+      <ul>
+        <li><a href="videos/eicb17dE1hI.html">THE GREAT AMERICAN SCAM: HOW DEMOCRATS &...</a></li>
+<li><a href="videos/3WQOCmMmsTA.html">If Prof. Jiang's Law of Proximity is rig...</a></li>
+<li><a href="videos/pUJUG4zc0Ms.html">STOP Watching Strikes — Watch The PATTER...</a></li>
+<li><a href="videos/CL6j5efojws.html">After the Silver Rally! What History Say...</a></li>
+<li><a href="videos/2rf3t33aERI.html">Why America is INCHES Away from Civil Wa...</a></li>
+<li><a href="videos/u3nTw4ReNx4.html">Iran Challenged U.S. NAVY Submarine l Pr...</a></li>
+<li><a href="videos/cBqDb4cCARs.html">"Trump Can't End This War — If He Loses ...</a></li>
+<li><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></li>
+<li><a href="videos/w6OVh4ic_RE.html">This WAR is Getting Out of Hand - Prof. ...</a></li>
+<li><a href="videos/9VfDaIOR9Cs.html">Strategic Secrets: Why Iran Is Impossibl...</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div style="background:linear-gradient(135deg,#2c3e50,#3498db);color:white;border-radius:12px;padding:2rem;margin-bottom:2rem">
+        <h1 style="font-size:1.8rem;margin-bottom:0.5rem">Predictive History Wiki</h1>
+        <p style="opacity:0.9">A comprehensive knowledge base of Prof. Jiang Xueqin's geopolitical framework, game theory analysis, and civilizational outlook. <strong>288 videos</strong> indexed.</p>
+        <div style="margin-top:1rem;font-size:0.85rem;opacity:0.8">
+          Date range: 2024-04-24 → 2026-03-21
+        </div>
+      </div>
+
+      <h2 class="section-title">Topics (41 indexed)</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+        <a href="topics/war.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#dc143c;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">War</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">War theory, proxy wars, military strategy</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">279 videos</div>
+    </a><a href="topics/empire.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#800000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Empire</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Imperial decline theory, American empire, historical parallels</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">193 videos</div>
+    </a><a href="topics/nuclear.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#8b0000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Nuclear</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Nuclear weapons, deterrence, proliferation</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">192 videos</div>
+    </a><a href="topics/china.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#e74c3c;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">China</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Chinese rise, Taiwan, South China Sea, trade, Belt and Road</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">190 videos</div>
+    </a><a href="topics/europe.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#4682b4;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Europe</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">European politics, EU, NATO, Russia relations</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">175 videos</div>
+    </a><a href="topics/united_states.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#3498db;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">United States</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">US geopolitics, domestic politics, foreign policy</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">168 videos</div>
+    </a><a href="topics/iran.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#2ecc71;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Iran</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Iranian strategy, nuclear program, regional influence, sanctions</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">167 videos</div>
+    </a><a href="topics/israel.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#9b59b6;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Israel</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Israeli strategy, Middle East policy, US-Israel alliance</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">163 videos</div>
+    </a><a href="topics/middle_east.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#a0522d;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Middle East</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Middle Eastern politics, conflicts, regional order</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">158 videos</div>
+    </a><a href="topics/collapse.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#c0392b;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Collapse</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Civilizational collapse patterns, historical examples</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">153 videos</div>
+    </a><a href="topics/strategy.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#006400;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Strategy</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Strategic theory, game theory applications</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">136 videos</div>
+    </a><a href="topics/russia.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#1abc9c;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Russia</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Russian strategy, Ukraine war, Putin, Soviet legacy</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">134 videos</div>
+    </a><a href="topics/civilization.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#8b4513;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Civilization</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Civilizational decline, cycles, cultural rot</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">134 videos</div>
+    </a><a href="topics/trump.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#ff0000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Trump</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Trump politics, impact on US and world</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">124 videos</div>
+    </a><a href="topics/civil_war.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#b22222;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Civil War</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">American civil war risk, secession, domestic conflict</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">106 videos</div>
+    </a><a href="topics/japan.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#dc143c;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Japan</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Japanese strategy, economic decline, security</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">96 videos</div>
+    </a><a href="topics/game_theory.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#4b0082;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Game Theory</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Game theory in geopolitics, strategic interaction analysis</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">94 videos</div>
+    </a><a href="topics/india.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#ff8c00;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">India</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Indian strategy, China rivalry, regional role</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">93 videos</div>
+    </a><a href="topics/gold.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#daa520;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Gold</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Gold as currency reserve, monetary history</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">93 videos</div>
+    </a><a href="topics/islam.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#006400;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Islam</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Islamic history, theology, political Islam</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">90 videos</div>
+    </a><a href="topics/ukraine.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#34495e;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Ukraine</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Ukraine conflict, NATO, Western aid, proxy war</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">87 videos</div>
+    </a><a href="topics/nato.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#00008b;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">NATO</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">NATO expansion, Article 5, European security</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">87 videos</div>
+    </a><a href="topics/saudi_arabia.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#e67e22;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Saudi Arabia</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Saudi-Iran rivalry, OPEC, oil strategy, Yemen, Gulf security</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">83 videos</div>
+    </a><a href="topics/christianity.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#8b0000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Christianity</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Christian history, theology, cultural influence</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">72 videos</div>
+    </a><a href="topics/democracy.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#4169e1;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Democracy</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Democratic systems, elections, populism</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">68 videos</div>
+    </a><a href="topics/roman_empire.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#8b0000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Roman Empire</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Roman imperial decline parallels</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">66 videos</div>
+    </a><a href="topics/geopolitics.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#4682b4;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Geopolitics</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Global power dynamics, regional strategy</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">57 videos</div>
+    </a><a href="topics/judaism.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#000080;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Judaism</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Jewish history, Zionism, Israeli politics</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">46 videos</div>
+    </a><a href="topics/cold_war.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#708090;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Cold War</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Cold War dynamics, superpower rivalry parallels</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">31 videos</div>
+    </a><a href="topics/constitution.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#00008b;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Constitution</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">US constitutional crisis, federalism, rights</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">30 videos</div>
+    </a><a href="topics/taiwan.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#008080;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Taiwan</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Taiwan strait, Chinese reunification, semiconductor</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">25 videos</div>
+    </a><a href="topics/bitcoin.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#ff8c00;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Bitcoin</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Bitcoin as monetary phenomenon, store of value</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">14 videos</div>
+    </a><a href="topics/federal_reserve.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#006400;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Federal Reserve</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Fed monetary policy, dollar dominance</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">14 videos</div>
+    </a><a href="topics/holy_roman_empire.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#800000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Holy Roman Empire</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Holy Roman Empire history, European imperial structure</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">13 videos</div>
+    </a><a href="topics/woke.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#800080;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Woke</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Woke culture, cultural Marxism, identity politics</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">10 videos</div>
+    </a><a href="topics/secession.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#b22222;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Secession</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">State secession, Texas, national divorce</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">8 videos</div>
+    </a><a href="topics/neocon.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#8b0000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">NeoCon</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Neoconservative ideology, US interventionism</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">7 videos</div>
+    </a><a href="topics/south_china_sea.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#000080;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">South China Sea</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">SCS disputes, Chinese expansion, maritime</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">6 videos</div>
+    </a><a href="topics/world_economic_forum.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#800080;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">World Economic Forum</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">WEF, globalist elite, Great Reset</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">5 videos</div>
+    </a><a href="topics/silk_road.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#ff0000;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">Silk Road</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">Belt and Road Initiative, Chinese global strategy</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">5 videos</div>
+    </a><a href="topics/brics.html" class="topic-card" style="background:white;border:1px solid var(--border);border-radius:8px;padding:1rem;display:block;text-decoration:none;color:inherit">
+      <div style="display:flex;align-items:center;margin-bottom:0.5rem">
+        <span style="display:inline-block;width:10px;height:10px;background:#daa520;border-radius:50%;margin-right:0.5rem"></span>
+        <strong style="color:var(--primary)">BRICS</strong>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted)">BRICS expansion, dedollarization, multipolar world</div>
+      <div style="font-size:0.75rem;color:var(--accent);margin-top:0.5rem">4 videos</div>
+    </a>
+      </div>
+
+      <h2 class="section-title">Recent Videos</h2>
+      <div class="grid">
+    <div class="video-card">
+      <h2><a href="videos/eicb17dE1hI.html">THE GREAT AMERICAN SCAM: HOW DEMOCRATS & REPUBLICANS ARE USING WAR TO TRAP YOU- Prof. Jiang Xueqin"</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-21</span>
+        <span>⏱ 15m 40s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/3WQOCmMmsTA.html">If Prof. Jiang's Law of Proximity is right..Bitcoin MOONS</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-21</span>
+        <span>⏱ 46m 4s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/bitcoin.html" class="topic-badge" style="background:#ff8c00">Bitcoin</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/pUJUG4zc0Ms.html">STOP Watching Strikes — Watch The PATTERN Beneath | Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-21</span>
+        <span>⏱ 11m 33s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/CL6j5efojws.html">After the Silver Rally! What History Says Happens Next</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-21</span>
+        <span>⏱ 16m 53s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/2rf3t33aERI.html">Why America is INCHES Away from Civil War - Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-20</span>
+        <span>⏱ 13m 6s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/u3nTw4ReNx4.html">Iran Challenged U.S. NAVY Submarine l Predictive History</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-20</span>
+        <span>⏱ 21m 6s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/cold_war.html" class="topic-badge" style="background:#708090">Cold War</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/woke.html" class="topic-badge" style="background:#800080">Woke</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/cBqDb4cCARs.html">"Trump Can't End This War — If He Loses Power, He Goes to Prison | Prof Jiang"</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-20</span>
+        <span>⏱ 11m 20s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 50m 25s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/w6OVh4ic_RE.html">This WAR is Getting Out of Hand - Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 12m 32s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/9VfDaIOR9Cs.html">Strategic Secrets: Why Iran Is Impossible to Conquer | Predictive History Jiang</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 12m 41s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/xdotRJEeIPI.html">Professor Jiang’s Warning Comes True — The “Big Event” Begins as Qatar & Tel Aviv Are Hit</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 14m 52s</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/uP9Fnq23lsA.html">Prof Jiang: Trump Can't End This War — If He Loses Power, He Goes to Prison</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>⏱ 1h 55m</span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/federal_reserve.html" class="topic-badge" style="background:#006400">Federal Reserve</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a>
+      </div>
+    </div></div>
+    </div>
+  </div>
+  <div class="footer">
+    Predictive History Wiki · 288 videos · Built from Prof. Jiang Xueqin's content<br>
+    <a href="https://www.youtube.com/@PredictiveHistory" target="_blank">YouTube Channel</a> · 
+    <a href="https://predictivehistory.substack.com/" target="_blank">Substack</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Concepts | Predictive History Wiki</title>
+  <style>
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #333;
+  --muted: #777;
+  --sidebar-width: 260px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: var(--primary); color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 a { color: white; }
+.search-bar { margin-top: 0.5rem; }
+.search-bar input { width: 100%; padding: 0.5rem; border: none; border-radius: 4px; font-size: 0.95rem; }
+.layout { display: flex; max-width: 1400px; margin: 0 auto; }
+.sidebar { width: var(--sidebar-width); background: white; border-right: 1px solid var(--border); height: calc(100vh - 60px); position: sticky; top: 60px; overflow-y: auto; padding: 1rem; }
+.sidebar h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.5rem; letter-spacing: 0.05em; }
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 0.25rem; }
+.sidebar a { display: block; padding: 0.3rem 0.5rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.15s; }
+.sidebar a:hover { background: #f0f0f0; text-decoration: none; }
+.topic-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; color: white; margin: 0.1rem; }
+.main { flex: 1; padding: 2rem; min-width: 0; }
+.video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.video-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.video-card h2 a { color: var(--primary); }
+.video-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.video-meta span { margin-right: 1rem; }
+.topic-list { margin: 0.75rem 0; }
+.intro-block { background: #f8f9fa; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 0.9rem; color: #555; border-radius: 0 4px 4px 0; }
+.intro-block .timestamp { font-family: monospace; color: var(--accent); font-size: 0.8rem; }
+.wiki-nav { margin-bottom: 2rem; }
+.wiki-nav a { margin-right: 1rem; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+.topic-header { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.topic-header h1 { color: var(--primary); margin-bottom: 0.5rem; }
+.cross-refs { background: #f0f4f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+.cross-refs h4 { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.timestamp-link { font-family: monospace; font-size: 0.8rem; color: var(--accent); background: #e8f4fc; padding: 0.1rem 0.4rem; border-radius: 3px; margin: 0 0.25rem; }
+.search-result { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.search-result:last-child { border: none; }
+.search-result h4 { margin-bottom: 0.25rem; }
+.search-result p { font-size: 0.85rem; color: var(--muted); }
+.footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="index.html">📚 Predictive History Wiki</a></h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search wiki..." onkeydown="if(event.key==='Enter') window.location.search='?q='+encodeURIComponent(this.value)">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Thematic Pages</h3>
+      <ul>
+        <li><a href="predictions.html">📌 Predictions</a></li>
+        <li><a href="law_of_proximity.html">📐 Law of Proximity</a></li>
+        <li><a href="eschatology.html">🔮 Eschatology</a></li>
+        <li><a href="strategic_concepts.html">⚔️ Strategic Concepts</a></li>
+      </ul>
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="topics/iran.html">Iran</a></li>
+        <li><a href="topics/china.html">China</a></li>
+        <li><a href="topics/empire.html">Empire</a></li>
+        <li><a href="topics/game_theory.html">Game Theory</a></li>
+        <li><a href="topics/civilization.html">Civilization</a></li>
+        <li><a href="topics/collapse.html">Collapse</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="wiki-nav">
+        <a href="index.html">← Wiki Home</a> | <a href="predictions.html">Predictions</a> | <a href="law_of_proximity.html">Law of Proximity</a> | <a href="eschatology.html">Eschatology</a> | <a href="strategic_concepts.html">Strategic Concepts</a>
+      </div>
+      
+      <div style="background:linear-gradient(135deg,#2c3e50,#34495e);color:white;border-radius:12px;padding:2rem;margin-bottom:2rem">
+        <h1 style="font-size:1.8rem;margin-bottom:0.5rem">⚔️ Strategic Concepts</h1>
+        <p style="opacity:0.9">The core analytical frameworks and key concepts Prof. Jiang Xueqin uses to analyze geopolitics and civilizational dynamics.</p>
+      </div>
+
+      <div class="grid">
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Game Theory</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Strategic interaction analysis, Nash equilibrium, zero-sum vs non-zero-sum games</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 94 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/kS-muAuq62E.html" style="font-size:0.85rem">Game Theory #2:  Why Schools Suck</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/8XdL-7tAqnU.html" style="font-size:0.85rem">Geo-Strategy Update:  US-Iran War Incoming</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/Y-gXVzwbFMU.html" style="font-size:0.85rem">Secret History #21:  Roman Anti-Civilization</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/nOQqGy4boBY.html" style="font-size:0.85rem">Game Theory #14:  The Law of Proximity</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/5I2VPYPJJ68.html" style="font-size:0.85rem">Geo-Strategy Update #5:   The Universal Law of Game Theory</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Law of Proximity</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">"Things close in strategic space affect each other disproportionately"</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 5 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/nOQqGy4boBY.html" style="font-size:0.85rem">Game Theory #14:  The Law of Proximity</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/3WQOCmMmsTA.html" style="font-size:0.85rem">If Prof. Jiang's Law of Proximity is right..Bitcoin MOONS</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/xdotRJEeIPI.html" style="font-size:0.85rem">Professor Jiang’s Warning Comes True — The “Big Event” Begins as Qatar & Tel Aviv Are Hit</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/pUJUG4zc0Ms.html" style="font-size:0.85rem">STOP Watching Strikes — Watch The PATTERN Beneath | Prof. Jiang Xueqin</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/2rf3t33aERI.html" style="font-size:0.85rem">Why America is INCHES Away from Civil War - Prof. Jiang Xueqin</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Grand Strategy</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Long-term national strategy, great power competition</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 14 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/Lma4p2GDxzM.html" style="font-size:0.85rem">SNEAKO X Professor Jiang: Predicting Iran War</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/enEET_0j_Y8.html" style="font-size:0.85rem">Civilization #48:  Napoleon's Empire of Myth</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/_gH4PvIni5E.html" style="font-size:0.85rem">Civilization #END:  The Decline and Fall of the American Empire</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/uHIdRgFypNo.html" style="font-size:0.85rem">Trump's War on Iran / Davos / Canada-China Relations w/ Prof. Jiang Xueqin of Predictive History</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/6rTlI_Qwd1I.html" style="font-size:0.85rem">Jiang Xueqin: New World Order - Iran War Ends U.S. Empire</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Strategy Matrix</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Framework for analyzing strategic options across multiple dimensions</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 3 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/xEEpOxqdU5E.html" style="font-size:0.85rem">Geo-Strategy #1:  Iran's Strategy Matrix</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/H84gSk3a7ok.html" style="font-size:0.85rem">Why Iran Traded Victory for Survival – Prof. Jiang Xueqin</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/-x6gKbIigjU.html" style="font-size:0.85rem">The SECRET "Predictive" History of Jiang Xueqin</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Hegemony</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Global dominance, unipolar moment, hegemonic decline</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 22 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/fz-Dan7NRss.html" style="font-size:0.85rem">Game Theory #11:  The Law of Escalation</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/WHWLILo3Ck8.html" style="font-size:0.85rem">Jiang Xueqin’s Predictive History: Could Iran Defeat the United States?</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/eicb17dE1hI.html" style="font-size:0.85rem">THE GREAT AMERICAN SCAM: HOW DEMOCRATS & REPUBLICANS ARE USING WAR TO TRAP YOU- Prof. Jiang Xueqin"</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/5FvzbUFa_yo.html" style="font-size:0.85rem">⚡WW3: A Major War Begins In OCTOBER w/ Prof. Jiang</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/3WQOCmMmsTA.html" style="font-size:0.85rem">If Prof. Jiang's Law of Proximity is right..Bitcoin MOONS</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Red Lines</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Critical thresholds that trigger major consequences if crossed</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 4 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/5FvzbUFa_yo.html" style="font-size:0.85rem">⚡WW3: A Major War Begins In OCTOBER w/ Prof. Jiang</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/uHIdRgFypNo.html" style="font-size:0.85rem">Trump's War on Iran / Davos / Canada-China Relations w/ Prof. Jiang Xueqin of Predictive History</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/ORyCS0r2Tpg.html" style="font-size:0.85rem">Jiang Xueqin: Predictions for 2026 - Empire, Rivalry & Collapse</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/XvDGvuffOBE.html" style="font-size:0.85rem">How the Next Global Conflict Begins – Prof. Jiang Xueqin</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Trigger</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Events that cascade into larger strategic outcomes</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 30 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/8XdL-7tAqnU.html" style="font-size:0.85rem">Geo-Strategy Update:  US-Iran War Incoming</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/Lma4p2GDxzM.html" style="font-size:0.85rem">SNEAKO X Professor Jiang: Predicting Iran War</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/UmDd-NsGiG0.html" style="font-size:0.85rem">Jiang Xueqin (clip): Predicting World War III</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/WHWLILo3Ck8.html" style="font-size:0.85rem">Jiang Xueqin’s Predictive History: Could Iran Defeat the United States?</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/3WQOCmMmsTA.html" style="font-size:0.85rem">If Prof. Jiang's Law of Proximity is right..Bitcoin MOONS</a>
+      </div>
+    
+    </div>
+    <div class="video-card" style="border-top:3px solid #2c3e50">
+      <h2 style="color:#2c3e50">Threshold</h2>
+      <p style="color:#666;font-size:0.9rem;margin:0.5rem 0">Tipping points in civilizational and strategic dynamics</p>
+      <div style="font-size:0.8rem;color:#888;margin-bottom:0.5rem">Appears in 11 videos</div>
+      
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/asbKjezwIJM.html" style="font-size:0.85rem">Civilization #30:  Dante as the Second Coming of Homer</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/Y-gXVzwbFMU.html" style="font-size:0.85rem">Secret History #21:  Roman Anti-Civilization</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/gXlcR7uHHdA.html" style="font-size:0.85rem">Great Books #5:  The Odyssey</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/5FvzbUFa_yo.html" style="font-size:0.85rem">⚡WW3: A Major War Begins In OCTOBER w/ Prof. Jiang</a>
+      </div>
+    
+      <div style="margin-bottom:0.5rem">
+        <a href="videos/xzNdR9FQiPo.html" style="font-size:0.85rem">Why Isn’t Israel Putting Boots On The Ground In IRAN ?</a>
+      </div>
+    
+    </div></div>
+    </div>
+  </div>
+</body>
+</html>

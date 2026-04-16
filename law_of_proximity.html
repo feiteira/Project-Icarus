@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Law of Proximity | Predictive History Wiki</title>
+  <style>
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #333;
+  --muted: #777;
+  --sidebar-width: 260px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: var(--primary); color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 a { color: white; }
+.search-bar { margin-top: 0.5rem; }
+.search-bar input { width: 100%; padding: 0.5rem; border: none; border-radius: 4px; font-size: 0.95rem; }
+.layout { display: flex; max-width: 1400px; margin: 0 auto; }
+.sidebar { width: var(--sidebar-width); background: white; border-right: 1px solid var(--border); height: calc(100vh - 60px); position: sticky; top: 60px; overflow-y: auto; padding: 1rem; }
+.sidebar h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.5rem; letter-spacing: 0.05em; }
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 0.25rem; }
+.sidebar a { display: block; padding: 0.3rem 0.5rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.15s; }
+.sidebar a:hover { background: #f0f0f0; text-decoration: none; }
+.topic-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; color: white; margin: 0.1rem; }
+.main { flex: 1; padding: 2rem; min-width: 0; }
+.video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.video-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.video-card h2 a { color: var(--primary); }
+.video-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.video-meta span { margin-right: 1rem; }
+.topic-list { margin: 0.75rem 0; }
+.intro-block { background: #f8f9fa; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 0.9rem; color: #555; border-radius: 0 4px 4px 0; }
+.intro-block .timestamp { font-family: monospace; color: var(--accent); font-size: 0.8rem; }
+.wiki-nav { margin-bottom: 2rem; }
+.wiki-nav a { margin-right: 1rem; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+.topic-header { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.topic-header h1 { color: var(--primary); margin-bottom: 0.5rem; }
+.cross-refs { background: #f0f4f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+.cross-refs h4 { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.timestamp-link { font-family: monospace; font-size: 0.8rem; color: var(--accent); background: #e8f4fc; padding: 0.1rem 0.4rem; border-radius: 3px; margin: 0 0.25rem; }
+.search-result { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.search-result:last-child { border: none; }
+.search-result h4 { margin-bottom: 0.25rem; }
+.search-result p { font-size: 0.85rem; color: var(--muted); }
+.footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="index.html">📚 Predictive History Wiki</a></h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search wiki..." onkeydown="if(event.key==='Enter') window.location.search='?q='+encodeURIComponent(this.value)">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Thematic Pages</h3>
+      <ul>
+        <li><a href="predictions.html">📌 Predictions</a></li>
+        <li><a href="law_of_proximity.html">📐 Law of Proximity</a></li>
+        <li><a href="eschatology.html">🔮 Eschatology</a></li>
+        <li><a href="strategic_concepts.html">⚔️ Strategic Concepts</a></li>
+      </ul>
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="topics/iran.html">Iran</a></li>
+        <li><a href="topics/china.html">China</a></li>
+        <li><a href="topics/empire.html">Empire</a></li>
+        <li><a href="topics/game_theory.html">Game Theory</a></li>
+        <li><a href="topics/civilization.html">Civilization</a></li>
+        <li><a href="topics/collapse.html">Collapse</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="wiki-nav">
+        <a href="index.html">← Wiki Home</a> | <a href="predictions.html">Predictions</a> | <a href="law_of_proximity.html">Law of Proximity</a> | <a href="eschatology.html">Eschatology</a> | <a href="strategic_concepts.html">Strategic Concepts</a>
+      </div>
+      
+      <div style="background:linear-gradient(135deg,#8e44ad,#3498db);color:white;border-radius:12px;padding:2rem;margin-bottom:2rem">
+        <h1 style="font-size:1.8rem;margin-bottom:0.5rem">📐 Law of Proximity</h1>
+        <p style="opacity:0.9">Prof. Jiang Xueqin's proprietary analytical framework. "Things that are close to each other in strategic space will affect each other disproportionately." Found in <strong>5 videos</strong>.</p>
+      </div>
+
+      <h2 class="section-title">Core Video (Game Theory #14)</h2>
+      
+      <div class="video-card" style="border-left:4px solid #8e44ad">
+        <h2><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></h2>
+        <div class="video-meta">
+          <span>📅 2026-03-19</span>
+          <span>⏱ 50 min</span>
+          <span>🔗 <a href="https://www.youtube.com/watch?v=nOQqGy4boBY" target="_blank">YouTube</a></span>
+        </div>
+        <div class="topic-list">
+          <a href="topics/united_states.html" class="topic-badge" style="background:#666">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#666">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#666">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#666">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#666">China</a><a href="topics/russia.html" class="topic-badge" style="background:#666">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#666">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#666">Civilization</a><a href="topics/war.html" class="topic-badge" style="background:#666">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#666">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#666">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#666">Game Theory</a><a href="topics/democracy.html" class="topic-badge" style="background:#666">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#666">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#666">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#666">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#666">Trump</a><a href="topics/islam.html" class="topic-badge" style="background:#666">Islam</a><a href="topics/japan.html" class="topic-badge" style="background:#666">Japan</a>
+        </div>
+      </div>
+
+      <h2 class="section-title">All Videos Mentioning Law of Proximity (5)</h2>
+      <div class="grid">
+    <div class="video-card">
+      <h2><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=nOQqGy4boBY" target="_blank">YouTube</a></span>
+      </div>
+      
+      <div style="margin-top:0.75rem;padding:0.75rem;background:#f8f9fa;border-radius:4px;border-left:3px solid #9b59b6">
+        <span style="font-family:monospace;color:#9b59b6;font-size:0.8rem">@ 14:52</span>
+        <div style="margin-top:0.5rem;color:#555">"called the law of proximity."</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/3WQOCmMmsTA.html">If Prof. Jiang's Law of Proximity is right..Bitcoin MOONS</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-21</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=3WQOCmMmsTA" target="_blank">YouTube</a></span>
+      </div>
+      
+      <div style="margin-top:0.75rem;padding:0.75rem;background:#f8f9fa;border-radius:4px;border-left:3px solid #9b59b6">
+        <span style="font-family:monospace;color:#9b59b6;font-size:0.8rem">@ 5:31</span>
+        <div style="margin-top:0.5rem;color:#555">"Jiang does not use the term the law of proximity as a formal"</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/xdotRJEeIPI.html">Professor Jiang’s Warning Comes True — The “Big Event” Begins as Qatar & Tel Aviv Are Hit</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-19</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=xdotRJEeIPI" target="_blank">YouTube</a></span>
+      </div>
+      
+      <div style="margin-top:0.75rem;padding:0.75rem;background:#f8f9fa;border-radius:4px;border-left:3px solid #9b59b6">
+        <span style="font-family:monospace;color:#9b59b6;font-size:0.8rem">@ 9:03</span>
+        <div style="margin-top:0.5rem;color:#555">"the law of proximity. The idea is this."</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/pUJUG4zc0Ms.html">STOP Watching Strikes — Watch The PATTERN Beneath | Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-21</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=pUJUG4zc0Ms" target="_blank">YouTube</a></span>
+      </div>
+      
+    </div>
+    <div class="video-card">
+      <h2><a href="videos/2rf3t33aERI.html">Why America is INCHES Away from Civil War - Prof. Jiang Xueqin</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-20</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=2rf3t33aERI" target="_blank">YouTube</a></span>
+      </div>
+      
+      <div style="margin-top:0.75rem;padding:0.75rem;background:#f8f9fa;border-radius:4px;border-left:3px solid #9b59b6">
+        <span style="font-family:monospace;color:#9b59b6;font-size:0.8rem">@ 0:02</span>
+        <div style="margin-top:0.5rem;color:#555">"Okay? It's called a law of proximity."</div>
+      </div>
+    </div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRICS | Predictive History Wiki</title>
+  <style>
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --bg: #fafafa;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #333;
+  --muted: #777;
+  --sidebar-width: 260px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.header { background: var(--primary); color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 1.4rem; font-weight: 600; }
+.header h1 a { color: white; }
+.search-bar { margin-top: 0.5rem; }
+.search-bar input { width: 100%; padding: 0.5rem; border: none; border-radius: 4px; font-size: 0.95rem; }
+.layout { display: flex; max-width: 1400px; margin: 0 auto; }
+.sidebar { width: var(--sidebar-width); background: white; border-right: 1px solid var(--border); height: calc(100vh - 60px); position: sticky; top: 60px; overflow-y: auto; padding: 1rem; }
+.sidebar h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); margin: 1rem 0 0.5rem; letter-spacing: 0.05em; }
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 0.25rem; }
+.sidebar a { display: block; padding: 0.3rem 0.5rem; border-radius: 4px; font-size: 0.9rem; transition: background 0.15s; }
+.sidebar a:hover { background: #f0f0f0; text-decoration: none; }
+.topic-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.75rem; color: white; margin: 0.1rem; }
+.main { flex: 1; padding: 2rem; min-width: 0; }
+.video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+.video-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.video-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.video-card h2 a { color: var(--primary); }
+.video-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+.video-meta span { margin-right: 1rem; }
+.topic-list { margin: 0.75rem 0; }
+.intro-block { background: #f8f9fa; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; margin-top: 0.75rem; font-size: 0.9rem; color: #555; border-radius: 0 4px 4px 0; }
+.intro-block .timestamp { font-family: monospace; color: var(--accent); font-size: 0.8rem; }
+.wiki-nav { margin-bottom: 2rem; }
+.wiki-nav a { margin-right: 1rem; font-size: 0.9rem; }
+.section-title { font-size: 1.5rem; color: var(--primary); margin: 2rem 0 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+.topic-header { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+.topic-header h1 { color: var(--primary); margin-bottom: 0.5rem; }
+.cross-refs { background: #f0f4f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+.cross-refs h4 { font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--muted); }
+.cross-ref-item { display: inline-block; margin: 0.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.timestamp-link { font-family: monospace; font-size: 0.8rem; color: var(--accent); background: #e8f4fc; padding: 0.1rem 0.4rem; border-radius: 3px; margin: 0 0.25rem; }
+.search-result { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+.search-result:last-child { border: none; }
+.search-result h4 { margin-bottom: 0.25rem; }
+.search-result p { font-size: 0.85rem; color: var(--muted); }
+.footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1><a href="../index.html">📚 Predictive History Wiki</a></h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search wiki..." onkeydown="if(event.key==='Enter') window.location.search='?q='+encodeURIComponent(this.value)">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="sidebar">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="topics/brics.html">BRICS</a></li>
+<li><a href="topics/bitcoin.html">Bitcoin</a></li>
+<li><a href="topics/china.html">China</a></li>
+<li><a href="topics/christianity.html">Christianity</a></li>
+<li><a href="topics/civil_war.html">Civil War</a></li>
+<li><a href="topics/civilization.html">Civilization</a></li>
+<li><a href="topics/cold_war.html">Cold War</a></li>
+<li><a href="topics/collapse.html">Collapse</a></li>
+<li><a href="topics/constitution.html">Constitution</a></li>
+<li><a href="topics/democracy.html">Democracy</a></li>
+<li><a href="topics/empire.html">Empire</a></li>
+<li><a href="topics/europe.html">Europe</a></li>
+<li><a href="topics/federal_reserve.html">Federal Reserve</a></li>
+<li><a href="topics/game_theory.html">Game Theory</a></li>
+<li><a href="topics/geopolitics.html">Geopolitics</a></li>
+<li><a href="topics/gold.html">Gold</a></li>
+<li><a href="topics/holy_roman_empire.html">Holy Roman Empire</a></li>
+<li><a href="topics/india.html">India</a></li>
+<li><a href="topics/iran.html">Iran</a></li>
+<li><a href="topics/islam.html">Islam</a></li>
+<li><a href="topics/israel.html">Israel</a></li>
+<li><a href="topics/japan.html">Japan</a></li>
+<li><a href="topics/judaism.html">Judaism</a></li>
+<li><a href="topics/middle_east.html">Middle East</a></li>
+<li><a href="topics/nato.html">NATO</a></li>
+<li><a href="topics/neocon.html">NeoCon</a></li>
+<li><a href="topics/nuclear.html">Nuclear</a></li>
+<li><a href="topics/roman_empire.html">Roman Empire</a></li>
+<li><a href="topics/russia.html">Russia</a></li>
+<li><a href="topics/saudi_arabia.html">Saudi Arabia</a></li>
+<li><a href="topics/secession.html">Secession</a></li>
+<li><a href="topics/silk_road.html">Silk Road</a></li>
+<li><a href="topics/south_china_sea.html">South China Sea</a></li>
+<li><a href="topics/strategy.html">Strategy</a></li>
+<li><a href="topics/taiwan.html">Taiwan</a></li>
+<li><a href="topics/trump.html">Trump</a></li>
+<li><a href="topics/ukraine.html">Ukraine</a></li>
+<li><a href="topics/united_states.html">United States</a></li>
+<li><a href="topics/war.html">War</a></li>
+<li><a href="topics/woke.html">Woke</a></li>
+<li><a href="topics/world_economic_forum.html">World Economic Forum</a></li>
+      </ul>
+      <h3>Recent Videos</h3>
+      <ul>
+        <li><a href="videos/eicb17dE1hI.html">THE GREAT AMERICAN SCAM: HOW DEMOCRATS &...</a></li>
+<li><a href="videos/3WQOCmMmsTA.html">If Prof. Jiang's Law of Proximity is rig...</a></li>
+<li><a href="videos/pUJUG4zc0Ms.html">STOP Watching Strikes — Watch The PATTER...</a></li>
+<li><a href="videos/CL6j5efojws.html">After the Silver Rally! What History Say...</a></li>
+<li><a href="videos/2rf3t33aERI.html">Why America is INCHES Away from Civil Wa...</a></li>
+<li><a href="videos/u3nTw4ReNx4.html">Iran Challenged U.S. NAVY Submarine l Pr...</a></li>
+<li><a href="videos/cBqDb4cCARs.html">"Trump Can't End This War — If He Loses ...</a></li>
+<li><a href="videos/nOQqGy4boBY.html">Game Theory #14:  The Law of Proximity</a></li>
+<li><a href="videos/w6OVh4ic_RE.html">This WAR is Getting Out of Hand - Prof. ...</a></li>
+<li><a href="videos/9VfDaIOR9Cs.html">Strategic Secrets: Why Iran Is Impossibl...</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="wiki-nav">
+        <a href="../index.html">← Wiki Home</a>
+      </div>
+      <div class="topic-header">
+        <h1><span style="display:inline-block;width:12px;height:12px;background:#daa520;border-radius:50%;margin-right:0.5rem"></span>BRICS</h1>
+        <p>BRICS expansion, dedollarization, multipolar world</p>
+        <div style="margin-top:0.75rem;font-size:0.85rem;color:var(--muted)">
+          Appears in <strong>4</strong> videos
+        </div>
+        
+        <div class="cross-refs">
+          <h4>Related Topics (frequently co-occur)</h4>
+          <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Videos covering "BRICS"</h2>
+      <div class="grid">
+    <div class="video-card">
+      <h2><a href="../videos/brXYY379gvI.html">Israel May Use Tactical Nuk*s On IRAN</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-03-09</span>
+        <span>⏱ 14m 8s</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=brXYY379gvI" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/brics.html" class="topic-badge" style="background:#daa520">BRICS</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/3lSUoP_-aGs.html">Is the West Exceptional? Or Exceptionally EVIL? | Prof. Jiang (Predictive History) &Dimitri Lascaris</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-02-14</span>
+        <span>⏱ 1h 35m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=3lSUoP_-aGs" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/judaism.html" class="topic-badge" style="background:#000080">Judaism</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/brics.html" class="topic-badge" style="background:#daa520">BRICS</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Israel, China, Russia
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/Id4WHhYPcuY.html">Game Theory, Prophecy, and WW3 with Professor Jiang @PredictiveHistory</a></h2>
+      <div class="video-meta">
+        <span>📅 2026-01-17</span>
+        <span>⏱ 1h 24m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=Id4WHhYPcuY" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/civilization.html" class="topic-badge" style="background:#8b4513">Civilization</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/geopolitics.html" class="topic-badge" style="background:#4682b4">Geopolitics</a><a href="topics/democracy.html" class="topic-badge" style="background:#4169e1">Democracy</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/constitution.html" class="topic-badge" style="background:#00008b">Constitution</a><a href="topics/trump.html" class="topic-badge" style="background:#ff0000">Trump</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/islam.html" class="topic-badge" style="background:#006400">Islam</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/brics.html" class="topic-badge" style="background:#daa520">BRICS</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div>
+    <div class="video-card">
+      <h2><a href="../videos/B_al2wgk49Y.html">Geo-Strategy #10:  Putin's Strategic Imagination</a></h2>
+      <div class="video-meta">
+        <span>📅 2024-06-05</span>
+        <span>⏱ 1h 5m</span>
+        <span>🔗 <a href="https://www.youtube.com/watch?v=B_al2wgk49Y" target="_blank">YouTube</a></span>
+      </div>
+      <div class="topic-list">
+        <a href="topics/united_states.html" class="topic-badge" style="background:#3498db">United States</a><a href="topics/iran.html" class="topic-badge" style="background:#2ecc71">Iran</a><a href="topics/saudi_arabia.html" class="topic-badge" style="background:#e67e22">Saudi Arabia</a><a href="topics/israel.html" class="topic-badge" style="background:#9b59b6">Israel</a><a href="topics/china.html" class="topic-badge" style="background:#e74c3c">China</a><a href="topics/russia.html" class="topic-badge" style="background:#1abc9c">Russia</a><a href="topics/ukraine.html" class="topic-badge" style="background:#34495e">Ukraine</a><a href="topics/empire.html" class="topic-badge" style="background:#800000">Empire</a><a href="topics/collapse.html" class="topic-badge" style="background:#c0392b">Collapse</a><a href="topics/war.html" class="topic-badge" style="background:#dc143c">War</a><a href="topics/strategy.html" class="topic-badge" style="background:#006400">Strategy</a><a href="topics/nuclear.html" class="topic-badge" style="background:#8b0000">Nuclear</a><a href="topics/game_theory.html" class="topic-badge" style="background:#4b0082">Game Theory</a><a href="topics/middle_east.html" class="topic-badge" style="background:#a0522d">Middle East</a><a href="topics/gold.html" class="topic-badge" style="background:#daa520">Gold</a><a href="topics/civil_war.html" class="topic-badge" style="background:#b22222">Civil War</a><a href="topics/christianity.html" class="topic-badge" style="background:#8b0000">Christianity</a><a href="topics/europe.html" class="topic-badge" style="background:#4682b4">Europe</a><a href="topics/nato.html" class="topic-badge" style="background:#00008b">NATO</a><a href="topics/india.html" class="topic-badge" style="background:#ff8c00">India</a><a href="topics/japan.html" class="topic-badge" style="background:#dc143c">Japan</a><a href="topics/taiwan.html" class="topic-badge" style="background:#008080">Taiwan</a><a href="topics/brics.html" class="topic-badge" style="background:#daa520">BRICS</a>
+      </div>
+      
+      <div style="font-size:0.8rem;color:#888;margin-top:0.5rem">
+        Also covers: United States, Iran, Saudi Arabia, Israel, China
+      </div>
+    </div></div>
+    </div>
+  </div>
+</body>
+</html>
