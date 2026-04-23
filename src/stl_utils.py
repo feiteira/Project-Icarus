@@ -191,6 +191,50 @@ def tube(cx=0.0, cy=0.0, cz=0.0, r_inner=0.8, r_outer=1.0, h=1.0, axis='z', segm
     return np.array(tris, dtype=np.float32)
 
 
+def disc(cx=0.0, cy=0.0, cz=0.0, r_inner=0.0, r_outer=1.0, axis='z', segments=24):
+    """
+    Solid flat disc (annulus = disc with hole, or full disc if r_inner=0).
+    """
+    tris = []
+    for i in range(segments):
+        t0 = 2*math.pi*i/segments
+        t1 = 2*math.pi*(i+1)/segments
+        if axis == 'z':
+            v0 = np.array([cx + r_inner*math.cos(t0), cy + r_inner*math.sin(t0), cz], dtype=np.float32)
+            v1 = np.array([cx + r_inner*math.cos(t1), cy + r_inner*math.sin(t1), cz], dtype=np.float32)
+            v2 = np.array([cx + r_outer*math.cos(t0), cy + r_outer*math.sin(t0), cz], dtype=np.float32)
+            v3 = np.array([cx + r_outer*math.cos(t1), cy + r_outer*math.sin(t1), cz], dtype=np.float32)
+            v_c = np.array([cx, cy, cz], dtype=np.float32)
+        elif axis == 'x':
+            v0 = np.array([cx, cy + r_inner*math.cos(t0), cz + r_inner*math.sin(t0)], dtype=np.float32)
+            v1 = np.array([cx, cy + r_inner*math.cos(t1), cz + r_inner*math.sin(t1)], dtype=np.float32)
+            v2 = np.array([cx, cy + r_outer*math.cos(t0), cz + r_outer*math.sin(t0)], dtype=np.float32)
+            v3 = np.array([cx, cy + r_outer*math.cos(t1), cz + r_outer*math.sin(t1)], dtype=np.float32)
+            v_c = np.array([cx, cy, cz], dtype=np.float32)
+        elif axis == 'y':
+            v0 = np.array([cx + r_inner*math.cos(t0), cy, cz + r_inner*math.sin(t0)], dtype=np.float32)
+            v1 = np.array([cx + r_inner*math.cos(t1), cy, cz + r_inner*math.sin(t1)], dtype=np.float32)
+            v2 = np.array([cx + r_outer*math.cos(t0), cy, cz + r_outer*math.sin(t0)], dtype=np.float32)
+            v3 = np.array([cx + r_outer*math.cos(t1), cy, cz + r_outer*math.sin(t1)], dtype=np.float32)
+            v_c = np.array([cx, cy, cz], dtype=np.float32)
+        else:
+            raise ValueError(f"Bad axis: {axis}")
+        if r_inner > 0:
+            tris.append((v0, v1, v_c))
+            tris.append((v2, v3, v_c))
+            tris.append((v0, v2, v1))
+            tris.append((v1, v2, v3))
+        else:
+            tris.append((v0, v1, v_c))
+            tris.append((v2, v3, v_c))
+    return np.array(tris, dtype=np.float32)
+
+
+def ring(r_inner, r_outer, cz=0.0, axis='z'):
+    """Alias for disc — annular ring at a given z position."""
+    return disc(0, 0, cz, r_inner=r_inner, r_outer=r_outer, axis=axis)
+
+
 def screw_standoff(cx=0.0, cy=0.0, cz=0.0, outer_r=3.5, inner_r=1.5, h=10.0, segments=16):
     """Hollow standoff pillar with center through-hole (for M3 screw)."""
     return tube(cx, cy, cz, r_inner=inner_r, r_outer=outer_r, h=h, axis='z', segments=segments)

@@ -1,168 +1,276 @@
 """
-Emitter Wire Supports for Ion Wind Aircraft
-Holds thin tungsten wire (~0.5mm) under tension between two frames.
-Parametric design for Bambu Lab 3D printing.
+Emitter designs for Ion Wind Aircraft — REDESIGNED based on Integza/Plasma Channel research.
+
+KEY INSIGHTS from Plasma Channel & Integza transcripts:
+1. Emitter (positive electrode) = POINTY — razor blades create corona discharge → generates wind
+2. Collector (negative/ground) = SMOOTH and ROUNDED — avoids sparks, doesn't generate wind alone
+3. Gap: 11mm better than 9mm (Plasma Channel data)
+4. Weight is critical — every gram counts at this scale
+5. Razor blades work well as positive electrode
+6. NEW: Peripheral acceleration design (hollow tube) — convergent approach
+
+IMPORTANT SAFETY: 20-40 kV is lethal. Never power while handling exposed electrodes.
 """
 
 from stl_utils import *
 import os
 
+# ── Design Parameters ────────────────────────────────────────────────────────
 P = dict(
-    wire_dia=0.5,
-    wire_span=200.0,
-    gap=25.0,
-    frame_W=80.0,
-    frame_H=60.0,
-    frame_D=10.0,
-    support_spacing=25.0,
-    post_r=4.0,
-    post_base_w=16.0,
-    post_base_d=12.0,
-    slot_w=2.0,
-    slot_d=4.0,
-    adj_body_r=8.0,
-    adj_body_L=20.0,
-    spring_pocket_r=7.0,
-    flange_t=2.5,
-    insulator_w=70.0,
-    insulator_h=8.0,
-    insulator_t=3.0,
-    snap_w=4.0, snap_h=2.0, snap_d=3.0,
+    # Collector (ground/negative) — SMOOTH rounded tube
+    collector_outer_d=50.0,   # Outer diameter of collector tube (mm)
+    collector_wall_t=0.5,      # Wall thickness for electroplating base
+    collector_length=80.0,     # Total length of collector tube
+    
+    # Emitter (positive/HV) — POINTY sharp edges
+    emitter_ring_d=46.0,      # Diameter of emitter ring (inside collector)
+    blade_count=8,             # Number of razor blade points
+    blade_thickness=0.3,       # Blade material thickness
+    blade_projection=1.5,     # How far blade tip projects from ring
+    
+    # Gap (critical for corona discharge)
+    gap=11.0,                 # Gap between emitter tip and collector wall (mm) — 11mm optimal
+    
+    # Frame / Housing
+    housing_d=58.0,           # Outer housing diameter
+    housing_length=90.0,      # Housing length
+    wall_t=2.0,               # Housing wall thickness
+    
+    # Mounting
+    flange_d=54.0,
+    flange_t=3.0,
+    mount_hole_d=3.0,
+    mount_screw_d=2.5,
 )
 
 
-def emitter_frame():
-    """Rectangular wire frame — hollow ring with mounting flanges."""
-    W, H, D = P["frame_W"], P["frame_H"], P["frame_D"]
-    strut = 5.0
+def collector_smooth_ring():
+    """
+    NEGATIVE electrode (ground) — smooth rounded metal surface.
+    Based on Integza findings: round ring doesn't spark but doesn't produce wind alone.
+    This is the OUTER tube in the peripheral acceleration design.
+    We print in resin then electroplate with copper.
+    """
+    ro = P["collector_outer_d"] / 2
+    wt = P["collector_wall_t"]
+    L = P["collector_length"]
+    
     tris = []
-    tris.extend(cube(0, 0, 0, D, strut, strut))                          # bottom
-    tris.extend(cube(0, 0, H - strut, D, strut, strut))                    # top
-    tris.extend(cube(0, 0, 0, strut, W, strut))                           # left
-    tris.extend(cube(0, W - strut, 0, strut, strut, H))                 # right
-    tris.extend(cube(0, -6, 0, strut, 6, H))                              # front gusset
-    tris.extend(cube(0, W - strut, 0, strut, 6, H))                        # back gusset
-
-    # Mounting flanges
-    fw, fh = 12.0, 3.0
-    tris.extend(cube(0, -fw/2, H, D, fw, fh))
-    tris.extend(cube(0, -fw/2, -fh, D, fw, fh))
-
-    # Screw holes
-    for xh in [D/4, 3*D/4]:
-        for yo in [-6, 6]:
-            tris.extend(cylinder(xh, yo, H + 1.5, 1.5, 8, axis='z', segments=8))
-            tris.extend(cylinder(xh, yo, -1.5, 1.5, 8, axis='z', segments=8))
-
+    # Outer smooth tube (collector)
+    tris.extend(tube(0, 0, 0,
+                    r_inner=ro - wt,
+                    r_outer=ro,
+                    h=L, axis='x', segments=48))
+    
+    # End caps with rounded edges (no sharp corners)
+    # Front cap
+    tris.extend(ring(ro - wt, ro, L, axis='x'))
+    # Back cap
+    tris.extend(ring(ro - wt, ro, 0, axis='x'))
+    
+    # Mounting flanges at each end
+    fd = P["flange_d"] / 2
+    ft = P["flange_t"]
+    tris.extend(disc(0, 0, L, fd, ro, axis='x', segments=48))
+    tris.extend(disc(0, 0, -ft, fd, ro, axis='x', segments=48))
+    
+    # Mounting holes in flanges
+    for angle in [0, 90, 180, 270]:
+        rad = np.radians(angle)
+        for r_frac in [0.3, 0.7]:
+            rr = r_frac * fd
+            y = rr * np.cos(rad)
+            z = rr * np.sin(rad)
+            tris.extend(cylinder(L + ft/2, y, z, P["mount_screw_d"]/2, ft + 2, axis='x', segments=12))
+    
     return np.array(tris, dtype=np.float32)
 
 
-def wire_support_post():
-    """Single wire support post with wire-guide notch at top."""
-    r = P["post_r"]
-    bw, bd = P["post_base_w"], P["post_base_d"]
-    H = P["frame_H"]
-    slot_w, slot_d = P["slot_w"], P["slot_d"]
-
+def emitter_razor_ring():
+    """
+    POSITIVE electrode (HV) — array of sharp points for corona discharge.
+    Based on Plasma Channel: razor blades on trailing edge of airfoil.
+    This is the INNER emitter in the peripheral acceleration design.
+    Sharp points create the electric field concentration for ion generation.
+    """
+    outer_r = P["collector_outer_d"] / 2 - P["collector_wall_t"]
+    inner_r = P["emitter_ring_d"] / 2
+    L = P["collector_length"]
+    blade_t = P["blade_thickness"]
+    n_blades = P["blade_count"]
+    blade_proj = P["blade_projection"]
+    
     tris = []
-    tris.extend(cube(-bd/2, -bw/2, 0, bd, bw, 2.0))   # base plate
-
-    # Main post (12-sided approx)
-    n = 12
-    for i in range(n):
-        t0 = 2*np.pi*i/n
-        t1 = 2*np.pi*(i+1)/n
-        dx = r * abs(np.cos(t1) - np.cos(t0)) + 1
-        dy = r * abs(np.sin(t1) - np.sin(t0)) + 1
-        tris.extend(cube(r*np.cos(t0) - dx/2, r*np.sin(t0) - dy/2, 2,
-                          dx, dy, H - 10))
-
-    # Wire guide notch
-    nz = H - 3
-    tris.extend(cube(-slot_d/2, -slot_w/2, nz, slot_d, slot_w, 4.0))
-
+    
+    # Central support ring
+    tris.extend(tube(0, 0, 0,
+                    r_inner=inner_r - 2,
+                    r_outer=inner_r,
+                    h=L, axis='x', segments=32))
+    
+    # Emitter wire ring inside (thin wire for sharp corona)
+    wire_r = inner_r - 1
+    tris.extend(tube(0, 0, 0,
+                    r_inner=wire_r - 0.3,
+                    r_outer=wire_r,
+                    h=L, axis='x', segments=32))
+    
+    # Razor blade tips projecting outward — these create corona
+    # Each blade is a thin strip with a sharp outer edge
+    gap = P["gap"]
+    emitter_tip_r = outer_r - gap  # Where tips should end up
+    
+    for i in range(n_blades):
+        angle = 2 * np.pi * i / n_blades
+        # Each blade is a thin rectangular strip from inner ring to near outer ring
+        y_center = emitter_tip_r * np.cos(angle)
+        z_center = emitter_tip_r * np.sin(angle)
+        
+        # Blade body — thin strip
+        blade_w = 2.0  # blade width
+        blade_l = emitter_tip_r - inner_r + blade_proj
+        
+        tris.extend(cube(0, 
+                         y_center - blade_w/2, 
+                         z_center - blade_w/2,
+                         blade_l, blade_w, blade_w))
+    
+    # End caps for emitter ring
+    tris.extend(disc(0, 0, -1, inner_r + blade_proj, inner_r - 2, axis='x', segments=32))
+    tris.extend(disc(0, 0, L + 1, inner_r + blade_proj, inner_r - 2, axis='x', segments=32))
+    
     return np.array(tris, dtype=np.float32)
 
 
-def wire_support_array():
-    """All wire support posts along the wire span."""
-    spacing = P["support_spacing"]
-    span = P["wire_span"]
-    n = int(span / spacing) + 1
-    parts = [wire_support_post() for _ in range(n)]
-    if parts:
-        return merge(*[translate(parts[i], x=i*spacing) for i in range(n)])
-    return np.zeros((0, 3, 3), dtype=np.float32)
-
-
-def tension_adjuster():
-    """Spring-loaded tension adjuster at wire end."""
-    br, bL = P["adj_body_r"], P["adj_body_L"]
-    spr, fl = P["spring_pocket_r"], P["flange_t"]
-    sw = P["slot_w"] + 0.5
-
-    tris = []
-    tris.extend(cylinder(0, 0, 0, br, bL, axis='x', segments=24))
-    tris.extend(cylinder(bL/2, 0, br - 3, sw/2 + 1, bL/2 + 2, axis='z', segments=12))
-    tris.extend(cube(-fl, -br*1.25, -br*1.25, fl, br*2.5, br*2.5))  # flange
-    tris.extend(cylinder(bL - bL*0.5, 0, 0, spr, bL*0.5, axis='x', segments=24))
-    tris.extend(cylinder(bL, 0, 0, br*0.7, 4.0, axis='x', segments=16))
-    for yo in [-8, 0, 8]:
-        tris.extend(cylinder(-0.5, yo, 0, 1.2, 8.0, axis='y', segments=8))
-
-    return np.array(tris, dtype=np.float32)
-
-
-def insulator_spacer():
-    """Insulating spacer plate between HV emitter and grounded frame."""
-    w, h, t = P["insulator_w"], P["insulator_h"], P["insulator_t"]
-    nw, nh, nd = P["snap_w"], P["snap_h"], P["snap_d"]
-
-    tris = []
-    tris.extend(cube(0, 0, 0, t, w, h))
-
-    # Snap-fit tabs
-    for yy in [w*0.25, w*0.75]:
-        tris.extend(cube(t, yy - nw/2, h - nh, nd, nw, nh))
-
-    # Cable tie slots
-    for zz in [h*0.3, h*0.7]:
-        tris.extend(cube(0, w/2 - 2, zz, t + 5, 4, 1.5))
-
-    return np.array(tris, dtype=np.float32)
-
-
-def complete_emitter_assembly():
-    """Full emitter assembly: frame + supports + tension adjusters."""
-    span = P["wire_span"]
-    FH = P["frame_H"]
-
+def peripheral_thruster_demo():
+    """
+    Complete peripheral acceleration thruster — DEMO VERSION.
+    
+    Design based on Plasma Channel's "hollow thruster with peripheral acceleration":
+    - Ions are generated at pointy emitter tips (razor blades)
+    - Air enters from SIDEs (periphery) not front
+    - No sequential column acceleration — convergent approach
+    - This avoids the diminishing returns problem seen in Mark I (40W → 2.1 → 3.2 → 4 m/s)
+    
+    Geometry:
+    - Outer smooth tube = GROUND (collector) 
+    - Inner sharp ring = HV positive (emitter)
+    - Gap = 11mm (optimal from Plasma Channel's 9mm vs 11mm tests)
+    """
     parts = []
-    # Top frame
-    parts.append(translate(emitter_frame(), x=0, y=0, z=FH))
-    # Bottom frame
-    parts.append(translate(emitter_frame(), x=0, y=0, z=0))
-    # Wire supports
-    parts.append(wire_support_array())
-    # Left adjuster
-    adj_l = translate(tension_adjuster(), x=-5, y=P["frame_W"]/2, z=FH/2)
-    parts.append(rotate(adj_l, 90, axis='z'))
-    # Right adjuster
-    adj_r = translate(tension_adjuster(), x=span + 5, y=P["frame_W"]/2, z=FH/2)
-    parts.append(rotate(adj_r, -90, axis='z'))
-
+    
+    # Collector (outer, smooth, grounded)
+    parts.append(collector_smooth_ring())
+    
+    # Emitter (inner, pointy, HV positive)
+    emitter = emitter_razor_ring()
+    parts.append(emitter)
+    
+    # Insulating spacers at ends (keep emitter centered)
+    spacer_t = 2.0
+    for x_pos in [-1, P["collector_length"] + 1]:
+        tris = []
+        outer_r = P["collector_outer_d"] / 2 - P["collector_wall_t"]
+        inner_r = P["emitter_ring_d"] / 2
+        tris.extend(tube(x_pos, 0, 0, r_inner=inner_r - 1, r_outer=inner_r + 2, h=4.0, axis='x', segments=32))
+        parts.append(np.array(tris, dtype=np.float32))
+    
     return merge(*parts) if parts else np.zeros((0,3,3), dtype=np.float32)
+
+
+def razor_blade_array_demo():
+    """
+    Simpler demo: razor blade array for testing on bench.
+    Based on Plasma Channel's trailing edge design.
+    Single row of razor blades, aluminum foil collector on other side.
+    """
+    parts = []
+    
+    # Mounting rail
+    rail_L = 100.0
+    rail_h = 5.0
+    rail_w = 4.0
+    tris = []
+    tris.extend(cube(0, 0, 0, rail_L, rail_w, rail_h))
+    # Rail mounting holes
+    for x in [10, 30, 50, 70, 90]:
+        tris.extend(cylinder(x, rail_w/2, -1, P["mount_screw_d"]/2, rail_h + 2, axis='z', segments=8))
+    parts.append(np.array(tris, dtype=np.float32))
+    
+    # Razor blades (positive/HV emitter) — alternating orientation
+    blade_L = 30.0
+    blade_h = 0.5
+    n = 3
+    spacing = rail_L / (n + 1)
+    for i in range(n):
+        x = (i + 1) * spacing
+        # Blade pointing forward (toward collector)
+        tris = cube(x - blade_L/2, 0, rail_h, blade_L, blade_h, blade_h)
+        parts.append(translate(np.array(tris, dtype=np.float32), x=0, y=rail_w, z=0))
+    
+    # Aluminum foil collector plate (smooth, grounded)
+    collector_t = 0.05  # foil
+    collector_h = 40.0
+    collector_L = 10.0
+    collector_x = rail_L + 5  # gap from last blade
+    tris = []
+    tris.extend(cube(collector_x, 0, 0, collector_t, collector_h, collector_L))
+    parts.append(translate(np.array(tris, dtype=np.float32), x=0, y=-collector_h/2 + rail_w/2, z=0))
+    
+    return merge(*parts) if parts else np.zeros((0,3,3), dtype=np.float32)
+
+
+def housing_demo():
+    """
+    3D printed housing for demo thruster.
+    Light resin body — can be electroplated for collector surface.
+    """
+    Do = P["housing_d"] / 2
+    Di = P["collector_outer_d"] / 2 + 1  # clearance for collector
+    L = P["housing_length"]
+    wt = P["wall_t"]
+    
+    tris = []
+    # Outer housing tube
+    tris.extend(tube(0, 0, 0,
+                    r_inner=Di,
+                    r_outer=Do,
+                    h=L, axis='x', segments=48))
+    
+    # End caps with mounting
+    tris.extend(disc(0, 0, -wt, Do, Di, axis='x', segments=48))
+    tris.extend(disc(0, 0, L, Do, Di, axis='x', segments=48))
+    
+    # Mounting flange rings
+    fd = P["flange_d"] / 2
+    ft = P["flange_t"]
+    tris.extend(disc(0, 0, -wt - ft, fd, Do, axis='x', segments=48))
+    tris.extend(disc(0, 0, L + wt, fd, Do, axis='x', segments=48))
+    
+    # Mounting holes
+    for angle in [0, 60, 120, 180, 240, 300]:
+        rad = np.radians(angle)
+        y = fd * 0.7 * np.cos(rad)
+        z = fd * 0.7 * np.sin(rad)
+        tris.extend(cylinder(-wt - ft/2, y, z, P["mount_screw_d"]/2, ft + 2, axis='x', segments=8))
+        tris.extend(cylinder(L + wt + ft/2, y, z, P["mount_screw_d"]/2, ft + 2, axis='x', segments=8))
+    
+    return np.array(tris, dtype=np.float32)
 
 
 def generate_all(out_dir):
     os.makedirs(out_dir, exist_ok=True)
-    print("Emitter parts:")
-    write_stl(os.path.join(out_dir, "emitter_frame.stl"), emitter_frame())
-    write_stl(os.path.join(out_dir, "wire_support_post.stl"), wire_support_post())
-    write_stl(os.path.join(out_dir, "wire_support_array.stl"), wire_support_array())
-    write_stl(os.path.join(out_dir, "tension_adjuster.stl"), tension_adjuster())
-    write_stl(os.path.join(out_dir, "insulator_spacer.stl"), insulator_spacer())
-    write_stl(os.path.join(out_dir, "emitter_assembly.stl"), complete_emitter_assembly())
+    print("Emitter/Thruster parts (REDESIGNED):")
+    write_stl(os.path.join(out_dir, "collector_smooth_ring.stl"), collector_smooth_ring())
+    write_stl(os.path.join(out_dir, "emitter_razor_ring.stl"), emitter_razor_ring())
+    write_stl(os.path.join(out_dir, "peripheral_thruster_demo.stl"), peripheral_thruster_demo())
+    write_stl(os.path.join(out_dir, "razor_blade_array_demo.stl"), razor_blade_array_demo())
+    write_stl(os.path.join(out_dir, "thruster_housing_demo.stl"), housing_demo())
+    print(f"  collector_smooth_ring.stl — smooth tube for electroplating")
+    print(f"  emitter_razor_ring.stl — sharp points for corona discharge")
+    print(f"  peripheral_thruster_demo.stl — complete demo unit")
+    print(f"  razor_blade_array_demo.stl — simple bench test version")
+    print(f"  thruster_housing_demo.stl — 3D printable housing")
 
 
 if __name__ == "__main__":
