@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Icarus — DIY Electrohydrodynamic Aircraft</title>
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --surface: #111827;
+      --surface2: #1a2332;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --blue: #3b82f6;
+      --red: #ef4444;
+      --orange: #f59e0b;
+      --green: #10b981;
+      --purple: #8b5cf6;
+      --cyan: #06b6d4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 2rem 2rem; }
+
+    header { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--cyan), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .tagline { color: var(--muted); font-size: 1.1rem; }
+
+    /* Tab Navigation */
+    .tabs { display: flex; gap: 0.25rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0; flex-wrap: wrap; }
+    .tab { padding: 0.75rem 1.25rem; background: transparent; border: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s; border-radius: 6px 6px 0 0; text-decoration: none; display: inline-block; }
+    .tab:hover { color: var(--text); background: var(--surface); }
+    .tab.active { color: var(--cyan); border-bottom-color: var(--cyan); background: var(--surface); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: var(--cyan); }
+    p { color: var(--muted); margin-bottom: 1rem; }
+
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.875rem; margin: 0; }
+
+    .specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .spec { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+    .spec .value { font-size: 1.6rem; font-weight: 800; color: var(--cyan); }
+    .spec .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .warning { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning strong { color: var(--red); }
+
+    .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .tech-item { background: var(--surface); border-radius: 8px; padding: 1rem; }
+    .tech-item h4 { font-size: 0.875rem; margin-bottom: 0.25rem; }
+    .tech-item p { font-size: 0.8rem; margin: 0; }
+
+    .status { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+    .status span { font-size: 0.875rem; color: var(--muted); }
+
+    .team { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .person { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--orange)); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+
+    .links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .link { background: var(--blue); color: white; text-decoration: none; padding: 0.5rem 1.25rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; display: inline-block; }
+    .link:hover { opacity: 0.9; }
+    .link.secondary { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+
+    /* File Browser */
+    .subsystem { margin-bottom: 1.5rem; }
+    .subsystem-title { font-size: 0.9rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
+    .file-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; transition: border-color 0.2s; }
+    .file-item:hover { border-color: var(--cyan); }
+    .file-icon { font-size: 1rem; flex-shrink: 0; }
+    .file-name { font-size: 0.8rem; color: var(--text); flex: 1; word-break: break-all; }
+    .file-size { font-size: 0.7rem; color: var(--muted); flex-shrink: 0; }
+    .file-download { background: var(--surface2); border: 1px solid var(--border); color: var(--cyan); text-decoration: none; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; flex-shrink: 0; }
+    .file-download:hover { background: var(--cyan); color: var(--bg); }
+
+    .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .preview-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .preview-card img { width: 100%; height: auto; display: block; }
+    .preview-card .caption { padding: 0.75rem; font-size: 0.8rem; color: var(--muted); text-align: center; }
+
+    /* Dev Diary */
+    .diary-entry { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; position: relative; overflow: hidden; }
+    .diary-entry::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cyan); }
+    .diary-entry.date-2026-04-23::before { background: var(--green); }
+    .diary-entry.date-2026-04-22::before { background: var(--orange); }
+    .diary-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .diary-date { font-size: 0.75rem; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.05em; }
+    .diary-tag { font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 999px; background: rgba(16,185,129,0.15); color: var(--green); font-weight: 600; }
+    .diary-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .diary-body { font-size: 0.875rem; color: var(--muted); }
+    .diary-body p { margin-bottom: 0.5rem; }
+    .diary-body p:last-child { margin-bottom: 0; }
+
+    footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+
+    @media (max-width: 600px) {
+      .tech-grid, .file-grid, .preview-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2rem; }
+      .container { padding: 0 1rem 1rem; }
+    }
+  </style>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[href="#${id}"]`).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Project Icarus</h1>
+      <p class="tagline">DIY Electrohydrodynamic Aircraft — Ion Wind Propulsion</p>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+      <button class="tab active" onclick="showTab('tab-overview')">Overview</button>
+      <button class="tab" onclick="showTab('tab-files')">🖨️ 3D Files</button>
+      <button class="tab" onclick="showTab('tab-previews')">📸 Previews</button>
+      <button class="tab" onclick="showTab('tab-diary')">📔 Dev Diary</button>
+    </nav>
+
+    <!-- OVERVIEW TAB -->
+    <div id="tab-overview" class="tab-content active">
+      <div class="section">
+        <div class="status">
+          <div class="dot"></div>
+          <span>Project Status: Research & Design Phase</span>
+        </div>
+        <p>
+          We are exploring the possibility of building a small aircraft powered entirely by <strong>Electrohydrodynamic (EHD) thrust</strong> — commonly known as "ion wind" or "electrohydrodynamic propulsion." Instead of using propellers or jet engines, the aircraft would generate thrust by ionizing air molecules and accelerating them with a high-voltage electric field.
+        </p>
+        <p>
+          This project is inspired by the <strong>MIT ion wind aircraft</strong> research (Steven Barrett et al., 2018), which demonstrated sustained flight using this technology. Our goal is to build a smaller, DIY version using 3D-printed components and accessible electronics.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>⚙️ How It Works</h2>
+        <div class="card">
+          <h3>Electrohydrodynamic Thrust</h3>
+          <p>The principle is simple in theory: a thin wire (the <strong>emitter</strong>) is charged to 20–40 kV. This ionizes the surrounding air molecules, stripping electrons to create positive ions. These ions are then attracted to a nearby surface (the <strong>collector</strong>) which is grounded or at a lower potential. As the ions travel from emitter to collector, they collide with neutral air molecules, transferring momentum and creating a net airflow — the "ion wind." This wind produces thrust that can propel an aircraft.</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-item" style="border-left: 3px solid var(--red);">
+            <h4>🔌 Emitter Wire</h4>
+            <p>Thin tungsten or steel wire (~0.5mm). Charged to 20–40 kV using a boost converter or flyback transformer.</p>
+          </div>
+          <div class="tech-item" style="border-left: 3px solid var(--orange);">
+            <h4>🎯 Collector Strip</h4>
+            <p>Smooth flat surface or tube at lower potential. Positioned ~25mm from the emitter for optimal ion collection.</p>
+          </div>
+          <div class="tech-item" style="border-left: 3px solid var(--green);">
+            <h4>🔋 Power Source</h4>
+            <p>Lightweight LiPo or 18650 battery. Boost converter steps up to 20–40 kV. Power consumption is surprisingly low.</p>
+          </div>
+          <div class="tech-item" style="border-left: 3px solid var(--blue);">
+            <h4>🪶 Airframe</h4>
+            <p>3D-printed lightweight structure. Wings designed to maximize thrust efficiency from ion wind flow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📊 Project Specs (Target)</h2>
+        <div class="specs">
+          <div class="spec"><div class="value">~300mm</div><div class="label">Wingspan</div></div>
+          <div class="spec"><div class="value">~180g</div><div class="label">Est. Weight</div></div>
+          <div class="spec"><div class="value">20–40kV</div><div class="label">HV Required</div></div>
+          <div class="spec"><div class="value">&lt;1N</div><div class="label">Est. Thrust</div></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>⚠️ Safety Warning</h2>
+        <div class="warning">
+          <strong>⚡ High Voltage Hazard — 20–40 kV can cause serious injury or death.</strong><br><br>
+          This project involves high-voltage electronics that are dangerous. If you attempt to replicate this project:
+          <ul style="margin: 0.5rem 0 0.5rem 1.5rem; color: var(--muted); font-size: 0.875rem;">
+            <li>Never power the system while handling exposed electrodes</li>
+            <li>Maintain minimum 25mm clearance between emitter and collector at all times</li>
+            <li>Use proper insulation and enclosure for all HV components</li>
+            <li>Work with experienced supervision if you are new to high-voltage electronics</li>
+            <li>This is a research/experimental project — not a finished product</li>
+          </ul>
+          <strong>Do not attempt to build this if you are not comfortable working with high voltage.</strong>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🔬 Research References</h2>
+        <div class="card">
+          <h3>Key Papers & Resources</h3>
+          <ul style="margin: 0.5rem 0 0.5rem 1.5rem; color: var(--muted); font-size: 0.875rem;">
+            <li><strong>MIT Barrett et al. (2018)</strong> — "Flight of an electrohydrodynamically powered aircraft" — Nature. First sustained EHD flight.</li>
+            <li><strong>MIT Barrett (2021)</strong> — Further refinements to EHD propulsion theory and scaling laws.</li>
+            <li><strong>FliteTest YouTube</strong> — Practical RC aircraft building techniques and 3D printing for RC planes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>👥 Team</h2>
+        <div class="team">
+          <div class="person"><div class="avatar">CN</div> Carlos Nogueira — Project Lead & Builder</div>
+          <div class="person"><div class="avatar">F</div> Feiteira — Hardware & 3D Printing</div>
+        </div>
+        <p style="margin-top:1rem;">AI-assisted design & research by <strong>Clawdia</strong> (OpenClaw AI Agent).</p>
+      </div>
+    </div>
+
+    <!-- FILES TAB -->
+    <div id="tab-files" class="tab-content">
+      <div class="section">
+        <h2>🖨️ 3D-Printed Components</h2>
+        <p>All parts designed for <strong>Bambu Lab X1C/P1P</strong> (256×256×256mm build volume). Parametric Python scripts generate STL files — edit dimensions in code and regenerate.</p>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">✈️ Fuselage (5 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">📦</span><span class="file-name">fuselage_shell.stl</span><span class="file-size">3.6KB</span><a href="/files/fuselage/fuselage_shell.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔋</span><span class="file-name">battery_bay.stl</span><span class="file-size">31KB</span><a href="/files/fuselage/battery_bay.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚡</span><span class="file-name">hv_module_bay.stl</span><span class="file-size">14KB</span><a href="/files/fuselage/hv_module_bay.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔩</span><span class="file-name">internal_ribs.stl</span><span class="file-size">7.1KB</span><a href="/files/fuselage/internal_ribs.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⬜</span><span class="file-name">lid.stl</span><span class="file-size">3.0KB</span><a href="/files/fuselage/lid.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🔭 Emitters (6 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">📐</span><span class="file-name">emitter_assembly.stl</span><span class="file-size">149KB</span><a href="/files/emitters/emitter_assembly.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">〰️</span><span class="file-name">emitter_frame.stl</span><span class="file-size">17KB</span><a href="/files/emitters/emitter_frame.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📏</span><span class="file-name">wire_support_array.stl</span><span class="file-size">74KB</span><a href="/files/emitters/wire_support_array.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📍</span><span class="file-name">wire_support_post.stl</span><span class="file-size">8.3KB</span><a href="/files/emitters/wire_support_post.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚙️</span><span class="file-name">tension_adjuster.stl</span><span class="file-size">20KB</span><a href="/files/emitters/tension_adjuster.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">insulator_spacer.stl</span><span class="file-size">3.0KB</span><a href="/files/emitters/insulator_spacer.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🎯 Collectors (6 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">collector_plate.stl</span><span class="file-size">3.0KB</span><a href="/files/collectors/collector_plate.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📊</span><span class="file-name">collector_foil_array.stl</span><span class="file-size">4.8KB</span><a href="/files/collectors/collector_foil_array.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🖼️</span><span class="file-name">collector_with_frame.stl</span><span class="file-size">19KB</span><a href="/files/collectors/collector_with_frame.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">collector_mount_frame.stl</span><span class="file-size">16KB</span><a href="/files/collectors/collector_mount_frame.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📏</span><span class="file-name">adjustable_mount.stl</span><span class="file-size">16KB</span><a href="/files/collectors/adjustable_mount.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚡</span><span class="file-name">streamer_suppressor.stl</span><span class="file-size">2.4KB</span><a href="/files/collectors/streamer_suppressor.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🔩 Frame (6 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">➕</span><span class="file-name">node_junction.stl</span><span class="file-size">15KB</span><a href="/files/frame/node_junction.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">━</span><span class="file-name">spine_segment.stl</span><span class="file-size">12KB</span><a href="/files/frame/spine_segment.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔗</span><span class="file-name">spine_assembly.stl</span><span class="file-size">195KB</span><a href="/files/frame/spine_assembly.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔴</span><span class="file-name">spine_end_cap.stl</span><span class="file-size">3.6KB</span><a href="/files/frame/spine_end_cap.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">✈️</span><span class="file-name">wing_mount_plate.stl</span><span class="file-size">12KB</span><a href="/files/frame/wing_mount_plate.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">tail_fin_mount.stl</span><span class="file-size">5.9KB</span><a href="/files/frame/tail_fin_mount.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🛡️ Guards / Ducts (3 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">⭕</span><span class="file-name">duct_ring.stl</span><span class="file-size">31KB</span><a href="/files/guards/duct_ring.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">duct_with_struts.stl</span><span class="file-size">22KB</span><a href="/files/guards/duct_with_struts.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔗</span><span class="file-name">wire_guard_mesh.stl</span><span class="file-size">28KB</span><a href="/files/guards/wire_guard_mesh.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEWS TAB -->
+    <div id="tab-previews" class="tab-content">
+      <div class="section">
+        <h2>📸 3D Model Previews</h2>
+        <p>Rendered previews of the current design. These are first-generation models — the design is subject to change as we validate feasibility.</p>
+      </div>
+      <div class="preview-grid">
+        <div class="preview-card"><img src="/files/previews/1_fuselage.png" alt="Fuselage Shell"><div class="caption">Fuselage Shell — Holds electronics + battery bay</div></div>
+        <div class="preview-card"><img src="/files/previews/2_emitters.png" alt="Emitter Array"><div class="caption">Emitter Array — 9 ion emission points</div></div>
+        <div class="preview-card"><img src="/files/previews/3_collectors.png" alt="Collector Plates"><div class="caption">Collector Plates + Frame</div></div>
+        <div class="preview-card"><img src="/files/previews/4_spine.png" alt="Spine Assembly"><div class="caption">Full Spine Assembly</div></div>
+        <div class="preview-card"><img src="/files/previews/5_duct.png" alt="Ducted Frame"><div class="caption">Ducted Frame / Prop Guard</div></div>
+        <div class="preview-card"><img src="/files/previews/assembly.png" alt="Full Assembly"><div class="caption">Full Assembly — All components</div></div>
+        <div class="preview-card"><img src="/files/previews/concept.png" alt="Concept"><div class="caption">Conceptual Design — Mini Ion Wing</div></div>
+      </div>
+    </div>
+
+    <!-- DIARY TAB -->
+    <div id="tab-diary" class="tab-content">
+      <div class="section">
+        <h2>📔 Dev Diary</h2>
+
+        <div class="diary-entry date-2026-04-23">
+          <div class="diary-header">
+            <span class="diary-date">April 23, 2026</span>
+            <span class="diary-tag">In Progress</span>
+          </div>
+          <div class="diary-title">🔬 Research Phase — Reassessing Scale & Feasibility</div>
+          <div class="diary-body">
+            <p>After reviewing the MIT ion wind aircraft specs, we realized our initial scale estimates were overly optimistic. The MIT prototype flew with ~5m wingspan and weighed ~2.5kg. Scaling down to 300mm (printable range) while maintaining meaningful thrust is extremely challenging.</p>
+            <p><strong>Key issue:</strong> EHD thrust at these scales is measured in millinewtons — far below what's needed to lift a typical 3D-printed airframe. The physics doesn't get easier when you go smaller.</p>
+            <p>Three paths are being considered: (1) go bigger, (2) build a ground-based demonstrator first, or (3) combine ion wind as a secondary boost with conventional propulsion. Decision pending.</p>
+            <p>Website launched at exapix.com. All 26 STL files uploaded and organized with download links. Project officially documented.</p>
+          </div>
+        </div>
+
+        <div class="diary-entry date-2026-04-22">
+          <div class="diary-header">
+            <span class="diary-date">April 22, 2026</span>
+            <span class="diary-tag">Kickoff</span>
+          </div>
+          <div class="diary-title">🚀 Project Kickoff — An Ion Wind Plane in a Cave</div>
+          <div class="diary-body">
+            <p>Carlos proposed the idea during a chat: build an ion wind-powered plane using the 3D printer in his cave. Three concepts were discussed — the ion wind plane won because of its pure "mad science" appeal.</p>
+            <p>Initial plan: use the Feiteira's Bambu Lab X1C to print all structural components, power from a single 18650 battery, generate 20–40 kV using a boost converter, and mount thin tungsten wires as emitters along the wing leading edge.</p>
+            <p>Clawdia was tasked with generating 3D models and researching open-source ion wind designs. Basic parametric STL files were produced covering fuselage, emitters, collectors, frame, and ducts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Project Icarus — A DIY Electrohydrodynamic Aircraft Experiment</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem;">This is an experimental project. No guarantee of functionality or safety. Proceed at your own risk.</p>
+    </footer>
+  </div>
+</body>
+</html>
