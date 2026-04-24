@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ion Wind Aircraft Physics Simulator — Project Icarus</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap');
+
+    :root {
+      --bg: #0a0e17;
+      --panel: #111827;
+      --border: #1e3a5f;
+      --cyan: #00d4ff;
+      --cyan-dim: #00d4ff33;
+      --cyan-glow: #00d4ff55;
+      --red: #ff4444;
+      --yellow: #ffaa00;
+      --green: #00ff88;
+      --text: #c8d8e8;
+      --muted: #5a7a8a;
+      --accent: #7ec8ff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Share Tech Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 4px;
+      text-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 340px 1fr 280px;
+      gap: 16px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .panel-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.65rem;
+      color: var(--cyan);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Sliders ── */
+    .param { margin-bottom: 14px; }
+
+    .param-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .param-name { font-size: 0.75rem; color: var(--accent); }
+
+    .param-value {
+      font-size: 0.85rem;
+      color: var(--cyan);
+      min-width: 80px;
+      text-align: right;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      appearance: none;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--border);
+      outline: none;
+      cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 8px var(--cyan);
+      cursor: pointer;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cyan);
+      border: none;
+      box-shadow: 0 0 8px var(--cyan);
+      cursor: pointer;
+    }
+
+    /* ── Checkboxes ── */
+    .toggle-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .toggle-btn {
+      flex: 1;
+      padding: 6px 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--muted);
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.7rem;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .toggle-btn.active {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: var(--cyan-dim);
+    }
+
+    /* ── Results ── */
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--cyan-dim);
+      font-size: 0.8rem;
+    }
+
+    .result-row:last-child { border-bottom: none; }
+
+    .result-label { color: var(--muted); }
+
+    .result-val {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    .result-val.highlight {
+      color: var(--cyan);
+      font-size: 1rem;
+    }
+
+    /* ── Feasibility ── */
+    .feasibility {
+      text-align: center;
+      padding: 14px;
+      border-radius: 6px;
+      margin-top: 14px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      transition: all 0.4s;
+      border: 2px solid;
+    }
+
+    .feasibility.red {
+      background: #ff444422;
+      border-color: var(--red);
+      color: var(--red);
+      text-shadow: 0 0 12px var(--red);
+    }
+
+    .feasibility.yellow {
+      background: #ffaa0022;
+      border-color: var(--yellow);
+      color: var(--yellow);
+      text-shadow: 0 0 12px var(--yellow);
+    }
+
+    .feasibility.green {
+      background: #00ff8822;
+      border-color: var(--green);
+      color: var(--green);
+      text-shadow: 0 0 12px var(--green);
+    }
+
+    /* ── Canvas preview ── */
+    .preview-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    canvas {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #080c14;
+    }
+
+    .geo-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── Scale Comparison ── */
+    .scale-bar-wrap { margin-bottom: 10px; }
+
+    .scale-bar-bg {
+      position: relative;
+      height: 8px;
+      background: var(--border);
+      border-radius: 4px;
+      margin: 6px 0;
+    }
+
+    .scale-marker {
+      position: absolute;
+      top: -4px;
+      width: 4px;
+      height: 16px;
+      border-radius: 2px;
+      transform: translateX(-50%);
+    }
+
+    .scale-marker-label {
+      font-size: 0.6rem;
+      margin-top: 18px;
+      transform: translateX(-50%);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .scale-tick {
+      position: absolute;
+      top: 10px;
+      font-size: 0.55rem;
+      color: var(--muted);
+      transform: translateX(-50%);
+    }
+
+    /* ── Section labels ── */
+    .section-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 10px 0 4px;
+    }
+
+    /* ── Vaddi-only sliders ── */
+    .vaddi-only { display: none; }
+    .vaddi-only.show { display: block; }
+
+    /* ── Physics model toggle ── */
+    #physics-toggle-wrap {
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>⚡ Ion Wind Aircraft Simulator</h1>
+<div class="subtitle">Project Icarus — Physics-Based Feasibility Analysis</div>
+
+<div class="container">
+
+  <!-- ── LEFT: Controls ── -->
+  <div class="panel">
+    <div class="panel-title">⚙ Aircraft Parameters</div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Wingspan</span>
+        <span class="param-value" id="val-b">300 mm</span>
+      </div>
+      <input type="range" id="sl-b" min="100" max="5000" step="10" value="300">
+    </div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Chord Length</span>
+        <span class="param-value" id="val-c">80 mm</span>
+      </div>
+      <input type="range" id="sl-c" min="30" max="1000" step="5" value="80">
+    </div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Electrode Length</span>
+        <span class="param-value" id="val-l">250 mm</span>
+      </div>
+      <input type="range" id="sl-l" min="50" max="4500" step="10" value="250">
+    </div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Voltage</span>
+        <span class="param-value" id="val-v">40 kV</span>
+      </div>
+      <input type="range" id="sl-v" min="10" max="120" step="1" value="40">
+    </div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Electrode Gap</span>
+        <span class="param-value" id="val-d">25 mm</span>
+      </div>
+      <input type="range" id="sl-d" min="3" max="60" step="1" value="25">
+      <div style="font-size:0.65rem;color:var(--yellow);margin-top:4px;">⚠ 20-40mm recommended to avoid arcing</div>
+    </div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Altitude</span>
+        <span class="param-value" id="val-h">0 m</span>
+      </div>
+      <input type="range" id="sl-h" min="0" max="10000" step="50" value="0">
+    </div>
+
+    <div class="param">
+      <div class="param-header">
+        <span class="param-name">Total Weight</span>
+        <span class="param-value" id="val-w">200 g</span>
+      </div>
+      <input type="range" id="sl-w" min="10" max="2000" step="5" value="200">
+    </div>
+
+    <div id="physics-toggle-wrap">
+      <div class="section-label">Physics Model</div>
+      <div class="toggle-row">
+        <button class="toggle-btn active" id="btn-empirical" onclick="setPhysicsModel('empirical')">📐 Empirical (K)</button>
+        <button class="toggle-btn" id="btn-vaddi" onclick="setPhysicsModel('vaddi')">⚡ Vaddi EHD</button>
+      </div>
+    </div>
+
+    <div class="section-label">Electrode Type</div>
+    <div class="toggle-row">
+      <button class="toggle-btn active" id="btn-smooth" onclick="setElecType('smooth')">Smooth Wire</button>
+      <button class="toggle-btn" id="btn-sawtooth" onclick="setElecType('sawtooth')">Sawtooth ✦ +28%</button>
+    </div>
+
+    <div class="vaddi-only" id="sliders-vaddi">
+      <div class="param">
+        <div class="param-header">
+          <span class="param-name">Ion Mobility (µ)</span>
+          <span class="param-value" id="val-mu">1.40e-4 m²/V·s</span>
+        </div>
+        <input type="range" id="sl-mu" min="0.5" max="2.5" step="0.05" value="1.4">
+      </div>
+      <div class="param">
+        <div class="param-header">
+          <span class="param-name">Emitter Radius</span>
+          <span class="param-value" id="val-re">0.125 mm</span>
+        </div>
+        <input type="range" id="sl-re" min="0.05" max="0.5" step="0.01" value="0.125">
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CENTER: Preview ── -->
+  <div class="panel preview-wrap">
+    <div class="panel-title">👁 Geometry Preview</div>
+    <canvas id="preview" width="380" height="280"></canvas>
+    <div class="geo-label" id="geo-label">Wingspan: 300 mm &nbsp;|&nbsp; Chord: 80 mm &nbsp;|&nbsp; AR: 3.75</div>
+    <div style="height: 16px;"></div>
+    <div class="panel-title">📐 Scale Comparison</div>
+    <div class="scale-bar-wrap" id="scale-wrap" style="position:relative; height:60px; width:100%;">
+      <div class="geo-label" style="margin-top:4px">Logarithmic scale — reference aircraft</div>
+    </div>
+  </div>
+
+  <!-- ── RIGHT: Results ── -->
+  <div class="panel">
+    <div class="panel-title">📊 Simulation Results</div>
+
+    <div class="result-row">
+      <span class="result-label">Wing Area (S)</span>
+      <span class="result-val" id="res-s">0.024 m²</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Aspect Ratio (AR)</span>
+      <span class="result-val" id="res-ar">—</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Air Density (ρ)</span>
+      <span class="result-val" id="res-rho">1.225 kg/m³</span>
+    </div>
+
+    <div class="section-label">Thrust</div>
+    <div class="result-row">
+      <span class="result-label">Thrust (Empirical)</span>
+      <span class="result-val" id="res-thrust-emp">— mN</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Thrust (Vaddi)</span>
+      <span class="result-val highlight" id="res-thrust-vaddi">— mN</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Thrust (smooth)</span>
+      <span class="result-val" id="res-thrust-s">— mN</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Thrust (sawtooth)</span>
+      <span class="result-val" id="res-thrust-st">— mN</span>
+    </div>
+    <div style="font-size:0.65rem;color:var(--muted);margin-top:8px;line-height:1.4;">
+      Empirical: fitted to MIT/WPI data. Vaddi: physics-first principles.<br>Discrepancy is expected — real data will calibrate.
+    </div>
+
+    <div class="section-label">Drag at Cruise</div>
+    <div class="result-row">
+      <span class="result-label">Parasitic Drag</span>
+      <span class="result-val" id="res-dp">— mN</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Induced Drag</span>
+      <span class="result-val" id="res-di">— mN</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Total Drag</span>
+      <span class="result-val highlight" id="res-dt">— mN</span>
+    </div>
+
+    <div class="section-label">Flight Envelope</div>
+    <div class="result-row">
+      <span class="result-label">Cruise Velocity</span>
+      <span class="result-val" id="res-vc">— m/s</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">T/W Ratio</span>
+      <span class="result-val" id="res-tw">—</span>
+    </div>
+    <div class="result-row">
+      <span class="result-label">Glide Ratio (L/D)</span>
+      <span class="result-val" id="res-ld">—</span>
+    </div>
+
+    <div class="feasibility" id="feasibility">CALCULATING</div>
+    <div id="arcing-warning" style="display:none;margin-top:8px;background:rgba(255,68,68,0.12);border:1px solid var(--red);border-radius:6px;padding:8px 10px;font-size:0.7rem;color:var(--red);line-height:1.5;">
+      ⚠ Gap may be too small — arcing risk. Literature recommends 20-40mm.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ── State ──
+  let elecType = 'smooth';   // 'smooth' or 'sawtooth'
+  let physicsModel = 'empirical'; // 'empirical' or 'vaddi'
+
+  // ── Physics constants ──
+  const K       = 0.25;         // Empirical thrust constant (mN·mm²/kV²·m), calibrated to MIT/WPI data
+                        // With K=0.25: MIT 75kV/25mm/6.4m → ~3.2 N (rough match), 40kV/10mm/250mm → 1 mN
+  const RHO_SEA = 1.225;        // sea-level air density kg/m³
+  const H_SCALE = 8500;         // scale height for exponential density decay (m)
+  const CD_P    = 0.02;         // parasitic drag coefficient
+  const E_OSW   = 0.8;          // Oswald efficiency factor
+  const EPS0    = 8.854e-12;    // vacuum permittivity F/m
+  const RHO_AIR = 1.225;        // air density kg/m³
+
+  // ── Reference aircraft ──
+  const REF = [
+    { name: 'MIT (2021)',    spanMm: 5000,  color: '#00d4ff' },
+    { name: 'Transilvania', spanMm: 250,   color: '#7ec8ff' },
+  ];
+
+  // ── DOM ──
+  const sliders = {
+    b:  { el: document.getElementById('sl-b'),  val: document.getElementById('val-b'),  unit: ' mm',  fmt: v => `${v} mm` },
+    c:  { el: document.getElementById('sl-c'),  val: document.getElementById('val-c'),  unit: ' mm',  fmt: v => `${v} mm` },
+    l:  { el: document.getElementById('sl-l'),  val: document.getElementById('val-l'),  unit: ' mm',  fmt: v => `${v} mm` },
+    v:  { el: document.getElementById('sl-v'),  val: document.getElementById('val-v'),  unit: ' kV',  fmt: v => `${v} kV` },
+    d:  { el: document.getElementById('sl-d'),  val: document.getElementById('val-d'),  unit: ' mm',  fmt: v => `${v} mm` },
+    h:  { el: document.getElementById('sl-h'),  val: document.getElementById('val-h'),  unit: ' m',   fmt: v => v >= 1000 ? `${(v/1000).toFixed(1)} km` : `${v} m` },
+    w:  { el: document.getElementById('sl-w'),  val: document.getElementById('val-w'),  unit: ' g',   fmt: v => `${v} g` },
+    mu: { el: document.getElementById('sl-mu'), val: document.getElementById('val-mu'), unit: ' m²/V·s', fmt: v => `${v.toFixed(2)}e-4 m²/V·s` },
+    re: { el: document.getElementById('sl-re'), val: document.getElementById('val-re'), unit: ' mm', fmt: v => `${v} mm` },
+  };
+
+  function getParams() {
+    return {
+      b_mm:   parseFloat(sliders.b.el.value),
+      c_mm:   parseFloat(sliders.c.el.value),
+      L_mm:   parseFloat(sliders.l.el.value),
+      V_kv:   parseFloat(sliders.v.el.value),
+      d_mm:   parseFloat(sliders.d.el.value),
+      h_m:    parseFloat(sliders.h.el),
+      W_g:    parseFloat(sliders.w.el),
+    };
+  }
+
+  // ── Physics ──
+  function calcThrust(V_kv, d_mm, L_m, sawtooth) {
+    if (V_kv <= 0 || d_mm <= 0 || L_m <= 0) return 0;
+    const raw = K * (V_kv * V_kv) / (d_mm * d_mm) * (L_m);
+    return sawtooth ? raw * 1.28 : raw;
+  }
+
+  // ── Vaddi EHD first-principles thrust ──
+  function calcThrustVaddi(V_kv, d_mm, L_m, mu, r_e_mm) {
+    if (V_kv <= 0 || d_mm <= 0 || L_m <= 0 || mu <= 0) return 0;
+    const E     = (V_kv * 1000) / d_mm;          // electric field V/m
+    const v_ion = mu * E;                         // ion drift velocity m/s
+    const A     = Math.PI * d_mm * L_m;           // cylindrical area m²
+    // Space-charge-limited ion current (wire-to-cylinder approximation)
+    const I     = (mu * EPS0 * A * E * E) / d_mm; // ion current A
+    // Thrust via momentum flux: F = m_dot * v_ion, m_dot = I * rho_air / (ion_charge density)
+    // Simplified physics-first formula:
+    const F_N   = (EPS0 * RHO_AIR * mu * E * E * A * L_m) / d_mm; // N
+    return Math.max(F_N * 1000, 0); // convert to mN
+  }
+
+  function calcRho(h_m) {
+    return RHO_SEA * Math.exp(-h_m / H_SCALE);
+  }
+
+  function calcDrag(weightN, rho, V_ms, S_m2, AR) {
+    const D_p = 0.5 * rho * V_ms * V_ms * CD_P * S_m2;
+    const D_i = (weightN * weightN) / (0.5 * rho * V_ms * V_ms * Math.PI * AR * E_OSW);
+    return { D_p, D_i, D_t: D_p + D_i };
+  }
+
+  function calcCruiseVelocity(thrustN, weightN, rho, S_m2, AR) {
+    // Solve for V where thrust ≈ total drag
+    // D_t = 0.5ρV²(Cd·S + W²/(0.5ρV²πARe))
+    // Simplification: iterate
+    if (thrustN <= 0) return 0;
+    let V = 1;
+    for (let i = 0; i < 200; i++) {
+      const { D_t } = calcDrag(weightN, rho, V, S_m2, AR);
+      const f  = D_t - thrustN;
+      const df = 0.5 * rho * V * (2 * CD_P * S_m2 + (2 * weightN * weightN) / (0.5 * rho * V * V * V * Math.PI * AR * E_OSW));
+      if (Math.abs(df) < 1e-12) break;
+      V -= f / df;
+      if (V < 0.1) V = 0.1;
+    }
+    return Math.max(V, 0.1);
+  }
+
+  function calcFeasibility(TW, glideRatio) {
+    if (TW < 0.3 || glideRatio < 2)   return 'red';
+    if (TW < 0.8 || glideRatio < 6)   return 'yellow';
+    return 'green';
+  }
+
+  function calcLabels(TW, glideRatio) {
+    if (TW < 0.3) return '❌ NO FLIGHT';
+    if (TW < 0.5) return '⚠ MARGINAL';
+    if (TW < 0.8) return '⚡ MARGINAL';
+    if (TW < 1.0) return '⚡ EFFICIENT';
+    if (glideRatio > 15) return '✨ EFFICIENT';
+    return '✅ FLIGHT POSSIBLE';
+  }
+
+  // ── Update ──
+  function update() {
+    const p = getParams();
+    const sawtooth = elecType === 'sawtooth';
+
+    const b_m  = p.b_mm / 1000;
+    const c_m  = p.c_mm / 1000;
+    const L_m  = p.L_mm / 1000;
+    const d_m  = p.d_mm / 1000;
+    const S    = b_m * c_m;
+    const AR   = (b_m * b_m) / S;
+    const rho  = calcRho(p.h_m);
+    const W_N  = (p.W_g / 1000) * 9.81;
+
+    const mu    = parseFloat(sliders.mu.el.value) * 1e-4;  // convert to m²/(V·s)
+    const r_e  = parseFloat(sliders.re.el.value);  // emitter radius mm
+
+    const T_s  = calcThrust(p.V_kv, p.d_mm, L_m, false);
+    const T_st = calcThrust(p.V_kv, p.d_mm, L_m, true);
+    const T_v  = calcThrustVaddi(p.V_kv, p.d_mm, L_m, mu, r_e);
+    const T    = sawtooth ? T_st : T_s;
+    const T_N  = T / 1000;
+
+    const V_c  = calcCruiseVelocity(T_N, W_N, rho, S, AR);
+    const { D_p, D_i, D_t } = calcDrag(W_N, rho, V_c, S, AR);
+
+    const TW   = W_N > 0 ? (T_N / W_N) : 0;
+    const LD   = D_t > 0 ? (W_N / D_t) : 0;
+    const feas = calcFeasibility(TW, LD);
+    const feasLabel = calcLabels(TW, LD);
+
+    // Update display
+    document.getElementById('res-s').textContent   = `${S.toFixed(4)} m²`;
+    document.getElementById('res-ar').textContent  = AR.toFixed(2);
+    document.getElementById('res-rho').textContent = `${rho.toFixed(4)} kg/m³`;
+    document.getElementById('res-thrust-emp').textContent  = `${T_s.toFixed(1)} mN`;
+    document.getElementById('res-thrust-vaddi').textContent = `${T_v.toFixed(1)} mN`;
+    document.getElementById('res-thrust-s').textContent  = `${T_s.toFixed(1)} mN`;
+    document.getElementById('res-thrust-st').textContent = `${T_st.toFixed(1)} mN`;
+    document.getElementById('res-dp').textContent = `${D_p.toFixed(3)} mN`;
+    document.getElementById('res-di').textContent  = `${D_i.toFixed(3)} mN`;
+    document.getElementById('res-dt').textContent  = `${D_t.toFixed(3)} mN`;
+    document.getElementById('res-vc').textContent  = `${V_c.toFixed(2)} m/s`;
+    document.getElementById('res-tw').textContent  = TW.toFixed(3);
+    document.getElementById('res-ld').textContent  = LD.toFixed(2);
+
+    const feasEl = document.getElementById('feasibility');
+    feasEl.className = `feasibility ${feas}`;
+    feasEl.textContent = feasLabel;
+
+    // Gap arcing warning
+    const arcingEl = document.getElementById('arcing-warning');
+    arcingEl.style.display = p.d_mm < 20 ? 'block' : 'none';
+
+    document.getElementById('geo-label').textContent =
+      `Wingspan: ${p.b_mm} mm  |  Chord: ${p.c_mm} mm  |  AR: ${AR.toFixed(2)}`;
+
+    drawPreview(b_m, c_m, L_m, d_m, p.V_kv, sawtooth);
+    drawScale(p.b_mm);
+  }
+
+  // ── Slider binding ──
+  Object.entries(sliders).forEach(([key, sl]) => {
+    sl.el.addEventListener('input', () => {
+      sl.val.textContent = sl.fmt(parseFloat(sl.el.value));
+      update();
+    });
+  });
+
+  function setElecType(type) {
+    elecType = type;
+    document.getElementById('btn-smooth').classList.toggle('active', type === 'smooth');
+    document.getElementById('btn-sawtooth').classList.toggle('active', type === 'sawtooth');
+    update();
+  }
+
+  function setPhysicsModel(model) {
+    physicsModel = model;
+    document.getElementById('btn-empirical').classList.toggle('active', model === 'empirical');
+    document.getElementById('btn-vaddi').classList.toggle('active', model === 'vaddi');
+    document.getElementById('sliders-vaddi').classList.toggle('show', model === 'vaddi');
+    update();
+  }
+
+  // Init Vaddi sliders
+  sliders.mu.el.addEventListener('input', () => {
+    sliders.mu.val.textContent = sliders.mu.fmt(parseFloat(sliders.mu.el.value));
+    update();
+  });
+  sliders.re.el.addEventListener('input', () => {
+    sliders.re.val.textContent = sliders.re.fmt(parseFloat(sliders.re.el.value));
+    update();
+  });
+
+  // ── Wing Preview Canvas ──
+  function drawPreview(b_m, c_m, L_m, d_m, V_kv, sawtooth) {
+    const canvas = document.getElementById('preview');
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Scale to fit
+    const scale = Math.min((W * 0.8) / b_m, (H * 0.7) / c_m, 1) * 0.7;
+    const cx = W / 2, cy = H / 2;
+
+    const b_px  = b_m * scale;
+    const c_px  = c_m * scale;
+    const L_px  = L_m * scale;
+    const d_px  = d_m * scale * 3; // exaggerated for visibility
+
+    // Wing planform (top-down view silhouette)
+    ctx.save();
+    ctx.translate(cx, cy);
+
+    // Wing body (center box)
+    ctx.strokeStyle = '#00d4ff44';
+    ctx.fillStyle = '#00d4ff0a';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.rect(-c_px / 2, -b_px / 2, c_px, b_px);
+    ctx.fill();
+    ctx.stroke();
+
+    // Emitter wire (front)
+    ctx.strokeStyle = '#00d4ff';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = '#00d4ff';
+    ctx.shadowBlur = 8;
+    ctx.beginPath();
+    ctx.moveTo(-c_px / 2, -b_px / 2 + 4);
+    ctx.lineTo(-c_px / 2, b_px / 2 - 4);
+    ctx.stroke();
+
+    // Collector wire (rear)
+    ctx.strokeStyle = '#ff8844';
+    ctx.shadowColor = '#ff8844';
+    ctx.beginPath();
+    ctx.moveTo(c_px / 2, -b_px / 2 + 4);
+    ctx.lineTo(c_px / 2, b_px / 2 - 4);
+    ctx.stroke();
+
+    // Sawtooth pattern overlay
+    if (sawtooth) {
+      ctx.strokeStyle = '#00ff8844';
+      ctx.lineWidth = 1;
+      ctx.shadowBlur = 0;
+      ctx.setLineDash([3, 3]);
+      for (let y = -b_px / 2 + 8; y < b_px / 2; y += 12) {
+        ctx.beginPath();
+        ctx.moveTo(-c_px / 2, y);
+        for (let x = -c_px / 2; x < c_px / 2; x += 6) {
+          ctx.lineTo(x + 3, y - 3);
+          ctx.lineTo(x + 6, y + 3);
+        }
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+    }
+
+    // Ion flow arrows
+    ctx.shadowBlur = 6;
+    ctx.shadowColor = '#00d4ff';
+    ctx.strokeStyle = '#00d4ff66';
+    ctx.lineWidth = 1;
+    const numArrows = 5;
+    for (let i = 0; i < numArrows; i++) {
+      const t = (i + 0.5) / numArrows;
+      const y = -b_px / 2 + 10 + t * (b_px - 20);
+      drawArrow(ctx, -c_px / 2 + 2, y, c_px / 2 - 2, y);
+    }
+
+    ctx.shadowBlur = 0;
+
+    // Dimension labels
+    ctx.font = '9px Share Tech Mono';
+    ctx.fillStyle = '#5a7a8a';
+    ctx.textAlign = 'center';
+
+    // Span arrow
+    ctx.beginPath();
+    ctx.moveTo(-c_px / 2 - 12, -b_px / 2);
+    ctx.lineTo(-c_px / 2 - 12, b_px / 2);
+    ctx.strokeStyle = '#5a7a8a';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.fillText(`${(b_m * 1000).toFixed(0)} mm`, -c_px / 2 - 22, 2);
+
+    // Chord arrow
+    ctx.beginPath();
+    ctx.moveTo(-c_px / 2, b_px / 2 + 12);
+    ctx.lineTo(c_px / 2, b_px / 2 + 12);
+    ctx.stroke();
+    ctx.fillText(`${(c_m * 1000).toFixed(0)} mm`, 0, b_px / 2 + 22);
+
+    // Electrode gap annotation
+    ctx.fillStyle = '#ff884488';
+    ctx.textAlign = 'left';
+    ctx.fillText(`d=${(d_m * 1000).toFixed(0)}mm`, c_px / 2 + 6, -b_px / 4);
+
+    // Voltage label
+    ctx.fillStyle = '#00d4ff88';
+    ctx.textAlign = 'right';
+    ctx.fillText(`${V_kv.toFixed(0)} kV`, -c_px / 2 - 6, -b_px / 4);
+
+    ctx.restore();
+
+    // Legend
+    ctx.font = '9px Share Tech Mono';
+    ctx.fillStyle = '#00d4ff';
+    ctx.fillText('● Emitter', 10, H - 32);
+    ctx.fillStyle = '#ff8844';
+    ctx.fillText('● Collector', 10, H - 18);
+  }
+
+  function drawArrow(ctx, x1, y1, x2, y2) {
+    const len = 12, angle = 0.4;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+    const dx = x2 - x1, dy = y2 - y1;
+    const len2 = Math.sqrt(dx * dx + dy * dy);
+    if (len2 < 1) return;
+    const ux = dx / len2, uy = dy / len2;
+    const px = -uy, py = ux;
+    const ex = x2 - ux * len, ey = y2 - uy * len;
+    ctx.beginPath();
+    ctx.moveTo(ex, ey);
+    ctx.lineTo(ex - ux * len + px * len * Math.tan(angle), ey - uy * len + py * len * Math.tan(angle));
+    ctx.moveTo(ex, ey);
+    ctx.lineTo(ex - ux * len - px * len * Math.tan(angle), ey - uy * len - py * len * Math.tan(angle));
+    ctx.stroke();
+  }
+
+  // ── Scale Comparison Bar ──
+  function drawScale(designMm) {
+    const wrap = document.getElementById('scale-wrap');
+    // Remove old markers
+    wrap.querySelectorAll('.marker').forEach(el => el.remove());
+
+    const minS = 50, maxS = 10000;
+    const logMin = Math.log10(minS);
+    const logMax = Math.log10(maxS);
+    const W_px = wrap.offsetWidth || 350;
+
+    function toX(mm) {
+      return ((Math.log10(mm) - logMin) / (logMax - logMin)) * W_px;
+    }
+
+    // Background bar
+    let bar = wrap.querySelector('.scale-bar-bg');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'scale-bar-bg';
+      wrap.insertBefore(bar, wrap.firstChild);
+    }
+    bar.style.width = W_px + 'px';
+
+    REF.forEach((r, i) => {
+      const x = toX(r.spanMm);
+      const marker = document.createElement('div');
+      marker.className = 'scale-marker marker';
+      marker.style.cssText = `left:${x}px;background:${r.color};top:-4px;height:16px;width:4px;border-radius:2px;position:absolute;`;
+      wrap.appendChild(marker);
+
+      const lbl = document.createElement('div');
+      lbl.className = 'scale-marker-label marker';
+      lbl.style.cssText = `left:${x}px;top:16px;position:absolute;font-size:0.6rem;color:${r.color};white-space:nowrap;transform:none;text-align:center;width:80px;margin-left:-40px;`;
+      lbl.textContent = `${r.name}\n${r.spanMm}mm`;
+      lbl.style.lineHeight = '1.3';
+      wrap.appendChild(lbl);
+    });
+
+    // Design marker
+    const dx = toX(designMm);
+    const marker = document.createElement('div');
+    marker.className = 'scale-marker marker';
+    marker.style.cssText = `left:${dx}px;background:#ffaa00;top:-4px;height:20px;width:6px;border-radius:3px;position:absolute;box-shadow:0 0 8px #ffaa00;`;
+    wrap.appendChild(marker);
+
+    const lbl = document.createElement('div');
+    lbl.className = 'scale-marker-label marker';
+    lbl.style.cssText = `left:${dx}px;top:18px;position:absolute;font-size:0.65rem;color:#ffaa00;white-space:nowrap;transform:none;text-align:center;width:80px;margin-left:-40px;font-weight:bold;`;
+    lbl.textContent = `Your Design\n${designMm}mm`;
+    lbl.style.lineHeight = '1.3';
+    wrap.appendChild(lbl);
+
+    // Tick marks
+    [100, 500, 1000, 5000].forEach(mm => {
+      const x = toX(mm);
+      const tick = document.createElement('div');
+      tick.className = 'scale-tick marker';
+      tick.style.cssText = `left:${x}px;top:10px;position:absolute;`;
+      tick.textContent = mm < 1000 ? `${mm}mm` : `${mm/1000}m`;
+      wrap.appendChild(tick);
+    });
+  }
+
+  // ── Init ──
+  update();
+</script>
+
+</body>
+</html>

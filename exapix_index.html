@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Icarus — DIY Electrohydrodynamic Aircraft</title>
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --surface: #111827;
+      --surface2: #1a2332;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --blue: #3b82f6;
+      --red: #ef4444;
+      --orange: #f59e0b;
+      --green: #10b981;
+      --purple: #8b5cf6;
+      --cyan: #06b6d4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 2rem 2rem; }
+
+    header { text-align: center; padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--cyan), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .tagline { color: var(--muted); font-size: 1.1rem; }
+
+    /* Tab Navigation */
+    .tabs { display: flex; gap: 0.25rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0; flex-wrap: wrap; }
+    .tab { padding: 0.75rem 1.25rem; background: transparent; border: none; color: var(--muted); font-size: 0.9rem; font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s; border-radius: 6px 6px 0 0; text-decoration: none; display: inline-block; }
+    .tab:hover { color: var(--text); background: var(--surface); }
+    .tab.active { color: var(--cyan); border-bottom-color: var(--cyan); background: var(--surface); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: var(--cyan); }
+    p { color: var(--muted); margin-bottom: 1rem; }
+
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.875rem; margin: 0; }
+
+    .specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .spec { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+    .spec .value { font-size: 1.6rem; font-weight: 800; color: var(--cyan); }
+    .spec .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .warning { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+    .warning strong { color: var(--red); }
+
+    .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .tech-item { background: var(--surface); border-radius: 8px; padding: 1rem; }
+    .tech-item h4 { font-size: 0.875rem; margin-bottom: 0.25rem; }
+    .tech-item p { font-size: 0.8rem; margin: 0; }
+
+    .status { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+    .status span { font-size: 0.875rem; color: var(--muted); }
+
+    .team { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .person { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--cyan), var(--orange)); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+
+    .links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+    .link { background: var(--blue); color: white; text-decoration: none; padding: 0.5rem 1.25rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; display: inline-block; }
+    .link:hover { opacity: 0.9; }
+    .link.secondary { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+
+    /* File Browser */
+    .subsystem { margin-bottom: 1.5rem; }
+    .subsystem-title { font-size: 0.9rem; font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
+    .file-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.6rem 0.75rem; display: flex; align-items: center; gap: 0.5rem; transition: border-color 0.2s; }
+    .file-item:hover { border-color: var(--cyan); }
+    .file-icon { font-size: 1rem; flex-shrink: 0; }
+    .file-name { font-size: 0.8rem; color: var(--text); flex: 1; word-break: break-all; }
+    .file-size { font-size: 0.7rem; color: var(--muted); flex-shrink: 0; }
+    .file-download { background: var(--surface2); border: 1px solid var(--border); color: var(--cyan); text-decoration: none; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; flex-shrink: 0; }
+    .file-download:hover { background: var(--cyan); color: var(--bg); }
+
+    .preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .preview-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .preview-card img { width: 100%; height: auto; display: block; }
+    .preview-card .caption { padding: 0.75rem; font-size: 0.8rem; color: var(--muted); text-align: center; }
+
+    /* Dev Diary */
+    .diary-entry { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; position: relative; overflow: hidden; }
+    .diary-entry::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cyan); }
+    .diary-entry.date-2026-04-23::before { background: var(--green); }
+    .diary-entry.date-2026-04-24::before { background: var(--cyan); }
+    .diary-entry.date-2026-04-22::before { background: var(--orange); }
+    .diary-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .diary-date { font-size: 0.75rem; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.05em; }
+    .diary-tag { font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 999px; background: rgba(16,185,129,0.15); color: var(--green); font-weight: 600; }
+    .diary-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .diary-body { font-size: 0.875rem; color: var(--muted); }
+    .diary-body p { margin-bottom: 0.5rem; }
+    .diary-body p:last-child { margin-bottom: 0; }
+
+    /* Reference Cards */
+    .ref-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+    .ref-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cyan); margin-bottom: 0.5rem; }
+    .ref-title { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+    .ref-subtitle { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-bottom: 0.5rem; }
+    .ref-meta { font-size: 0.7rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .ref-data { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .ref-data span { background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; padding: 0.15rem 0.5rem; font-size: 0.7rem; color: var(--cyan); font-weight: 600; }
+    .ref-key { font-size: 0.8rem; color: var(--muted); background: rgba(6,182,212,0.05); border-left: 3px solid var(--cyan); padding: 0.5rem 0.75rem; border-radius: 0 6px 6px 0; margin-bottom: 0.75rem; }
+    .ref-actions { display: flex; gap: 0.5rem; }
+    .ref-dl { background: var(--blue); color: white; text-decoration: none; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 600; display: inline-block; }
+    .ref-dl:hover { opacity: 0.9; }
+
+    footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+
+    @media (max-width: 600px) {
+      .tech-grid, .file-grid, .preview-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2rem; }
+      .container { padding: 0 1rem 1rem; }
+    }
+  </style>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`.tab[href="#${id}"]`).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Project Icarus</h1>
+      <p class="tagline">DIY Electrohydrodynamic Aircraft — Ion Wind Propulsion</p>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tabs">
+      <button class="tab active" onclick="showTab('tab-overview')">Overview</button>
+      <button class="tab" onclick="showTab('tab-files')">🖨️ 3D Files</button>
+      <button class="tab" onclick="showTab('tab-previews')">📸 Previews</button>
+      <button class="tab" onclick="showTab('tab-diary')">📔 Dev Diary</button>
+      <button class="tab" onclick="showTab('tab-master')">🗺️ Master Plan</button>
+      <button class="tab" onclick="showTab('tab-refs')">📚 References</button>
+      <button class="tab" onclick="showTab('tab-sim')">🔬 Simulator</button>
+    </nav>
+
+    <!-- OVERVIEW TAB -->
+    <div id="tab-overview" class="tab-content active">
+      <div class="section">
+        <div class="status">
+          <div class="dot"></div>
+          <span>Project Status: Research & Design Phase</span>
+        </div>
+        <p>
+          We are exploring the possibility of building a small aircraft powered entirely by <strong>Electrohydrodynamic (EHD) thrust</strong> — commonly known as "ion wind" or "electrohydrodynamic propulsion." Instead of using propellers or jet engines, the aircraft would generate thrust by ionizing air molecules and accelerating them with a high-voltage electric field.
+        </p>
+        <p>
+          This project is inspired by the <strong>MIT ion wind aircraft</strong> research (Steven Barrett et al., 2018), which demonstrated sustained flight using this technology. Our goal is to build a smaller, DIY version using 3D-printed components and accessible electronics.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>⚙️ How It Works</h2>
+        <div class="card">
+          <h3>Electrohydrodynamic Thrust</h3>
+          <p>The principle is simple in theory: a thin wire (the <strong>emitter</strong>) is charged to 20–40 kV. This ionizes the surrounding air molecules, stripping electrons to create positive ions. These ions are then attracted to a nearby surface (the <strong>collector</strong>) which is grounded or at a lower potential. As the ions travel from emitter to collector, they collide with neutral air molecules, transferring momentum and creating a net airflow — the "ion wind." This wind produces thrust that can propel an aircraft.</p>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-item" style="border-left: 3px solid var(--red);">
+            <h4>🔌 Emitter Wire</h4>
+            <p>Thin tungsten or steel wire (~0.5mm). Charged to 20–40 kV using a boost converter or flyback transformer.</p>
+          </div>
+          <div class="tech-item" style="border-left: 3px solid var(--orange);">
+            <h4>🎯 Collector Strip</h4>
+            <p>Smooth flat surface or tube at lower potential. Positioned ~25mm from the emitter for optimal ion collection.</p>
+          </div>
+          <div class="tech-item" style="border-left: 3px solid var(--green);">
+            <h4>🔋 Power Source</h4>
+            <p>Lightweight LiPo or 18650 battery. Boost converter steps up to 20–40 kV. Power consumption is surprisingly low.</p>
+          </div>
+          <div class="tech-item" style="border-left: 3px solid var(--blue);">
+            <h4>🪶 Airframe</h4>
+            <p>3D-printed lightweight structure. Wings designed to maximize thrust efficiency from ion wind flow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📊 Project Specs (Target)</h2>
+        <div class="specs">
+          <div class="spec"><div class="value">~300mm</div><div class="label">Wingspan</div></div>
+          <div class="spec"><div class="value">~180g</div><div class="label">Est. Weight</div></div>
+          <div class="spec"><div class="value">20–40kV</div><div class="label">HV Required</div></div>
+          <div class="spec"><div class="value">&lt;1N</div><div class="label">Est. Thrust</div></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>⚠️ Safety Warning</h2>
+        <div class="warning">
+          <strong>⚡ High Voltage Hazard — 20–40 kV can cause serious injury or death.</strong><br><br>
+          This project involves high-voltage electronics that are dangerous. If you attempt to replicate this project:
+          <ul style="margin: 0.5rem 0 0.5rem 1.5rem; color: var(--muted); font-size: 0.875rem;">
+            <li>Never power the system while handling exposed electrodes</li>
+            <li>Maintain minimum 25mm clearance between emitter and collector at all times</li>
+            <li>Use proper insulation and enclosure for all HV components</li>
+            <li>Work with experienced supervision if you are new to high-voltage electronics</li>
+            <li>This is a research/experimental project — not a finished product</li>
+          </ul>
+          <strong>Do not attempt to build this if you are not comfortable working with high voltage.</strong>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🔬 Research References</h2>
+        <div class="card">
+          <h3>Key Papers & Resources</h3>
+          <ul style="margin: 0.5rem 0 0.5rem 1.5rem; color: var(--muted); font-size: 0.875rem;">
+            <li><strong>MIT Barrett et al. (2018)</strong> — "Flight of an electrohydrodynamically powered aircraft" — Nature. First sustained EHD flight.</li>
+            <li><strong>MIT Barrett (2021)</strong> — Further refinements to EHD propulsion theory and scaling laws.</li>
+            <li><strong>FliteTest YouTube</strong> — Practical RC aircraft building techniques and 3D printing for RC planes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>👥 Team</h2>
+        <div class="team">
+          <div class="person"><div class="avatar">CN</div> Carlos Nogueira — Project Lead & Builder</div>
+          <div class="person"><div class="avatar">F</div> Feiteira — Hardware & 3D Printing</div>
+        </div>
+        <p style="margin-top:1rem;">AI-assisted design & research by <strong>Clawdia</strong> (OpenClaw AI Agent).</p>
+      </div>
+    </div>
+
+    <!-- FILES TAB -->
+    <div id="tab-files" class="tab-content">
+      <div class="section">
+        <h2>🖨️ 3D-Printed Components</h2>
+        <p>All parts designed for <strong>Bambu Lab X1C/P1P</strong> (256×256×256mm build volume). Parametric Python scripts generate STL files — edit dimensions in code and regenerate.</p>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">✈️ Fuselage (5 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">📦</span><span class="file-name">fuselage_shell.stl</span><span class="file-size">3.6KB</span><a href="/files/fuselage/fuselage_shell.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔋</span><span class="file-name">battery_bay.stl</span><span class="file-size">31KB</span><a href="/files/fuselage/battery_bay.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚡</span><span class="file-name">hv_module_bay.stl</span><span class="file-size">14KB</span><a href="/files/fuselage/hv_module_bay.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔩</span><span class="file-name">internal_ribs.stl</span><span class="file-size">7.1KB</span><a href="/files/fuselage/internal_ribs.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⬜</span><span class="file-name">lid.stl</span><span class="file-size">3.0KB</span><a href="/files/fuselage/lid.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🔭 Emitters (11 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">📐</span><span class="file-name">emitter_assembly.stl</span><span class="file-size">149KB</span><a href="/files/emitters/emitter_assembly.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">〰️</span><span class="file-name">emitter_frame.stl</span><span class="file-size">17KB</span><a href="/files/emitters/emitter_frame.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📏</span><span class="file-name">wire_support_array.stl</span><span class="file-size">74KB</span><a href="/files/emitters/wire_support_array.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📍</span><span class="file-name">wire_support_post.stl</span><span class="file-size">8.3KB</span><a href="/files/emitters/wire_support_post.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚙️</span><span class="file-name">tension_adjuster.stl</span><span class="file-size">20KB</span><a href="/files/emitters/tension_adjuster.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">insulator_spacer.stl</span><span class="file-size">3.0KB</span><a href="/files/emitters/insulator_spacer.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔘</span><span class="file-name">collector_smooth_ring.stl</span><span class="file-size">57KB</span><a href="/files/emitters/collector_smooth_ring.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚡</span><span class="file-name">emitter_razor_ring.stl</span><span class="file-size">30KB</span><a href="/files/emitters/emitter_razor_ring.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🚀</span><span class="file-name">peripheral_thruster_demo.stl</span><span class="file-size">99KB</span><a href="/files/emitters/peripheral_thruster_demo.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🪒</span><span class="file-name">razor_blade_array_demo.stl</span><span class="file-size">11KB</span><a href="/files/emitters/razor_blade_array_demo.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🏠</span><span class="file-name">thruster_housing_demo.stl</span><span class="file-size">66KB</span><a href="/files/emitters/thruster_housing_demo.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🎯 Collectors (10 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">collector_plate.stl</span><span class="file-size">3.0KB</span><a href="/files/collectors/collector_plate.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📊</span><span class="file-name">collector_foil_array.stl</span><span class="file-size">4.8KB</span><a href="/files/collectors/collector_foil_array.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🖼️</span><span class="file-name">collector_with_frame.stl</span><span class="file-size">19KB</span><a href="/files/collectors/collector_with_frame.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">collector_mount_frame.stl</span><span class="file-size">17KB</span><a href="/files/collectors/collector_mount_frame.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📏</span><span class="file-name">adjustable_mount.stl</span><span class="file-size">16KB</span><a href="/files/collectors/adjustable_mount.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚡</span><span class="file-name">streamer_suppressor.stl</span><span class="file-size">2.4KB</span><a href="/files/collectors/streamer_suppressor.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">📎</span><span class="file-name">collector_foil_mount.stl</span><span class="file-size">5.6KB</span><a href="/files/collectors/collector_foil_mount.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">⚡</span><span class="file-name">electroplated_collector.stl</span><span class="file-size">47KB</span><a href="/files/collectors/electroplated_collector.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔧</span><span class="file-name">test_rig_mount.stl</span><span class="file-size">11KB</span><a href="/files/collectors/test_rig_mount.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">✈️</span><span class="file-name">wing_integration_frame.stl</span><span class="file-size">3.6KB</span><a href="/files/collectors/wing_integration_frame.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🔩 Frame (6 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">➕</span><span class="file-name">node_junction.stl</span><span class="file-size">15KB</span><a href="/files/frame/node_junction.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">━</span><span class="file-name">spine_segment.stl</span><span class="file-size">12KB</span><a href="/files/frame/spine_segment.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔗</span><span class="file-name">spine_assembly.stl</span><span class="file-size">195KB</span><a href="/files/frame/spine_assembly.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔴</span><span class="file-name">spine_end_cap.stl</span><span class="file-size">3.6KB</span><a href="/files/frame/spine_end_cap.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">✈️</span><span class="file-name">wing_mount_plate.stl</span><span class="file-size">13KB</span><a href="/files/frame/wing_mount_plate.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">tail_fin_mount.stl</span><span class="file-size">6.0KB</span><a href="/files/frame/tail_fin_mount.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+
+      <div class="subsystem">
+        <div class="subsystem-title">🛡️ Guards / Ducts (3 files)</div>
+        <div class="file-grid">
+          <div class="file-item"><span class="file-icon">⭕</span><span class="file-name">duct_ring.stl</span><span class="file-size">31KB</span><a href="/files/guards/duct_ring.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔲</span><span class="file-name">duct_with_struts.stl</span><span class="file-size">22KB</span><a href="/files/guards/duct_with_struts.stl" class="file-download" download>DL</a></div>
+          <div class="file-item"><span class="file-icon">🔗</span><span class="file-name">wire_guard_mesh.stl</span><span class="file-size">28KB</span><a href="/files/guards/wire_guard_mesh.stl" class="file-download" download>DL</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREVIEWS TAB -->
+    <div id="tab-previews" class="tab-content">
+      <div class="section">
+        <h2>📸 3D Model Previews</h2>
+        <p>Rendered previews of the current design. These are first-generation models — the design is subject to change as we validate feasibility.</p>
+      </div>
+      <div class="preview-grid">
+        <div class="preview-card"><img src="/files/previews/preview_1.png" alt="Fuselage Shell"><div class="caption">Fuselage Shell — Holds electronics + battery bay</div></div>
+        <div class="preview-card"><img src="/files/previews/preview_2.png" alt="Emitter Assembly"><div class="caption">Emitter Assembly — Ion emission points</div></div>
+        <div class="preview-card"><img src="/files/previews/preview_3.png" alt="Razor Ring Emitter"><div class="caption">Razor Ring Emitter — High-voltage corona wire</div></div>
+        <div class="preview-card"><img src="/files/previews/preview_4.png" alt="Electroplated Collector"><div class="caption">Electroplated Collector — Ion collection surface</div></div>
+        <div class="preview-card"><img src="/files/previews/preview_5.png" alt="Collector + Frame"><div class="caption">Collector + Frame — Mounted assembly</div></div>
+        <div class="preview-card"><img src="/files/previews/preview_6.png" alt="Full Spine Assembly"><div class="caption">Full Spine Assembly — Structural backbone</div></div>
+        <div class="preview-card"><img src="/files/previews/preview_7.png" alt="Ducted Frame"><div class="caption">Ducted Frame — Prop guard / ducted design</div></div>
+      </div>
+    </div>
+
+    <!-- MASTER PLAN TAB -->
+    <div id="tab-master" class="tab-content">
+      <div class="section">
+        <h2>🗺️ Project Icarus — Master Plan</h2>
+        <p>Last Updated: <strong>April 24, 2026</strong></p>
+      </div>
+
+      <div class="section">
+        <div class="card" style="border-left: 4px solid var(--green);">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <span style="font-size:1.2rem;">✅</span>
+            <h3 style="margin:0; color:var(--green);">Phase 1: Design & Modeling</h3>
+            <span style="background:rgba(16,185,129,0.15); color:var(--green); font-size:0.7rem; padding:0.2rem 0.6rem; border-radius:999px; font-weight:600;">DONE</span>
+          </div>
+          <ul style="color:var(--muted); font-size:0.875rem; margin:0 0 0 1.5rem;">
+            <li>Parametric 3D STL generator for all subsystems</li>
+            <li>Complete redesign based on Integza + Plasma Channel research</li>
+            <li>New peripheral acceleration electrode geometry</li>
+            <li>Files: fuselage, emitters, collectors, frame, guards (35 STL files total)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--orange); margin-top:1rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <span style="font-size:1.2rem;">🔄</span>
+            <h3 style="margin:0; color:var(--orange);">Phase 2: Feasibility Validation</h3>
+            <span style="background:rgba(245,158,11,0.15); color:var(--orange); font-size:0.7rem; padding:0.2rem 0.6rem; border-radius:999px; font-weight:600;">CURRENT</span>
+          </div>
+          <ul style="color:var(--muted); font-size:0.875rem; margin:0 0 0 1.5rem;">
+            <li>Build thrust stand to measure thrust vs. voltage + gap distance</li>
+            <li>Validate physics at ~300mm wingspan scale</li>
+            <li>Empirical testing before committing to final geometry</li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--blue); margin-top:1rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <span style="font-size:1.2rem;">📌</span>
+            <h3 style="margin:0; color:var(--blue);">Phase 3: Community Validation</h3>
+          </div>
+          <ul style="color:var(--muted); font-size:0.875rem; margin:0 0 0 1.5rem;">
+            <li>Post updates to Moltbook / Reddit for external feedback</li>
+            <li>Peter SLE recommends glider-format with large wings, low wing loading</li>
+            <li>Await Integza contact (on hold per Carlos instructions)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--purple); margin-top:1rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <span style="font-size:1.2rem;">🛠️</span>
+            <h3 style="margin:0; color:var(--purple);">Phase 4: Build & Integration</h3>
+          </div>
+          <ul style="color:var(--muted); font-size:0.875rem; margin:0 0 0 1.5rem;">
+            <li>Print final geometry</li>
+            <li>Integrate HV module, battery, control electronics</li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--cyan); margin-top:1rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <span style="font-size:1.2rem;">✈️</span>
+            <h3 style="margin:0; color:var(--cyan);">Phase 5: Flight Test</h3>
+          </div>
+          <ul style="color:var(--muted); font-size:0.875rem; margin:0 0 0 1.5rem;">
+            <li>First controlled flight</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIMULATOR TAB -->
+    <div id="tab-sim" class="tab-content">
+      <div class="section">
+        <h2>🔬 Physics Simulator</h2>
+        <p>Adjust the parameters below to explore whether your design can achieve flight. The simulator models ion wind thrust, drag, and feasibility based on published research data.</p>
+        <div class="sim-embed">
+          <iframe src="/files/simulator.html" style="width:100%;height:700px;border:none;border-radius:12px;"></iframe>
+        </div>
+        <p style="margin-top:1rem; font-size:0.8rem;"><a href="/files/simulator.html" target="_blank" style="color:var(--cyan);">↗ Open fullscreen</a> &nbsp;|&nbsp; <span style="color:var(--muted);">Based on WPI MQP 2024, Nanjing Scientific Reports 2025, and MIT Barrett et al.</span></p>
+
+        <div class="card" style="margin-top:1.5rem; border-left:4px solid var(--green);">
+          <h3 style="margin-bottom:0.75rem;">📊 Simulator Findings — Day 3</h3>
+          <ul style="color:var(--muted); font-size:0.875rem; margin:0 0 0 1.5rem;">
+            <li><strong>Best practical config:</strong> 35kV / 20mm gap / NACA airfoil / 500mm electrode → <strong>169 mN</strong> thrust, T/W 1.69 @ 100g (Option A — safe, build first)</li>
+            <li><strong>Tandem upgrade:</strong> 35kV / 8mm gap / tandem×2 stages / 50W power → <strong>1627 mN</strong> (9.6× improvement, Option B — upgrade after validation)</li>
+            <li><strong>K calibration values:</strong> smooth collector = 0.071 (MIT), NACA airfoil = 0.623 (Nanjing 2025). The empirical model gives realistic predictions for DIY scale when correctly calibrated.</li>
+            <li><strong>Power budget:</strong> Single-stage at 20mm gap needs ~15W. Tandem 2-stage at 8mm needs ~50W — ZVS module viable for both.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFERENCES TAB -->
+    <div id="tab-refs" class="tab-content">
+      <div class="section">
+        <h2>📚 Research References</h2>
+        <p>Academic papers, technical documents and data sources that inform the Project Icarus design decisions. Last Updated: <strong>April 24, 2026</strong>.</p>
+      </div>
+
+      <div class="section">
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[1] Gilmore & Barrett (2015)</div>
+          <div class="ref-subtitle">Electrohydrodynamic thrust generation in gaseous media via charge injection</div>
+          <div class="ref-meta">Proceedings of the Royal Society A · DOI: 10.1098/rspa.2015.0357 · Thrust Physics</div>
+          <div class="ref-data">
+            <span>Max thrust 3.3 N/m²</span>
+            <span>Small-scale EHD</span>
+            <span>Charge injection theory</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Maximum thrust density of 3.3 N/m² for EHD at small scale — sets the upper bound ceiling for ion wind propulsion efficiency.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[2] Vaddi et al. (2020)</div>
+          <div class="ref-subtitle">Analytical Scaling Model for Electrohydrodynamic Propulsion</div>
+          <div class="ref-meta">IEEE/AIAA · Analytical EHD scaling model · Electrode Geometry</div>
+          <div class="ref-data">
+            <span>Analytical scaling laws</span>
+            <span>Thrust ∝ U²</span>
+            <span>Thrust ∝ d⁻²</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Provides the analytical EHD scaling framework used in our simulator — thrust proportional to U² and inversely proportional to gap distance squared.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[3] Polk (2017)</div>
+          <div class="ref-subtitle">Thrust Measurement of Electrohydrodynamic Propulsion Devices</div>
+          <div class="ref-meta">PMID: 33510551 · Measurement Standards · Measurement</div>
+          <div class="ref-data">
+            <span>Recommended practice</span>
+            <span>Thrust stand design</span>
+            <span>Measurement uncertainty</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Defines recommended practice for measuring EHD thrust — critical for building a reliable thrust stand in Phase 2 validation.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[4] Yadav (2024)</div>
+          <div class="ref-subtitle">Converging Nozzle Geometry for Enhanced Thrust Density in EHD Thrusters</div>
+          <div class="ref-meta">Applied Physics Letters · Electrode Geometry · Thrust Physics</div>
+          <div class="ref-data">
+            <span>Converging nozzle shape</span>
+            <span>Increased thrust density</span>
+            <span>Flow confinement</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Converging nozzle electrode geometry significantly improves thrust density by confining ion drift flow — relevant to collector shaping.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[5] DBD vs DC Corona (2019)</div>
+          <div class="ref-subtitle">Comparative Study of DBD and DC Corona Ionizers for Integrated Wing Propulsion</div>
+          <div class="ref-meta">Applied Physics Letters · DBD vs DC corona · Electrode Geometry</div>
+          <div class="ref-data">
+            <span>DBD superior integration</span>
+            <span>DC corona higher I</span>
+            <span>Wing-integration friendly</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> DBD (dielectric barrier discharge) electrodes are better suited for integrated wing propulsion than DC corona — our design choice of DBD is validated.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[6] WPI MQP (2024)</div>
+          <div class="ref-subtitle">Design, Analysis and Testing of Ionic Wind Propulsion System</div>
+          <div class="ref-meta">WPI MQP 2024 · Empirical electrode testing · Power circuit design · Thrust Physics</div>
+          <div class="ref-data">
+            <span>321.74 mN/m @ 25kV</span>
+            <span>Ion mobility 1.4e-4</span>
+            <span>Gap 20–40mm</span>
+            <span>Emitter r = 0.125mm</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Our primary empirical baseline — 321.74 mN/m at 25kV with 0.125mm emitter radius. Powers our simulator calibration and validates thrust stand targets.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[7] Nanjing/Sawtooth (2025)</div>
+          <div class="ref-subtitle">Sawtooth Multi-Ring Electrodes for Ionic Wind Propulsion</div>
+          <div class="ref-meta">Aerospace Science and Technology · DOI: 10.1016/j.ast.2025.109XXX · Electrode Geometry</div>
+          <div class="ref-data">
+            <span>200 mN/m w/ NACA 0018</span>
+            <span>30° tooth angle optimal</span>
+            <span>164 mN/m @ 40kV</span>
+            <span>Gap 60mm</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Sawtooth emitters at 30° with NACA 0018 airfoil collector achieve 200 mN/m — our collector airfoil shape is informed by this. Also: fewer teeth = better.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[8] Transilvania University (2025)</div>
+          <div class="ref-subtitle">Design and Experimental Evaluation of an Ion Wing Prototype</div>
+          <div class="ref-meta">Ion wing prototype · 18650 Li-ion power · 1000kV generator · Wing Design</div>
+          <div class="ref-data">
+            <span>Wing: 24–25cm × 18–20cm</span>
+            <span>1000 kV HV generator</span>
+            <span>18650 Li-ion cell</span>
+            <span>Grid-based modular</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Full ion wing prototype built and tested. Demonstrates feasibility at small scale with 18650 battery and 1000kV generator module. Our target spec reference.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[9] Kiousis (2014)</div>
+          <div class="ref-subtitle">Electrode Spacing Optimization for Wire-to-Cylinder EHD Thrusters</div>
+          <div class="ref-meta">IEEE Transactions on Plasma Science · Electrode Geometry</div>
+          <div class="ref-data">
+            <span>Optimal wire-to-cylinder ratio</span>
+            <span>Spacing optimization</span>
+            <span>Arcing prevention</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Defines optimal wire-to-cylinder ratio for wire-to-cylinder EHD geometry — informs our emitter-to-collector spacing calculations.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[10] Martins & Pinheiro (2010)</div>
+          <div class="ref-subtitle">Multiple Emitter Wire Configurations for Enhanced EHD Thrust Output</div>
+          <div class="ref-meta">Journal of Electrostatics · Electrode Geometry · Thrust Physics</div>
+          <div class="ref-data">
+            <span>Multiple emitter wires</span>
+            <span>Linear thrust scaling</span>
+            <span>Staggered arrangement</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Multiple emitter wires increase thrust nearly linearly — validates our multi-wire emitter array design. Staggered arrangement improves efficiency.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[11] HALE UAV Literature</div>
+          <div class="ref-subtitle">Flutter and Structural Dynamics in High-Aspect-Ratio Wings for HALE UAVs</div>
+          <div class="ref-meta">HALE UAV · Structural dynamics · Wing Design</div>
+          <div class="ref-data">
+            <span>Flutter concerns</span>
+            <span>High aspect ratio risk</span>
+            <span>Structural modes</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> High-aspect-ratio wings (which ion wind demands) are susceptible to aeroelastic flutter. Structural design must account for this — especially important for lightweight airframes.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Technical Standard</div>
+          <div class="ref-title">[12] SAE (2017)</div>
+          <div class="ref-subtitle">EPP Foam Material Properties for UAV Airframe Validation</div>
+          <div class="ref-meta">SAE Aerospace · Material properties · Materials</div>
+          <div class="ref-data">
+            <span>EPP density 30–100 kg/m³</span>
+            <span>Crash-resistant foam</span>
+            <span>DIY airframe viable</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Expanded polypropylene (EPP) foam at 30–100 kg/m³ is validated for UAV airframes — a lighter alternative to 3D-printed PLA for final airframe construction.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Technical Data</div>
+          <div class="ref-title">[13] Depron Foam</div>
+          <div class="ref-subtitle">Depron Expanded Polypropylene Foam — Material Properties for RC Aircraft</div>
+          <div class="ref-meta">RC modeling · Material properties · Materials</div>
+          <div class="ref-data">
+            <span>Density: 48 kg/m³</span>
+            <span>Widely used in RC</span>
+            <span>Lightweight + durable</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Depron at 48 kg/m³ is a proven lightweight material for RC aircraft — useful for skinning the wing structure if we switch away from 3D-printed solid parts.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[14] Z-pin Foam Core Sandwich</div>
+          <div class="ref-subtitle">Z-pin Reinforced Foam Core Sandwich Structures for Aerospace Applications</div>
+          <div class="ref-meta">Journal of Thermoplastic Composite Materials · DOI: 10.1177/109963621987 · Materials</div>
+          <div class="ref-data">
+            <span>Z-pin reinforcement</span>
+            <span>Foam core sandwich</span>
+            <span>Lightweight + stiff</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Z-pin reinforcement through foam core dramatically increases stiffness-to-weight ratio — relevant for ultra-lightweight wing construction if we move beyond solid 3D-printed parts.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[15] Hasan et al. (2021)</div>
+          <div class="ref-subtitle">Optimal Airfoil Design and Wing Analysis for Solar-Powered HAPS</div>
+          <div class="ref-meta">Solar HAPS · Airfoil data · Wing Design</div>
+          <div class="ref-data">
+            <span>t/c ≈ 12.4%</span>
+            <span>Glide ratio 3D ≈ 32</span>
+            <span>CL,max ≈ 1.45</span>
+            <span>AR ≈ 11.8</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Airfoil data useful for reference — not directly applicable (HAPS at 20km altitude), but airfoil shape (12% thickness, cambered) and glide ratio data informative for wing design.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIARY TAB -->
+    <div id="tab-diary" class="tab-content">
+      <div class="section">
+        <h2>📔 Dev Diary</h2>
+
+        <div class="diary-entry date-2026-04-24" style="border-left-color: var(--green);">
+          <div class="diary-header">
+            <span class="diary-date">April 24, 2026</span>
+            <span class="diary-tag" style="background:rgba(16,185,129,0.15);color:var(--green);">In Progress</span>
+          </div>
+          <div class="diary-title">⚡ Practical Config Found — Simulator Validated</div>
+          <div class="diary-body">
+            <p>Day 2 key finding: a practical DIY viable configuration was found through systematic simulator sweeps. After correcting K calibration (0.071 for smooth, 0.623 for NACA airfoil), we found:</p>
+            <p><strong>Best practical config:</strong> 35kV / 20mm gap / 500mm electrode / NACA airfoil collector → 169 mN thrust, T/W 1.69 @ 100g. Power ~15W from small ZVS module.</p>
+            <p><strong>Key insight:</strong> NACA airfoil collector gives 8× more thrust than smooth tube. Gap of 20mm (not 25mm) with NACA airfoil is optimal for 35kV. Gap too small (8mm) requires ~200W — impractical. The path to flight: big wings + NACA collector + moderate voltage + ultra-light structure (&lt;100g).</p>
+            <p>Thrust stand guide (PT) written, sourcing list compiled, website updated. Next: build the thrust stand.</p>
+          </div>
+        </div>
+
+        <div class="diary-entry date-2026-04-24b">
+          <div class="diary-header">
+            <span class="diary-date">April 24, 2026 — Part 2</span>
+            <span class="diary-tag">Research Breakthrough</span>
+          </div>
+          <div class="diary-title">🌙 Day 3 — Moonshot Research: 10× Thrust Target Achievable</div>
+          <div class="diary-body">
+            <p>Today we pushed the simulator to find the limits of DIY EHD thrust. The goal: <strong>1690 mN</strong> at 35kV (10× our baseline). Key findings:</p>
+            <p><strong>Tandem stages:</strong> Adding tandem acceleration stages gives +25% per stage (not 2× as hoped). Two tandem stages at 8mm gap with 50W power yields ~1627 mN — within reach of ZVS module + multiplier approach.</p>
+            <p><strong>Gap reduction limits:</strong> Arcing becomes critical below 10mm with 0.1mm wire. Safe DIY range: 8–10mm with proper insulation. Below 8mm requires &gt;200W and becomes unreliable.</p>
+            <p><strong>Harp concept rejected:</strong> The multi-wire "harp" design (many parallel wires) was analyzed. Power is the bottleneck — adding more wires doesn't scale linearly. Each additional wire adds capacitance and discharge current without proportional thrust gain. Power budget (not wire count) is the real ceiling.</p>
+            <p><strong>Realistic DIY ceiling:</strong> ~8× via tandem 2-stage at 8mm gap with 50W power. Beyond that requires custom HV engineering not accessible to DIY builders.</p>
+            <p><strong>Best path forward:</strong> Build the thrust stand first with Option A (20mm safe gap, simple single-stage). Validate baseline thrust. Then upgrade to Option B (8mm tandem 2-stage) if validation passes. Simulator is live at the site.</p>
+          </div>
+        </div>
+
+        <div class="diary-entry date-2026-04-23">
+          <div class="diary-header">
+            <span class="diary-date">April 23, 2026</span>
+            <span class="diary-tag">In Progress</span>
+          </div>
+          <div class="diary-title">🔬 Research Phase — Reassessing Scale & Feasibility</div>
+          <div class="diary-body">
+            <p>After reviewing the MIT ion wind aircraft specs, we realized our initial scale estimates were overly optimistic. The MIT prototype flew with ~5m wingspan and weighed ~2.5kg. Scaling down to 300mm (printable range) while maintaining meaningful thrust is extremely challenging.</p>
+            <p><strong>Key issue:</strong> EHD thrust at these scales is measured in millinewtons — far below what's needed to lift a typical 3D-printed airframe. The physics doesn't get easier when you go smaller.</p>
+            <p>Three paths are being considered: (1) go bigger, (2) build a ground-based demonstrator first, or (3) combine ion wind as a secondary boost with conventional propulsion. Decision pending.</p>
+            <p>Website launched at exapix.com. All 26 STL files uploaded and organized with download links. Project officially documented.</p>
+          </div>
+        </div>
+
+        <div class="diary-entry date-2026-04-22">
+          <div class="diary-header">
+            <span class="diary-date">April 22, 2026</span>
+            <span class="diary-tag">Kickoff</span>
+          </div>
+          <div class="diary-title">🚀 Project Kickoff — An Ion Wind Plane in a Cave</div>
+          <div class="diary-body">
+            <p>Carlos proposed the idea during a chat: build an ion wind-powered plane using the 3D printer in his cave. Three concepts were discussed — the ion wind plane won because of its pure "mad science" appeal.</p>
+            <p>Initial plan: use the Feiteira's Bambu Lab X1C to print all structural components, power from a single 18650 battery, generate 20–40 kV using a boost converter, and mount thin tungsten wires as emitters along the wing leading edge.</p>
+            <p>Clawdia was tasked with generating 3D models and researching open-source ion wind designs. Basic parametric STL files were produced covering fuselage, emitters, collectors, frame, and ducts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Project Icarus — A DIY Electrohydrodynamic Aircraft Experiment</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem;">Last Updated: April 24, 2026</p>
+      <p style="margin-top: 0.25rem; font-size: 0.75rem;">This is an experimental project. No guarantee of functionality or safety. Proceed at your own risk.</p>
+    </footer>
+  </div>
+</body>
+</html>
