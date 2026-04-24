@@ -142,7 +142,8 @@
     <nav class="tabs">
       <button class="tab active" onclick="showTab('tab-overview')">Overview</button>
       <button class="tab" onclick="showTab('tab-files')">🖨️ 3D Files</button>
-      <button class="tab" onclick="showTab('tab-previews')">📸 Previews</button>
+      <button class="tab" onclick="showTab('tab-previews')">📸 3D Models</button>
+      <button class="tab" onclick="showTab('tab-thrust-stand')">⚙️ Thrust Stand</button>
       <button class="tab" onclick="showTab('tab-diary')">📔 Dev Diary</button>
       <button class="tab" onclick="showTab('tab-master')">🗺️ Master Plan</button>
       <button class="tab" onclick="showTab('tab-refs')">📚 References</button>
@@ -325,6 +326,33 @@
         <div class="preview-card"><img src="/files/previews/preview_5.png" alt="Collector + Frame"><div class="caption">Collector + Frame — Mounted assembly</div></div>
         <div class="preview-card"><img src="/files/previews/preview_6.png" alt="Full Spine Assembly"><div class="caption">Full Spine Assembly — Structural backbone</div></div>
         <div class="preview-card"><img src="/files/previews/preview_7.png" alt="Ducted Frame"><div class="caption">Ducted Frame — Prop guard / ducted design</div></div>
+      </div>
+    </div>
+
+    <!-- THRUST STAND TAB -->
+    <div id="tab-thrust-stand" class="tab-content">
+      <div class="section">
+        <h2>⚙️ Thrust Stand — Build Order</h2>
+        <p>Build the thrust stand FIRST to validate our model. All parts are 3D-printed on Bambu Lab X1C/P1P. Start with Option A.</p>
+        <p><strong>Option A (EUR64):</strong> Single-stage NACA collector, 20mm gap, 35kV to 169 mN baseline. Build this first.</p>
+        <p><strong>Option C (~EUR69):</strong> Wire-to-mesh + steel wool collector, 20mm gap to 234 mN (+39 percent). Test after Option A validates.</p>
+        <p><strong>Option B (~EUR80 + PSU):</strong> Ducted tandem 2-stage, 8mm gap, 50W to 1355 mN. Only build after Options A+C validate.</p>
+      </div>
+      <div class="preview-grid">
+        <div class="preview-card"><img src="/files/previews/ts_1.png" alt="Emitter Wire Frame"><div class="caption">Emitter Wire Frame — acrylic structure for thin wire</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_2.png" alt="Wire Support Post"><div class="caption">Wire Support Post — one of 9 posts holding emitter wire</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_3.png" alt="Collector Mount Frame"><div class="caption">Collector Mount Frame — holds foil parallel to emitter</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_4.png" alt="Adjustable Gap Mount"><div class="caption">Adjustable Gap Mount — tune gap from 10-40mm</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_5.png" alt="Spine Segment"><div class="caption">Spine Segment — structural node for acrylic base</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_6.png" alt="Spine Junction Node"><div class="caption">Spine Junction Node — joins two spine segments</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_7.png" alt="Fuselage Shell"><div class="caption">Fuselage Shell — battery bay + HV module enclosure</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_8.png" alt="Collector Foil Plate"><div class="caption">Collector Foil Plate — flat copper on acrylic (Option A)</div></div>
+        <div class="preview-card"><img src="/files/previews/ts_9.png" alt="Duct Ring"><div class="caption">Duct Ring — for ducted tandem Option B upgrade</div></div>
+      </div>
+      <div class="section">
+        <h3>📋 STL Files</h3>
+        <p>All STL files in the <a href="https://github.com/feiteira/Project-Icarus">GitHub repo</a> under ion-wind-plane/. Generate with:</p>
+        <pre>python3 generate_all.py</pre>
       </div>
     </div>
 
