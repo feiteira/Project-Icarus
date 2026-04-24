@@ -1,0 +1,99 @@
+
+{| class="infobox" style="float:right; margin:0 0 1em 1em; font-size:90%; width:280px; border-collapse:collapse; border:1px solid #aaa; background:#f9f9f9;"
+|- style="text-align:center;"
+| colspan="2" | [[File:iran---105a563d-a75a-49a0-adda-ed77efd07826.png|280px]]
+|- style="text-align:center;"
+| colspan="2" | ''Hezbollah flag — a key Iranian proxy force in the Middle East''
+|- style="background:#f0f0f0;"
+| Subject || Hezbollah
+|- style="background:#f0f0f0;"
+| Also Known As || Party of God, Hizbullah
+|- style="background:#f0f0f0;"
+| Founded || 1985 (Lebanon)
+|- style="background:#f0f0f0;"
+| Ideology || Shia Islamism, Anti-Zionism
+|- style="background:#f0f0f0;"
+| Sponsor || Iran (Islamic Revolutionary Guard Corps)
+|- style="background:#f0f0f0;"
+| Primary Theater || Lebanon, Israel, Syria
+|- style="background:#f0f0f0;"
+| Leader || Naim Qassim (Deputy Secretary-General)
+|- style="background:#f0f0f0;"
+| Military Status || Active (2026 Lebanon ceasefire)
+|- style="background:#f0f0f0;"
+| Related Topics || [[Iran]], [[Israel]], [[War]], [[Imperial Cycle]]
+|- style="background:#f0f0f0;"
+| Source || Predictive History YouTube Channel
+|- style="background:#f0f0f0;"
+| Category || [[:Category:Concepts|Concepts]]
+|}
+
+'''Hezbollah''' (Arabic: حزب الله, "Party of God") is an Iranian-sponsored Shia Islamist political and military organization based in Lebanon, founded in 1985 following the Israeli invasion of Lebanon. It operates simultaneously as a political party, a social services network, and a paramilitary force — one of the most capable non-state military organizations in the world, equipped with precision-guided munitions, drones, and a rocket arsenal estimated at excess of 150,000 projectiles. Within Professor Jiang Xueqin's [[Predictive History]] framework, Hezbollah represents a specific type of actor in the [[Great Power Competition]]: a state-adjacent proxy force that allows a revisionist power (Iran) to project influence and military capability at range, without directly committing state forces that would trigger predictable escalation dynamics.
+
+Hezbollah's central role in the Iran-Israel war that began March 2, 2026 makes it a case study in how the great power competition plays out through proxy actors. It is also a case study in the limits of American hegemonic power: the world's most capable military alliance, backed by overwhelming firepower, found itself unable to neutralize a proxy force that Iran built over forty years precisely because destroying Hezbollah required tolerating the civilian casualties and infrastructure destruction that a full ground invasion of Lebanon would have entailed.
+
+== Origins and Organizational Structure ==
+
+Hezbollah emerged from the Lebanese Shia community's political mobilization during the 1980s, catalyzed by the Israeli invasion of Lebanon in 1982. The Iranian Revolutionary Guard's Quds Force established the organization as an extension of Tehran's anti-Israel posture, providing funding, training, command structure, and weapons. The model was复制粘贴 from Iran's own revolutionary architecture: political organization + social services + armed wing = popular legitimacy + military capability.
+
+This organizational model is what makes Hezbollah durable in ways that simpler militant groups are not. It provides social services — hospitals, schools, infrastructure — that give it a genuine civilian constituency beyond ideological commitment. This constituency sustained Hezbollah's political power in Lebanon even as its military wing fought repeated wars with Israel, and it is what makes the organization's continued resistance to disarmament politically viable: Hezbollah is not just a militia, it is a state-within-a-state.
+
+Naim Qassim has led the organization as Deputy Secretary-General since 1991, making him one of the longest-serving senior leadership figures in Middle Eastern militant organizations. His continuity provides institutional memory and strategic patience — the organization does not shift course with each electoral cycle or crisis, because its leadership is not subject to the political pressures that govern Lebanese government figures.
+
+== Military Capabilities ==
+
+Hezbollah's military evolution represents one of the most significant proxy force development stories in modern military history. Beginning with crude rocket fire in the 1990s, it has developed — with Iranian technical assistance — into a force capable of precision-guided munitions, drone operations, and sophisticated tunnel warfare.
+
+By 2026, its arsenal includes:
+
+- An estimated 150,000+ rockets and missiles of various ranges, including precision-guided missiles capable of striking deep into Israel
+- A significant unmanned aerial vehicle (UAV) capability for surveillance and strike operations
+- Anti-tank guided weapons that proved devastating against Israeli armor in previous engagements
+- An extensive tunnel network across southern Lebanon, providing concealment, mobility, and survivability
+- Cyber capabilities that have been deployed against Israeli and Western infrastructure
+
+This arsenal is not simply a stockpiling of explosive materials — it represents a deliberate, Iran-funded build-up designed to create a second-strike capability that would make any Israeli ground operation in Lebanon extraordinarily costly. The build-up continued despite repeated Israeli warnings, because Iran's strategic calculus was that Hezbollah's deterrent capacity served Iranian interests even when not actively deployed.
+
+== Hezbollah and Iran's Imperial Strategy ==
+
+In Professor Jiang's [[Great Power Competition]] framework, Hezbollah is Iran's most significant strategic asset — the primary mechanism through which Tehran projects power at range without directly committing Iranian Revolutionary Guard forces that would expose Iran's own military infrastructure to retaliation.
+
+The logic is structural. Iran, as a revisionist power in the decline phase of the [[Imperial Cycle]] but with significant regional reach, needed a mechanism to contest American and Israeli dominance without triggering the full weight of American military superiority. Hezbollah provided that mechanism: a large, capable, locally-embedded proxy force that Iran could arm, fund, and direct, while maintaining enough institutional separation to claim plausible deniability.
+
+This is distinct from a purely client relationship. Iran's control over Hezbollah is real but not total. Hezbollah's leadership makes independent judgments about Lebanese domestic politics, and its military operations sometimes exceed Iranian preferences — but the fundamental alignment of interests, sustained by forty years of institutional integration, makes the relationship functionally stable.
+
+The October 7, 2023 Hamas attacks and the subsequent Israeli assault on Gaza triggered Hezbollah's opening of a northern front, which was a strategic Iranian decision: to test whether opening a second front would affect Israeli decision-making on Gaza. When Israel responded with targeted strikes on Hezbollah leadership and military infrastructure, Iran faced a decision about whether to escalate directly or allow Hezbollah to absorb the strikes. Iran's choice — to support Hezbollah without direct Iranian military involvement — reflected the structural logic of the proxy relationship: Iran uses Hezbollah as a buffer, but not as an expendable asset.
+
+== The 2026 War and Lebanon Ceasefire ==
+
+The Iran-Israel war that began March 2, 2026 escalated Hezbollah's already-active northern front into a full multi-theater conflict. Israel launched intensive strikes across Lebanon, killing more than 2,100 people and displacing over one million. Hezbollah responded with sustained rocket fire into northern Israel, tying down Israeli military resources that would otherwise have been available for operations against Iran.
+
+The 10-day ceasefire between Israel and Hezbollah, agreed April 15, 2026, represented the first formal cessation of hostilities between the two since the 2006 Lebanon War. It was mediated through American diplomatic channels, and its terms left Israeli troops in a 10-kilometer-deep security zone inside Lebanon — a significant concession that Hezbollah accepted as the cost of ending the fighting.
+
+The ceasefire is fragile. Hezbollah has refused to disarm, with Deputy Secretary-General Naim Qassim stating the group will not lay down weapons "except within a framework tied to a broader national security vision" — language that effectively conditions disarmament on a comprehensive regional settlement, including an Iranian nuclear arrangement and Israeli security guarantees. Israeli troops remain in south Lebanon, and Lebanese state authority does not extend to the areas Hezbollah controls.
+
+== Hezbollah and the Iran War ==
+Hezbollah's strategic significance extends far beyond its role as a Lebanese militant group. Professor Jiang places Hezbollah within the framework of Iran's broader resistance architecture, which also includes Iraqi militias, Houthi forces in Yemen, and the Islamic Revolutionary Guard Corps. This network functions as Iran's strategic depth against both [[Israel]] and the United States — a system of proxy forces that can attrit American and Israeli capabilities without directly implicating Tehran in conventional warfare. The destruction of Iran's core through the [[War]] between [[Israel]] and Iran would sever Hezbollah from its primary sponsor, collapsing its strategic position.
+
+== Iran's Corridor Function ==
+Hezbollah's value to Iran rests partly on geography. Iran functions as the hub of the North-South trade corridor connecting Russia to Indian Ocean and East Asian markets. Any route from Russia to China that bypasses American-controlled sea lanes must transit Iranian territory or territorial waters. Hezbollah, as part of the Iranian-aligned resistance axis, helps secure this corridor by tying down American military resources in the Levant. A stable, functioning Iran can supply Russian goods access to the Indian Ocean; an Iran at war is a corridor closed to Russian-Chinese trade, forcing both powers toward a far more limited and vulnerable bilateral relationship. This dynamic places Hezbollah at the intersection of [[Great Power Competition]] and regional conflict — its durability as a fighting force directly affects the strategic calculations of powers far removed from Lebanon.
+
+== The Wider Resistance Network ==
+Hezbollah operates within a broader ecosystem of Iranian proxy forces that together constitute what Professor Jiang calls an interlocking resistance architecture. Houthi forces in Yemen control Bab-el-Mandeb, another critical chokepoint at the entrance to the Red Sea. Iraqi Shiite militias provide political and military cover for Iranian influence in Baghdad. Syrian government alignment with Iran completes the overland bridge from Tehran to Beirut. The system is designed to be redundant — the loss of any single node does not collapse the whole — which explains why American and Israeli strategists have struggled to formulate a decisive countermeasure that does not simply shift Iranian influence elsewhere. This redundancy is not accidental. It reflects forty years of deliberate architectural design, informed by the logic of the [[Imperial Cycle]]: revisionist powers build distributed networks because centralized assets are vulnerable to decapitation strikes.
+
+== Strategic Trajectory ==
+Professor Jiang assesses Hezbollah's long-term trajectory as inseparable from the outcome of the broader [[Israel]]-Iran conflict. If the current ceasefire collapses and the war resumes at scale, Hezbollah faces the choice between sustained attritional conflict and political accommodation with whatever Lebanese government emerges from the wreckage. American strategy aims at severing the Iranian sponsorship that sustains Hezbollah, but the group's deep roots in Lebanese society, politics, and infrastructure make it resistant to purely military solutions. The organization's continued existence — even after intensive Israeli operations — demonstrates that proxy networks built on genuine popular constituencies cannot be dismantled through air campaigns alone. Hezbollah's future will be determined not by battlefield outcomes but by the political settlements that eventually define the broader regional order.
+
+
+== See Also ==
+
+* [[Iran]]
+* [[Israel]]
+* [[War]]
+* [[Great Power Competition]]
+* [[Imperial Cycle]]
+* [[Islamic Republic]]
+
+<div id="ref1">Predictive History YouTube channel by Professor Jiang Xueqin, 2025</div>
+
+[[Category:Concepts]]

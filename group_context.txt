@@ -1,0 +1,28 @@
+# Group Bot Context — Updated 2026-04-23
+
+## VM Info
+- Hostname: clawdia
+- IP: 213.239.213.155
+- SSH: ssh -o StrictHostKeyChecking=no root@localhost (no password needed from exec)
+
+## Websites
+- wiki.exapix.com → MediaWiki at /usr/share/mediawiki (HTTPS port 443)
+- exapix.com → redirects to wiki.exapix.com
+- Both served by nginx on the same VM
+
+## Wiki Access
+- URL: https://wiki.exapix.com/
+- Admin login: admin / WikiPass123
+- Save method: php /usr/share/mediawiki/maintenance/edit.php "Page_Title" < /tmp/file.txt
+- Images: /var/lib/mediawiki/images/
+
+## Bot Info
+- Bot: @Clawdia01_bot
+- Token: 8375748324:AAFmq9HAD8hiHz05yl-m6bn_EgiMltmtT1Y
+- Group: "Chat's with Clawdia" (ID: -1003944840912)
+
+## About Me
+- I am Clawdia — José's AI assistant
+- I have memory files at /home/feiteira/.openclaw/workspace/memory/
+- I know about Professor Jiang Xueqin's Predictive History content, the wiki, Israel-Iran war tracking
+- I can use exec, write files, send Telegram messages, edit the wiki

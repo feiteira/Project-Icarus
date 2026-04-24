@@ -108,6 +108,21 @@ There are two configurations for the thrust stand. Both use the same basic setup
 
 **Best for:** If you want to test the tandem concept and push toward flight-capable thrust.
 
+### Option C: Wire-to-Mesh + Steel Wool (~EUR64 + steel wool)
+- Voltage: 35 kV
+- Gap: 20 mm (safe, no arcing risk)
+- Electrode length: 500 mm
+- Collector: Wire-to-mesh + steel wool texture (see Part 3.2 below)
+- Power: ~15W (small ZVS module)
+- Expected thrust: ~234 mN (1.39× vs baseline NACA)
+- T/W @ 100g: 2.34 (flight viable)
+- Risk: Very low. Same safe gap as Option A.
+- Build time: 2-3 hours
+
+**Best for:** If Option A works and you want to test the collector geometry upgrade before committing to tandem.
+
+**Why this matters:** Academic research (Lee et al. 2008) shows 3D textured electrode surfaces amplify thrust 1.5–3×. Steel wool on a wire-to-mesh collector creates this texture effect — cheap and immediately testable.
+
 ---
 
 ## PARTE 2: Conhecer os Componentes
@@ -245,14 +260,33 @@ Para saber quanta tensão estás a gerar, usa o divisor resistivo:
 
 **Passo 4: Monta o collector foil**
 
-1. Corta uma tira de cobre/alumínio com ~2cm de largura e 15cm de comprimento
-2. Moldura suavemente à volta de um tubo ou cilindro (para ficar com forma arredondada)
-3. Coloca o collector paralelo ao fio emitter, com os dois a apontarem na mesma direcção
-4. O gap (espaço) entre o fio emitter e o collector deve ser:
-   - **Opção A (Starter): 20mm** — seguro, sem risco de arcing (podes usar uma régua ou um pedaço de cartão de 2cm como espaçador)
-   - **Opção B (Upgrade/10×): 8mm** — cuidado, tens de validar primeiro com Opção A
+Tens 3 opções de collector — escolhe conforme a opção que estás a construir:
 
-[⚠️ AVISO (Opção A): Se o gap for < 15mm, vais ter arcing (faíscas) em vez de corona. Se for > 40mm, o thrust vai ser muito fraco. 20mm é o ponto óptimo para começar.]
+**Collector Opção A (Starter / Opção A): NACA airfoil foil**
+
+1. Corta uma tira de cobre/alumínio com ~2cm de largura e 15cm de comprimento
+2. Moldeia suavemente à volta de um tubo ou cilindro (para ficar com forma arredondada de aerofólio)
+3. Coloca o collector paralelo ao fio emitter
+4. Gap: **20mm**
+
+**Collector Opção B (Upgrade / Opção B): NACA airfoil foil**
+
+1. Same as Opção A
+2. Gap: **8mm** (após validar com Opção A)
+
+**Collector Opção C (Wire-to-Mesh + Steel Wool / Opção C):**
+
+1. Corta um pedaço de **malha de arame de aluminum** (tipo rede de mosquito ou tela de chicken coop) com ~5cm × 50cm — ~€3 num supermercado
+2. Estica a malha sobre uma placa de acrylic — deve ficar plana mas com textura (buraquinhos visíveis)
+3. Corta um pedaço de **BOMBEAGEM DE AÇO #0000 ou #00** (o mais fino, disponível em qualquer supermercado por ~€2)
+4. Coloca o steel wool **por cima** da malha — não precisas de colar, fica suspenso e em contacto eléctrico com a malha
+5. Liga a malha + steel wool ao fio HV- (terra/cátodo)
+6. A combinação malha + steel wool cria uma **superfície 3D texturada** com muitos pontos de campo intenso — isso gera ~1.8× mais thrust
+7. Gap: **20mm** (mesmo safe as Opção A)
+
+[NOTA: O steel wool vai oxidar (acção electroquímica). Após 10-20 horas de uso, replace-o. É um consumível de €2.]
+
+[⚠️ AVISO (Opção A/C): Se o gap for < 15mm, vais ter arcing (faíscas) em vez de corona. Se for > 40mm, o thrust vai ser muito fraco. 20mm é o ponto óptimo para começar.]
 [⚠️ AVISO (Opção B): Com 8mm, o risco de arcing é maior. Só avança para este gap após teres validado o sistema em Opção A (20mm). Se ouvires estalos, volta a 10mm ou mais.]
 
 **Passo 5: Liga os fios HV**

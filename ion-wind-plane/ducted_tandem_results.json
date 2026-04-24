@@ -1,0 +1,29 @@
+{
+  "calibration": {
+    "K_our_NACA": 0.1104,
+    "K_NACA_theoretical": 0.623,
+    "baseline_mN": 169.0,
+    "V_kV": 35.0,
+    "d_mm": 20.0,
+    "L_m": 0.5,
+    "P_W": 15.0
+  },
+  "model_params": {
+    "K_wire_mesh": 0.0806,
+    "K_wire_mesh_steelwool": 0.145,
+    "texture_factor": 1.8,
+    "eta_duct_open": 0.25,
+    "eta_duct_diy": 0.85,
+    "eta_duct_perfect": 0.95
+  },
+  "configs": {
+    "baseline_NACA_20mm_mN": 169.0,
+    "wm_sw_20mm_mN": 222.1,
+    "wm_sw_10mm_mN": 888.3,
+    "wm_sw_8mm_mN": 1387.9,
+    "duct_2stage_10mm_diy_mN": 1643.3,
+    "duct_2stage_8mm_diy_mN": 2567.6,
+    "duct_2stage_8mm_perfect_mN": 2706.4,
+    "open_tandem_2stage_8mm_mN": 1734.9
+  }
+}

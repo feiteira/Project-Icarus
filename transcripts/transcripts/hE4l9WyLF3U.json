@@ -1,0 +1,5325 @@
+{
+  "video_id": "hE4l9WyLF3U",
+  "title": "Game Theory #1:  The Dating Game",
+  "url": "https://www.youtube.com/watch?v=hE4l9WyLF3U",
+  "upload_date": "20260106",
+  "duration": 2973,
+  "full_text": "This semester we are going to analyze a question together which is how do societies behave? Why do we do what we do? What motivates us? What drives us? And there have been different theories as to what drives human behavior. Okay. So let's go over some theories. The first theory comes to us from um religion. And the idea is that we are all driven in a war between good and evil. There's a good side to us and there is an evil side to us. There's Satan and there's God. and we are constantly in a battle in ourselves. Okay? Do we move towards Satan or do we move towards God? And that's the core of human civilization. So religion is meant to give us the strength to show us the path towards goodness. Okay, that's one theory. Another theory is comes to us from biology. Okay. And the idea is sex. We want to pass on our genes forward because that's the point of our existence. If we cannot have children, we all die. So the point of existence is to have children and have them pass on their genes to others. Okay? And for males and females, life is different because as a man, you have a penis and all you have to do is stick your penis into a woman and you're good. Okay? That's all you have to do. So you want to stick your penis in as many women as possible and that's the point of your existence. But as a woman, your life is different because it's hard to give birth. It takes 9 months to incubate the child in your womb and then p child birth is the most painful experience anyone will have ever experienced. And then the child it'll take like 16 18 years to raise a child to maturity. So it's a huge investment on your part. So as a female, you have to be very cautious, very careful about who you marry or have or or you or who you have sex with. Okay? And so life is a struggle between men who want to put their penis into anything and women who want to be careful about who they marry. Okay? So that's the idea of biology. Then of course you have the idea of race and culture that the world it's a struggle between these different races and cultures for dominance and each race each culture has their own characteristics. Okay. So maybe the yellow rays it's they're very clever but they're very weak. And then the white race are brave but kind of stupid. And the black people like anyway anyway that's another theory. I'm not saying it's correct. I'm just saying it's a theory that people believe it. Then you have economics, right? And what they believe is that we are driven by money or self-interest. We want to make as much money as possible and that's what drives us. Okay, that's pretty simple. And the last big theory is the idea of liberalism that comes from the enlightenment. And here the theory is that history is a progress towards enlightenment to rationality to truth and to justice. So the inevitability of history of human development is towards paradise towards heaven. And maybe you know we go off track now and then but inevitably we move towards God. Okay. And this comes to us from the enlightenment. We call this liberalism. Okay. So these are five theories. There are others but these are five theories that show you the diversity, the variety of ideas out there. What I will do this semester is present to you another theory which I call game theory. >> [snorts] >> And my argument to you is that game theory is the best way to understand how humans behave, what drives nations, what drives societies, what drives humans. Okay? So that's my that's my argument to you this semester. So the entire semester we will study game theory. All right. So what is game theory? All right. Game theory is very simple. The idea is that there are three components to a game. Just three aspects to a game. There are the players, the participants. Okay. Then there are the rules or the constraints. Um in mathematics we would call this the boundary conditions. Okay, the limits to the game. And the third aspect are the incentives. Basically, how do you win this game? What do you get from this game? My argument to you this semester is that if you study all three, okay? Figure out who the if you figure out who the players are, figure out what if you understand the rules, you understand the incentives, then you understand how the game works and then therefore you can predict how the game will turn out. Okay, that's the skill that I want to teach you this semester. And what I want to show you or what I promise you is that if you learn game theory, there'll be three major benefits to you as a student. Again, you don't have to learn game theory. You don't have you don't have to come to class. But if you spend the effort to learn game theory from me, then three things will benefit you. Okay. The first benefit is that you become a better person. The point of education guys, it's not to get good grades or get into university or get a good job. What I believe is the point of education is to make you into a better person which means that you are a much more thoughtful person who can better analyze yourself in the world around you. That allows you to make better better decisions. This makes you a much more curious, much more moral and much more imaginative person. Okay. So one benefit of learning game theory is you become smarter and therefore you become a better person. Okay, that's number one. Number two is you'll be able to understand the world that we live in because this world is kind of stupid. Okay, so you may have heard that Donald Trump um and the American military went into Venezuela for no real for no good reason, kidnapped a president of Venezuela, which is against which is against international law and then brought him back to New York City where he will stand trial. It's really stupid what happened. But then, but our class, it's not meant to say this is stupid or this is wrong because we all know it's stupid and wrong. We're trying to figure out why this happened and what this will lead to. And so we will be in this class studying and analyzing current events to understand how the world really works, why people behave the way they they do, and understand how the game of the world works. And this requires you to actually follow the news. Okay? It's not hard to spend five minutes and just read up on the news, but we'll be looking at the the war in Ukraine. We'll be looking at a new war between Israel and Iran. We'll be looking at what's happening in South America. We'll be looking at the conflict between China and Japan. We'll be looking at the relationship between United States and China. Okay? So this is relevant to your lives because you'll be you will eventually have to work and live in this really screwed up world that we live in. Okay. And the third benefit is once you understand the game you will have predictive powers. You'll be able to understand how the world will develop. You'll be able to analyze your own life and understand how you will develop and that gives you control, sovereignty over your own destiny. Okay, that's my promise to you. If you actually spend the time to listen carefully in class, to participate fully, to follow the news, uh, and you spend the entire semester doing so, then these three benefits will start to acrue in you. Okay, this is a lifelong struggle to learn game theory. I'm a lot older than you are. I have a lot more experience than you. Okay, but I want to show you how to look at the world through game theory. Another phrase that you you learn in school is I'm going to teach you how to think critically about the world or I'll just teach you how to think. Okay. All right. Are we clear? Any questions before I move on? All right. So, this is all very abstract. And so, what what I'm going to do now is I'm going to use an example of a game to show you how game theory works. Okay. All right. So, let's let's use a really simple game. Okay. Let's imagine there are five boys and five girls and they want to get married. Okay. So, these are the players and what we're going to do is we're going to divide up them up into male and female. Then what we're going to do is we will rank the males and the females. Okay? Okay. So, we're going to rank 10 players and to five 4 3 2 1 5 4 3 2 1. Okay. And so, how do we rank them? Well, we rank them according to their attractiveness using three criteria. Uh the first is genes, the second is wealth and the third is status. Okay. So genes is very simple. It means that you're good-looking. It means you're tall. It means you're healthy. You you will live a long time. Okay. Genes is pretty simple to understand. Wealth just means that you or your family have a lot of money. Status means that you have a lot of friends, you have a high status job, you come from a really powerful family. Okay, so these are the three criteria that we can use to judge a person's attractiveness. And then what we can do is rank them from five to one. Five means really the best, one means the worst. Okay? And we can rank all 10 according to these metrics. So according to biology, what we call evolution biology or ev evolution psychology, we're always trying to find the best genes to procreate because this ensures that our genes pass on. Okay. So um remember that men have a penis which they can stick into anything. Women have to give birth. So the strategies are different. Okay. So basically five number five is trying to have sex with all five women. Right? That's his strategy. Um but fear one number five wants to ensure that she only gets five. Okay. So these are different strategies. And if this according to evidence psychology all five of these females should try to procreate with number five. Okay. But we know you can't do this. and suicidal. Why is it suicidal? Because the human rights couldn't survive, right? It'd be idiotic to do something like this where all five women are just trying to marry this one guy and maybe him. Okay? But these three are eliminated because then your society would collapse. You wouldn't you can have that many children. So this can't possibly be true, right? So let's figure out what rationally what should happen. Okay. All right. So let's think about this rationally [snorts] or from an e economics perspective. All right. So again number five, he's trying to maximize the game. So he's trying to sleep with all five women. Okay. The problem if he does that is these five know they're all being played and they recognize that this guy is probably an So five the best woman is like you know what there's not much of difference between four and five so I'll just go marry this guy right? So number four is gone and number four is like you know what five is probably making a good decision so I'll just go marry number three right and then what happens now is that five by trying to marry all the women is stuck with the worst choice. Right? So that's kind of stupid for him. He's stuck with number one. But guess what? If any of these guys try this crap, the same thing happens to him. Where four is like, you know what? I I can't get five, but I'll but I'll try to get four and three together. And then three is like, screw you. I'm I'm going to go and marry two. Four is going to marry three. Okay. Then he's stuck with one as well. Or he's just alone. So if they try to individually maximize their outcome, they all get screwed in the end. So the only way out out of this is if they cooperate. Okay? And the best way to cooperate is basically five is like, you know what? Screw this. I'm not going to go after four or three. I'll just I'll just have my five. Okay. Right. Four is like, yeah, I'll just go marry four. No dating, no games. I'll just go marry four. And three marries three. Two marries two. and one marries one. Okay. And the world now is perfect. Everyone has a husband and a wife and they can now just have children and the world is perfect. And this is actually the best strategy for all the players, right? We call this the word in game theory we call we use for this is called the Nash equilibrium. Okay. Nash equilibrium just means that you always reach a state in which all the players maximize their outcome, the Nash equilibrium. And so the world makes sense. Now there's a problem with this though. The problem is in real life no one does this. Okay? In real life no one actually follows this rule. Natural living is just a theory we made up. But in real life, that's just not what happens. What happens in real life is we choose to be suicidal. Okay. So, let me tell you about a game I played. So last year I was teaching this class and I asked the boys and I asked the girls. Pretend you're now 30 years old, right? Your parents are pestering you to get married and you've been on the dating market for 10 years. There's really no one that you think is perfect for you. You've just you you've have basically give up on love. Imagine that you want to get married now and tell me what is the minimum requirement you need in order to agree to marry someone else. Okay. What's the minimum? Okay. And then I have the boys and the girls write down response. The boys were pretty simple, right? Well, you know, as long as she likes me and as long as I can put her my penis into her, I'm good. Okay, it's that simple. Okay, it really is. Guys are like, \"Yeah, I'll settle for anything. That's the That's the boys, right?\" Girls were different. girls who were like, \"Okay, if I don't love him, if I'm not even attracted to him, I need about a million dollars a month.\" >> Really? >> Oh my god. >> Yeah. I need about a million dollars. >> Last class. >> Last semester. Okay. All right. So, [laughter] this makes no sense, right? So, in theory, >> in theory, we should follow natur. In real life, what happens is this. All the girls want this one guy. Okay? And maybe number four. Look at them for number four. But 321 they don't want. And we know because just look at the world around you. Look at these billionaires, right? Like Ellen Mus. How many wives does does he have? How many children does he have? Right? All the women in the world, many, not all, but many just want to marry actors like Brad Pitt, billionaires like Ellen Musk, right? And 3, two, and one, they what do they do? Well, they watch Netflix, they watch porn, they play video games. They've given up on life, okay? They're like, \"We don't care.\" We call these people incels, right? involuntary celibates because basically they have given up on life and life has given up on them. So this entire competition is between number five and four for all the women in the world. And this is again suicidal. This will lead to the death of humanity. And the question now is okay why are we suicidal? And so let's look at game three analysis, right? The players, the rules, and incentives. We know, we know what the players are. The players are doing stupid things. The rules, we know, okay, but incentives is something that we have to think about. Why are they behaving like this? And the answer is because they're not interested in sex or procaration. What they're interested in is status. Okay, that's the game they're playing. Status. I don't want to marry someone to have children. I want to marry someone so I can take a picture of her and post it on Instagram so I can get a lot of likes. Oh my god. I want to marry someone so I can walk with her in the mall and all the guys are jealous. I want to marry someone who I can brag about. Okay. It's it's a game about status, not a game about sex or procreation. Do you understand? They are not people are not being rational here. People are trying to maximize their status in life. And that's why everyone's behaving like this. Number she may be the ugest woman in the world, but she's still like, you know what? It's still my choice where not to have kids. And having kids is a pain in the ass. So, if I'm if I'm going to make the sacrifice, this guy better be good-looking, okay? Or this guy better be rich. Otherwise, why would I want to have kids? Okay, so this is why people behave the way they do. If you think about this way, what you recognize is that people are rational. But to understand why they're rational, you have to figure out what the game is. Okay. But then this leads to us to a question which is okay well clearly this is wrong because if we behave like this throughout human history we wouldn't be here today. Okay. How is it that we have this game today and we're going to die but we must have come from somewhere. We've been around for like a long time. So how is it that humans have survived for so long doing these stupid things? And the answer is basic game changes over time according to the superructure of society. Okay, the superructure the superructure is what determines the nature of the game. Superructure just think about the big picture, right? How many people are there? Is society wealthy or poor? Are there enemies to the society? Okay, this is the superructure, the big picture. Demographics, economics, culture, politics, religion. And these things together is what determines the nature of the game. All right. So, let's look at three examples of superructure. All right. Um example one is you have a low population society. Okay, low population is like maybe 200 people, 200 people. Okay, a village basically they are poor and um low technology. Low technologies means they don't have access to clean water. They don't know what hygiene is. They don't understand what germs are. So it's very easy for a woman to die in childbirth. Okay. And um low competition. Low competition just means that there are no competing villages against them. Okay. So that's one kind of superructure, the early superructure of human society. Okay. Then you have maybe growing population. Okay. So we're talking about like maybe 10,000 people, 20,000 people. They are now growing in wealth, growing wealth. Um, they have some technology meaning they have access to clean water and they have high competition. Okay, meaning that they're competing against different villages and societies around them. Okay, that's another superructure. And the third superructure is overpopulation. Okay, which is the world we live in today. Okay, where in China you have a billion people. That's a lot of people. Um, too much wealth. Okay. But with wealth, you have inequality, right? And then you have high technology. This high technology means that every woman who gives birth will not die and every child born will live on will live. Okay? And then you have something called equilibrium. Equilibrium just means that yeah, there's competition, but they're not going to go to war against each other. The world is basically peaceful. Okay. And according to super structure, the game is going to change. So let's go back to the game. Okay. We have 10 people in a low population, poor society. Guess what? They're not going to date. What they're going to do is they might get married, but they're going to have sex with each other. Why? Because as a woman, the only way to ensure that your child survives is if all the men in the village want to protect and nurture the child. They will do that if they believe that the child could be theirs. Okay? So the woman will maybe have a husband, but the woman will also choose to sleep with other men to disguise paternity. Doesn't make sense. So there's no dating. There's just lots and lots of sex in order to maintain social cohesion. Okay. Now, in a superructure number two, there's no dating either. Why? Because this society is in competition with other societies and they need to have as many children as possible. So, what the the solution here is to arrange marriages. arrange marriages where you know who cares who you marry? Just have lots and lots of kids. Okay, there's no dating either. Just have lots and lots of kids. You marry who your parents tell you to marry. You marry someone that you know. You marry your childhood best friend. Who cares? Okay, but you marry someone. You have lots and lots of kids. Okay, that's super structure number two. Superst number three is the one we live in. And here you have a dating game, right? Because why? because the odds of you obtaining status is really really low. Okay? And the only way that you can change your status is by marrying up. [clears throat] And that's why you have a dating game. A dating game is opportunity for you to find someone better than your social demographic circumstance can suggest. Okay? And that's why you have low uh decreasing uh fertility rate. Okay. Where over time because of the dating game society will collapse. Okay. Does that make sense? All right. So now you're the government and all around the world women who are wealthy, well educated are refusing to have children, especially in East Asia. Right now the fertility rate in China is about one. Okay, about one. The replacement rate that you need is a 2.1. So just to maintain your current population levels, every woman in China needs to give birth to at least two kids. But right now on average, women are choosing to have one kid only in China. And the worst thing is that this trend is increasing. So 5 years ago, the fertility rate was maybe 1.7. Now it's one. Okay. So the trend is very very negative. Okay. So governments all around the world are trying to figure out what to do. How do you convince women to have more kids? And what we've discovered is it's impossible. We can pay you more money like they do in South Korea. Guess what? It doesn't work because people don't want money. They want status. And status is a zero- sum game. Okay? Money is infinite. But status power is a zero sum game. So when you have overpopulation, we have too many people competing for two status too few status positions, you have decreasing fertility rates. And there's nothing you can do about it. The moment you give women choice, they choose to improve their lives by marrying someone better. Okay? Not all but most. And so over time, what happens is your society collapses. If you look at history, the best indicator that a society is about to collapse is if the woman who are wealthy and well educated, if they refuse to have children. This is the same. This is what happened to the Romans who collapsed. This is what happened um to many empires. This is what's happening around the world today in America, in Britain, in Europe, in China. Okay? And this tells us that society is collapsing. So in other words, what this really is, okay, these superructures, it tells us the life cycle of a civilization, right? So this is when you when civilization is young then it mature it grows and then it collapses. Okay. And if you look at history all civilizations go through this process of birth maturation and then collapse. and there's no way around it. So the power of game theory is that just by studying one aspect, okay, if I just study this game, all right, I figure out who the players are, the rules and the incentives, I can figure out what the super structure of the civilization is. Okay, and then once I have these two, I can now figure out where it came from and where it's going. Okay, that's what I want to teach you in this class. How to analyze a situation so you understand the players, the rules and incentives which will give you insight into the superructure so that you can figure out where it came from and then you can also predict where it's going. All right. So, but you can also look at the superructure and figure out what the game is being played. Okay. So, this is one example, but but throughout the semester, we'll be doing many many different examples of game theory. Is this clear so far? Are there any questions? Any comments? Any questions before I move on? All right. All right. All right. So let's just look at some basic [clears throat] facts. Okay. All right. All right. This is a map of the world. Okay. As you can see. Okay. Oh, sorry. So the color scheme is this. The red is where the population uh the society has an above replacement fertility rate. Okay. So above 2.1. If it's dark red like here in the middle of Africa, it's six to seven or six above. Okay? And why why is it that the case? Because Africa is in a situation where it is a growing society with middling tech. So a lot of people die, lots of competition. So to survive, families have to give birth to a lot of kids. Okay? They have no choice in the matter. But then you move to the rest of the world. Okay? So this is um North America, Europe, and East Asia. the three wealthiest parts of the world. And guess what? The fertility rate is collapsing because now we've entered the endgame where it is overpopulation, too much wealth, so too much inequality. And so women are forced to pick the best possible mate or not have children at all. All right? And here the situation is very very dire. North America and Europe are kind of okay. Why? Because immigration. because even though their women are not having children, they can choose to import people for their labor force. But East Asia is really really screwed guys. Okay, so just look at this region. Okay, so China is one but the worst is North Korea. Sorry, South Korea. South Korea has the lowest population uh rate in sorry the lowest fertility rate in the world. They're at between 0.6 to 0.8. So they're probably gone in 50 years time. It's so bad that when you go to South Korea, they have signs outside restaurants that says no dogs and no kids. They think that kids are a problem. Okay. So you look at the these areas again they are poorer so women are forced to have more children in order to survive. Okay but you look at wealthy areas well they'll probably be gone in 100 years time. Okay you it's total total collapse. The solution the governments are choosing right now is to import immigrants. Okay? Especi So these are the trends right now and it's causing a lot of disruption in society because guess why guys people don't like outsiders people don't like immigrants but they don't have a choice of matter because along with the fertility crisis is the aging crisis where your population is getting older and older. Okay. So life the world is not that simple. If you want to know who will rule the world in 100 year time, 100 years time, just figure out which society in which society do wealthy educated women choose to have children and then that society will rule the world. Okay, it's that simple, right? [snorts] Well, unfortunately, if you do it that way, you get a really really disturbing answer. Okay. So this is per capita G uh GDP. Okay. So how much people people make. All right. So obviously if you're zero you're very poor and um if you move to over here you're very wealthy. Okay. So United States is the wealthiest society in the world. Right? Sure we can understand that. Then this is the fertility rate which tells us how many children women have on average. Okay, so again 2.1 is replacement rate. Okay, 2.1 is replacement rate. So United States is actually below replacement rate, but the United States doesn't really care because it can import immigrants. Okay, um China is probably around here somewhere somewhere. Okay. Um, Angola is up here, but it's poor. So, what this map tells us is a country that is most likely to be dominant for the next 50 years is this country, Israel. Okay? Is it is the only wealthy western high-tech society in which women choose to have more than two kids. Okay, this is what game theory teaches us. And yeah, I know there are people like, \"Yeah, but Israel, it's um it has 9 million people and um it's in the middle of a desert and everyone hates Israel. I understand that. Thank you very much.\" Okay, I understand that. But if you just analyze how the game works, okay, if you just look at it objectively from a game theory perspective, you are forced to conclude that Israel right now has the major advantage over everyone else. Now, it is possible that societies will change the fertility rate as the as the world changes. Okay? But I'm saying that given the current state of things, Israel their growth trae trajectory is very very high. But then the question then is okay why is it that Israel they are different from everyone else? And the answer is because the world hates them. Okay? Because they think they are different from everyone else. and they must unite together to survive. So in Israel, fertility is status. Okay? If you are a woman and you give birth to a lot of kids, that means that you love Israel. That means that you are doing what you can in this war for survival. It means you are a patriot. Okay? Um but this has to do with religion. So what the west has done is not only um has it created a dating game where women can choose to have kids but the western world has also given up on religion and embraced materialism. Right? So what is valued in our world in the west? It's not patriotism or love of family or religious duty. It's just how many Instagram followers you have. It's how many YouTube subscribers you have. It's how many how much money you have. Okay? That's all that matters. So given the current state of state of events, it's very hard for the Western world and really for China to survive for the next 50 years. Okay. And I and I know like well China has a billion people. So even though um you know we're only giving birth to 10 million kids a year which will still be around for a long long time. Okay. So at this rate by 2100 China will be will be at a population about 600 million. That's still a lot of people man. Um okay here's the problem though. Okay. This is South Korea. Okay. South Korea is like the worst case scenario and for South Korea this is actually the best case scenario where okay given current trends and let's let's just pretend that nothing bad happens to South Korea. Well, by the year 2100 you you have a situation like this where the vast majority of people are over 65 and you have no kids. Okay, that is a zombie society where no one works and everyone just I don't know walks around the park every day. No one works. So the economy has collapsed. Okay. So look look look at this trend where we are now in here. Okay. Where where the majority it's still a working population which is good. You need that for the economy. But by the time you hit 2040 okay you got this huge dependency and a creating population. Okay. Do you guys see this where we are in um Okay. So we're at 2020, right? Okay. All right. So, it's still not too bad, but by the time you have 2040, look at this. Okay, look at this. M look at this. Where you have absolutely no kids and then you have lots and lots of retirees. Okay? And then by the time you hit 60, oh my god, right? Your population, your working population has decreased by half, by 50%. All right? So if things are stay the same, if nothing happens, South Korea will be will be dead in I don't know by 20 150. Okay, best case scenario. But what we know from history is that societies will not die naturally. Eventually South Korea will be forced into wars, new economic crisis. So this trend will just increase. And so if North Korea get got past 2080, I'd be very surprised. Okay? I would be surprised by 2040, South Korea were to face collapse as a nation state. Okay? Because you need these people to work. But guess what? You also need them to fight wars. So if North Korea ever threatens South Korea, most of your adult population will be dead. Okay. So, South Korea cannot fight a war. Now, the prospects for South Korea is utterly hopeless. There's nothing South Korea can do about this because South Korea is an extremely materialistic society where the only way only way to get ahead is by making a lot of money. Okay? And if you're a middle class person in South Korea, it makes no sense for you to have three kids. makes sense for you to have one kid and put all your resources into this one kid in the hopes that he passes the college examination, gets in a good university and then gets a good job at Samsung, which is the only company in South Korea. Okay, Samsung, right? So, the situation is pretty dire in South Korea. All right. Okay, that's it for today. Any questions, guys, about what we've learned? Yeah. >> Okay. >> Yeah. Speaking of mic, please. >> So, so for the last graph that uh we talked about Israel and I've noticed that the Saudi Arabia that is also like uh at uh have not bad GDP per capita and fertility rate. So, but for Saudi Arabia, maybe I'm wrong, like uh stereotypically that they didn't receive uh much hate as Israel. So, so why did they like at the similar position as Israel? >> Okay. That's actually really good question. Okay. All right. So, South Saudi Arabia, as you can see from this map, has it's a very wealthy society. um and families have about 4K on average. All right. So, South Saudi Arabia is actually an outlier. And the reason why is that it gets all the money from oil revenues. Okay? So, it sells with oil around the world. What what does it do? It creates a welfare state using this oil. Um so, you're incentivized to have um many children as possible because the government will pay for it. free schooling, free health care, free housing, and then a guaranteed job. So, it's basically like socialism. Uh it's also a Muslim country. So, you have this religious duty imperative to have have as many children as possible. Okay. But the problem with Saudi Arabia is the idea of human capital where it is not really a Mar society in which people are well educated and they're contributing to the to the economy. Okay. Saudi Arabia just just gets all its money from oil and that's it. It's trying to grow terrorism. It's trying to develop its uh human capital, but it doesn't really work. Okay. So, so you're right in that Saudi Arabia um it is uh it seems to be doing well, but it's not really. Okay. Um but also like people will argue about Israel as well. We're like, well, Israel gets all its money from the United States and it's the American military that supports Israel. Um, that's true to a certain extent, but I would argue that you actually go to Israel, you will see that it's an open dynamic society in which you're allowed to ask questions, which you're allowed to criticize the government, uh, in which you are given a lots of opportunities for social mobility. Okay. So, Israel has democracy, it has uh innovation, okay, it has um um technology, okay? And Saudi Arabia doesn't have these things. If you want to be a really strong nation, then you need innovation, you need openness, you need you need technology, okay? It's also um really highly educated, right? Okay. Does that make sense? Okay. So Saudi Arabia is really an outlier here. All right. But the problem is what happens if Saudi Saud runs out of oil, right? Or there's a war in the Middle East and Saudi Arabia is kind of screwed. All right. All right. But you can also argue, no, well, you know, Saudi Arabia, it has a lot of money and maybe Okay. So, so game theory doesn't give us the answers. Game theory we it just gives us a guide to ask questions and do research. Okay. Does that make sense? Uh yeah. >> I have a question about I have a question about like when is this data? It's it's rose about 2009, right? So how about now? Did it change a lot or like is there anything change? >> Um okay. Okay. Yeah. So you ask you asked about the sourcing of the data. Okay. And you're right in that there there will be fluctuation. Okay. But the um but this is 2024. Okay. 2024. And this is Israel right here. Okay. All right. So if it's red, it's above replacement. All right. And if you just Google Israel population fertility rate, Israel is the only wealthy nation in the world that has an above replacement fertility rate. Okay. All right. [snorts] [clears throat] Okay. Any any more questions, guys? All right. Great. So, I will see you guys next class.",
+  "timestamped": [
+    {
+      "start": 1.199,
+      "duration": 5.441,
+      "text": "This semester we are going to analyze a"
+    },
+    {
+      "start": 3.76,
+      "duration": 6.64,
+      "text": "question together which is how do"
+    },
+    {
+      "start": 6.64,
+      "duration": 8.4,
+      "text": "societies behave? Why do we do what we"
+    },
+    {
+      "start": 10.4,
+      "duration": 7.28,
+      "text": "do? What motivates us? What drives us?"
+    },
+    {
+      "start": 15.04,
+      "duration": 5.12,
+      "text": "And there have been different theories"
+    },
+    {
+      "start": 17.68,
+      "duration": 6.32,
+      "text": "as to what drives human behavior. Okay."
+    },
+    {
+      "start": 20.16,
+      "duration": 6.24,
+      "text": "So let's go over some theories."
+    },
+    {
+      "start": 24.0,
+      "duration": 6.56,
+      "text": "The first theory"
+    },
+    {
+      "start": 26.4,
+      "duration": 7.56,
+      "text": "comes to us from"
+    },
+    {
+      "start": 30.56,
+      "duration": 3.4,
+      "text": "um religion."
+    },
+    {
+      "start": 34.0,
+      "duration": 6.719,
+      "text": "And the idea is that"
+    },
+    {
+      "start": 37.12,
+      "duration": 6.8,
+      "text": "we are all driven"
+    },
+    {
+      "start": 40.719,
+      "duration": 5.121,
+      "text": "in a war between good"
+    },
+    {
+      "start": 43.92,
+      "duration": 3.76,
+      "text": "and evil."
+    },
+    {
+      "start": 45.84,
+      "duration": 4.559,
+      "text": "There's a good side to us and there is"
+    },
+    {
+      "start": 47.68,
+      "duration": 7.6,
+      "text": "an evil side to us. There's Satan and"
+    },
+    {
+      "start": 50.399,
+      "duration": 6.401,
+      "text": "there's God. and we are constantly in a"
+    },
+    {
+      "start": 55.28,
+      "duration": 4.32,
+      "text": "battle"
+    },
+    {
+      "start": 56.8,
+      "duration": 6.079,
+      "text": "in ourselves."
+    },
+    {
+      "start": 59.6,
+      "duration": 6.72,
+      "text": "Okay? Do we move towards Satan or do we"
+    },
+    {
+      "start": 62.879,
+      "duration": 7.041,
+      "text": "move towards God? And that's the core of"
+    },
+    {
+      "start": 66.32,
+      "duration": 7.04,
+      "text": "human civilization. So religion is meant"
+    },
+    {
+      "start": 69.92,
+      "duration": 7.04,
+      "text": "to give us the strength to show us the"
+    },
+    {
+      "start": 73.36,
+      "duration": 9.439,
+      "text": "path towards goodness. Okay, that's one"
+    },
+    {
+      "start": 76.96,
+      "duration": 12.08,
+      "text": "theory. Another theory is comes to us"
+    },
+    {
+      "start": 82.799,
+      "duration": 10.481,
+      "text": "from biology. Okay. And the idea is sex."
+    },
+    {
+      "start": 89.04,
+      "duration": 6.399,
+      "text": "We want to pass on our genes"
+    },
+    {
+      "start": 93.28,
+      "duration": 4.96,
+      "text": "forward because that's the point of our"
+    },
+    {
+      "start": 95.439,
+      "duration": 6.881,
+      "text": "existence. If we cannot have children,"
+    },
+    {
+      "start": 98.24,
+      "duration": 5.919,
+      "text": "we all die. So the point of existence is"
+    },
+    {
+      "start": 102.32,
+      "duration": 5.2,
+      "text": "to"
+    },
+    {
+      "start": 104.159,
+      "duration": 8.32,
+      "text": "have children and have them pass on"
+    },
+    {
+      "start": 107.52,
+      "duration": 9.08,
+      "text": "their genes to others. Okay? And for"
+    },
+    {
+      "start": 112.479,
+      "duration": 4.121,
+      "text": "males and females,"
+    },
+    {
+      "start": 118.0,
+      "duration": 4.64,
+      "text": "life is different because as a man, you"
+    },
+    {
+      "start": 120.399,
+      "duration": 4.08,
+      "text": "have a penis and all you have to do is"
+    },
+    {
+      "start": 122.64,
+      "duration": 4.88,
+      "text": "stick your penis into a woman and you're"
+    },
+    {
+      "start": 124.479,
+      "duration": 5.28,
+      "text": "good. Okay? That's all you have to do."
+    },
+    {
+      "start": 127.52,
+      "duration": 4.4,
+      "text": "So you want to stick your penis in as"
+    },
+    {
+      "start": 129.759,
+      "duration": 4.161,
+      "text": "many women as possible and that's the"
+    },
+    {
+      "start": 131.92,
+      "duration": 4.0,
+      "text": "point of your existence."
+    },
+    {
+      "start": 133.92,
+      "duration": 6.64,
+      "text": "But as a woman, your life is different"
+    },
+    {
+      "start": 135.92,
+      "duration": 7.039,
+      "text": "because it's hard to give birth. It"
+    },
+    {
+      "start": 140.56,
+      "duration": 6.08,
+      "text": "takes 9 months to incubate the child in"
+    },
+    {
+      "start": 142.959,
+      "duration": 6.401,
+      "text": "your womb and then p child birth is the"
+    },
+    {
+      "start": 146.64,
+      "duration": 5.52,
+      "text": "most painful experience anyone will have"
+    },
+    {
+      "start": 149.36,
+      "duration": 5.2,
+      "text": "ever experienced. And then the child"
+    },
+    {
+      "start": 152.16,
+      "duration": 4.32,
+      "text": "it'll take like 16 18 years to raise a"
+    },
+    {
+      "start": 154.56,
+      "duration": 5.12,
+      "text": "child to maturity. So it's a huge"
+    },
+    {
+      "start": 156.48,
+      "duration": 5.759,
+      "text": "investment on your part. So as a female,"
+    },
+    {
+      "start": 159.68,
+      "duration": 5.44,
+      "text": "you have to be very cautious,"
+    },
+    {
+      "start": 162.239,
+      "duration": 4.72,
+      "text": "very careful about who you marry or have"
+    },
+    {
+      "start": 165.12,
+      "duration": 4.24,
+      "text": "or or you or who you have sex with."
+    },
+    {
+      "start": 166.959,
+      "duration": 4.401,
+      "text": "Okay? And so life is a struggle between"
+    },
+    {
+      "start": 169.36,
+      "duration": 4.72,
+      "text": "men who want to put their penis into"
+    },
+    {
+      "start": 171.36,
+      "duration": 5.68,
+      "text": "anything and women who want to be"
+    },
+    {
+      "start": 174.08,
+      "duration": 6.879,
+      "text": "careful about who they marry. Okay? So"
+    },
+    {
+      "start": 177.04,
+      "duration": 7.68,
+      "text": "that's the idea of biology. Then of"
+    },
+    {
+      "start": 180.959,
+      "duration": 6.761,
+      "text": "course you have the idea of race and"
+    },
+    {
+      "start": 184.72,
+      "duration": 3.0,
+      "text": "culture"
+    },
+    {
+      "start": 188.72,
+      "duration": 4.32,
+      "text": "that the world it's a struggle between"
+    },
+    {
+      "start": 190.56,
+      "duration": 5.52,
+      "text": "these different races and cultures for"
+    },
+    {
+      "start": 193.04,
+      "duration": 5.52,
+      "text": "dominance and each race each culture has"
+    },
+    {
+      "start": 196.08,
+      "duration": 5.439,
+      "text": "their own characteristics."
+    },
+    {
+      "start": 198.56,
+      "duration": 5.679,
+      "text": "Okay. So maybe the yellow rays it's"
+    },
+    {
+      "start": 201.519,
+      "duration": 7.121,
+      "text": "they're very clever but they're very"
+    },
+    {
+      "start": 204.239,
+      "duration": 6.881,
+      "text": "weak. And then the white race are brave"
+    },
+    {
+      "start": 208.64,
+      "duration": 4.8,
+      "text": "but kind of stupid. And the black people"
+    },
+    {
+      "start": 211.12,
+      "duration": 4.0,
+      "text": "like anyway anyway that's another"
+    },
+    {
+      "start": 213.44,
+      "duration": 3.439,
+      "text": "theory. I'm not saying it's correct. I'm"
+    },
+    {
+      "start": 215.12,
+      "duration": 7.479,
+      "text": "just saying it's a theory that people"
+    },
+    {
+      "start": 216.879,
+      "duration": 5.72,
+      "text": "believe it. Then you have economics,"
+    },
+    {
+      "start": 223.76,
+      "duration": 8.36,
+      "text": "right? And what they believe is that we"
+    },
+    {
+      "start": 226.0,
+      "duration": 6.12,
+      "text": "are driven by money or self-interest."
+    },
+    {
+      "start": 232.64,
+      "duration": 4.56,
+      "text": "We want to make as much money as"
+    },
+    {
+      "start": 234.799,
+      "duration": 5.041,
+      "text": "possible"
+    },
+    {
+      "start": 237.2,
+      "duration": 6.0,
+      "text": "and that's what drives us. Okay, that's"
+    },
+    {
+      "start": 239.84,
+      "duration": 7.44,
+      "text": "pretty simple. And the last big theory"
+    },
+    {
+      "start": 243.2,
+      "duration": 8.119,
+      "text": "is the idea of liberalism"
+    },
+    {
+      "start": 247.28,
+      "duration": 4.039,
+      "text": "that comes from the enlightenment."
+    },
+    {
+      "start": 254.08,
+      "duration": 8.16,
+      "text": "And here the theory is that history is a"
+    },
+    {
+      "start": 258.32,
+      "duration": 8.48,
+      "text": "progress towards enlightenment to"
+    },
+    {
+      "start": 262.24,
+      "duration": 7.04,
+      "text": "rationality to truth and to justice. So"
+    },
+    {
+      "start": 266.8,
+      "duration": 5.04,
+      "text": "the inevitability of history of human"
+    },
+    {
+      "start": 269.28,
+      "duration": 5.52,
+      "text": "development is towards paradise towards"
+    },
+    {
+      "start": 271.84,
+      "duration": 6.48,
+      "text": "heaven. And maybe you know we go off"
+    },
+    {
+      "start": 274.8,
+      "duration": 6.8,
+      "text": "track now and then but inevitably we"
+    },
+    {
+      "start": 278.32,
+      "duration": 6.56,
+      "text": "move towards God. Okay. And this comes"
+    },
+    {
+      "start": 281.6,
+      "duration": 6.0,
+      "text": "to us from the enlightenment. We call"
+    },
+    {
+      "start": 284.88,
+      "duration": 4.24,
+      "text": "this liberalism. Okay. So these are five"
+    },
+    {
+      "start": 287.6,
+      "duration": 3.28,
+      "text": "theories. There are others but these are"
+    },
+    {
+      "start": 289.12,
+      "duration": 5.359,
+      "text": "five theories that show you the"
+    },
+    {
+      "start": 290.88,
+      "duration": 5.759,
+      "text": "diversity, the variety of ideas out"
+    },
+    {
+      "start": 294.479,
+      "duration": 4.241,
+      "text": "there."
+    },
+    {
+      "start": 296.639,
+      "duration": 5.521,
+      "text": "What I will do this semester is present"
+    },
+    {
+      "start": 298.72,
+      "duration": 6.44,
+      "text": "to you another theory which I call game"
+    },
+    {
+      "start": 302.16,
+      "duration": 3.0,
+      "text": "theory."
+    },
+    {
+      "start": 305.233,
+      "duration": 3.727,
+      "text": ">> [snorts]"
+    },
+    {
+      "start": 305.919,
+      "duration": 7.921,
+      "text": ">> And my argument to you is that game"
+    },
+    {
+      "start": 308.96,
+      "duration": 9.76,
+      "text": "theory is the best way to understand how"
+    },
+    {
+      "start": 313.84,
+      "duration": 8.24,
+      "text": "humans behave, what drives nations, what"
+    },
+    {
+      "start": 318.72,
+      "duration": 5.68,
+      "text": "drives societies, what drives humans."
+    },
+    {
+      "start": 322.08,
+      "duration": 4.08,
+      "text": "Okay? So that's my that's my argument to"
+    },
+    {
+      "start": 324.4,
+      "duration": 5.359,
+      "text": "you this semester. So the entire"
+    },
+    {
+      "start": 326.16,
+      "duration": 5.92,
+      "text": "semester we will study game theory. All"
+    },
+    {
+      "start": 329.759,
+      "duration": 6.961,
+      "text": "right. So what is game theory? All"
+    },
+    {
+      "start": 332.08,
+      "duration": 8.559,
+      "text": "right. Game theory is very simple. The"
+    },
+    {
+      "start": 336.72,
+      "duration": 8.16,
+      "text": "idea is that there are three components"
+    },
+    {
+      "start": 340.639,
+      "duration": 9.321,
+      "text": "to a game. Just three aspects to a game."
+    },
+    {
+      "start": 344.88,
+      "duration": 5.08,
+      "text": "There are the players, the participants."
+    },
+    {
+      "start": 350.16,
+      "duration": 8.4,
+      "text": "Okay. Then there are the rules"
+    },
+    {
+      "start": 355.6,
+      "duration": 5.12,
+      "text": "or the constraints."
+    },
+    {
+      "start": 358.56,
+      "duration": 5.84,
+      "text": "Um in mathematics we would call this the"
+    },
+    {
+      "start": 360.72,
+      "duration": 6.8,
+      "text": "boundary conditions. Okay, the limits to"
+    },
+    {
+      "start": 364.4,
+      "duration": 6.12,
+      "text": "the game. And the third aspect are the"
+    },
+    {
+      "start": 367.52,
+      "duration": 3.0,
+      "text": "incentives."
+    },
+    {
+      "start": 371.6,
+      "duration": 5.2,
+      "text": "Basically, how do you win this game?"
+    },
+    {
+      "start": 374.0,
+      "duration": 6.16,
+      "text": "What do you get from this game? My"
+    },
+    {
+      "start": 376.8,
+      "duration": 6.16,
+      "text": "argument to you this semester is that if"
+    },
+    {
+      "start": 380.16,
+      "duration": 4.08,
+      "text": "you study all three, okay? Figure out"
+    },
+    {
+      "start": 382.96,
+      "duration": 3.28,
+      "text": "who the if you figure out who the"
+    },
+    {
+      "start": 384.24,
+      "duration": 3.76,
+      "text": "players are, figure out what if you"
+    },
+    {
+      "start": 386.24,
+      "duration": 4.399,
+      "text": "understand the rules, you understand the"
+    },
+    {
+      "start": 388.0,
+      "duration": 6.16,
+      "text": "incentives, then you understand how the"
+    },
+    {
+      "start": 390.639,
+      "duration": 7.601,
+      "text": "game works and then therefore you can"
+    },
+    {
+      "start": 394.16,
+      "duration": 7.12,
+      "text": "predict how the game will turn out."
+    },
+    {
+      "start": 398.24,
+      "duration": 6.399,
+      "text": "Okay, that's the skill that I want to"
+    },
+    {
+      "start": 401.28,
+      "duration": 6.32,
+      "text": "teach you this semester."
+    },
+    {
+      "start": 404.639,
+      "duration": 6.56,
+      "text": "And what I want to show you or what I"
+    },
+    {
+      "start": 407.6,
+      "duration": 6.719,
+      "text": "promise you is that if you learn game"
+    },
+    {
+      "start": 411.199,
+      "duration": 6.56,
+      "text": "theory, there'll be three major benefits"
+    },
+    {
+      "start": 414.319,
+      "duration": 5.761,
+      "text": "to you as a student. Again, you don't"
+    },
+    {
+      "start": 417.759,
+      "duration": 4.081,
+      "text": "have to learn game theory. You don't"
+    },
+    {
+      "start": 420.08,
+      "duration": 6.16,
+      "text": "have you don't have to come to class."
+    },
+    {
+      "start": 421.84,
+      "duration": 8.799,
+      "text": "But if you spend the effort to learn"
+    },
+    {
+      "start": 426.24,
+      "duration": 6.64,
+      "text": "game theory from me, then three things"
+    },
+    {
+      "start": 430.639,
+      "duration": 4.4,
+      "text": "will benefit you. Okay. The first"
+    },
+    {
+      "start": 432.88,
+      "duration": 7.0,
+      "text": "benefit"
+    },
+    {
+      "start": 435.039,
+      "duration": 4.841,
+      "text": "is that you become a better person."
+    },
+    {
+      "start": 440.8,
+      "duration": 6.0,
+      "text": "The point of education guys, it's not to"
+    },
+    {
+      "start": 444.24,
+      "duration": 5.679,
+      "text": "get good grades or get into university"
+    },
+    {
+      "start": 446.8,
+      "duration": 5.36,
+      "text": "or get a good job. What I believe is the"
+    },
+    {
+      "start": 449.919,
+      "duration": 5.12,
+      "text": "point of education is to make you into a"
+    },
+    {
+      "start": 452.16,
+      "duration": 5.92,
+      "text": "better person which means that you are a"
+    },
+    {
+      "start": 455.039,
+      "duration": 5.44,
+      "text": "much more thoughtful person who can"
+    },
+    {
+      "start": 458.08,
+      "duration": 4.559,
+      "text": "better analyze yourself in the world"
+    },
+    {
+      "start": 460.479,
+      "duration": 4.241,
+      "text": "around you. That allows you to make"
+    },
+    {
+      "start": 462.639,
+      "duration": 5.28,
+      "text": "better better decisions. This makes you"
+    },
+    {
+      "start": 464.72,
+      "duration": 6.479,
+      "text": "a much more curious, much more moral and"
+    },
+    {
+      "start": 467.919,
+      "duration": 5.521,
+      "text": "much more imaginative person. Okay. So"
+    },
+    {
+      "start": 471.199,
+      "duration": 4.56,
+      "text": "one benefit of learning game theory is"
+    },
+    {
+      "start": 473.44,
+      "duration": 4.8,
+      "text": "you become smarter and therefore you"
+    },
+    {
+      "start": 475.759,
+      "duration": 6.481,
+      "text": "become a better person."
+    },
+    {
+      "start": 478.24,
+      "duration": 6.48,
+      "text": "Okay, that's number one."
+    },
+    {
+      "start": 482.24,
+      "duration": 5.2,
+      "text": "Number two is"
+    },
+    {
+      "start": 484.72,
+      "duration": 5.44,
+      "text": "you'll be able to understand"
+    },
+    {
+      "start": 487.44,
+      "duration": 7.039,
+      "text": "the world"
+    },
+    {
+      "start": 490.16,
+      "duration": 6.879,
+      "text": "that we live in because this world is"
+    },
+    {
+      "start": 494.479,
+      "duration": 4.961,
+      "text": "kind of stupid. Okay, so you may have"
+    },
+    {
+      "start": 497.039,
+      "duration": 4.481,
+      "text": "heard that Donald Trump"
+    },
+    {
+      "start": 499.44,
+      "duration": 4.319,
+      "text": "um and the American military went into"
+    },
+    {
+      "start": 501.52,
+      "duration": 4.72,
+      "text": "Venezuela for no real for no good"
+    },
+    {
+      "start": 503.759,
+      "duration": 4.56,
+      "text": "reason, kidnapped a president of"
+    },
+    {
+      "start": 506.24,
+      "duration": 4.0,
+      "text": "Venezuela, which is against which is"
+    },
+    {
+      "start": 508.319,
+      "duration": 4.001,
+      "text": "against international law and then"
+    },
+    {
+      "start": 510.24,
+      "duration": 4.56,
+      "text": "brought him back to New York City where"
+    },
+    {
+      "start": 512.32,
+      "duration": 6.079,
+      "text": "he will stand trial. It's really stupid"
+    },
+    {
+      "start": 514.8,
+      "duration": 6.799,
+      "text": "what happened. But then, but our class,"
+    },
+    {
+      "start": 518.399,
+      "duration": 4.801,
+      "text": "it's not meant to say this is stupid or"
+    },
+    {
+      "start": 521.599,
+      "duration": 3.041,
+      "text": "this is wrong because we all know it's"
+    },
+    {
+      "start": 523.2,
+      "duration": 4.96,
+      "text": "stupid and wrong. We're trying to figure"
+    },
+    {
+      "start": 524.64,
+      "duration": 7.84,
+      "text": "out why this happened and what this will"
+    },
+    {
+      "start": 528.16,
+      "duration": 7.44,
+      "text": "lead to. And so we will be in this class"
+    },
+    {
+      "start": 532.48,
+      "duration": 5.52,
+      "text": "studying and analyzing current events to"
+    },
+    {
+      "start": 535.6,
+      "duration": 4.72,
+      "text": "understand how the world really works,"
+    },
+    {
+      "start": 538.0,
+      "duration": 5.279,
+      "text": "why people behave the way they they do,"
+    },
+    {
+      "start": 540.32,
+      "duration": 6.72,
+      "text": "and understand how the game of the world"
+    },
+    {
+      "start": 543.279,
+      "duration": 6.641,
+      "text": "works. And this requires you to actually"
+    },
+    {
+      "start": 547.04,
+      "duration": 5.04,
+      "text": "follow the news. Okay? It's not hard to"
+    },
+    {
+      "start": 549.92,
+      "duration": 4.4,
+      "text": "spend five minutes and just read up on"
+    },
+    {
+      "start": 552.08,
+      "duration": 4.319,
+      "text": "the news, but we'll be looking at the"
+    },
+    {
+      "start": 554.32,
+      "duration": 4.72,
+      "text": "the war in Ukraine. We'll be looking at"
+    },
+    {
+      "start": 556.399,
+      "duration": 3.841,
+      "text": "a new war between Israel and Iran. We'll"
+    },
+    {
+      "start": 559.04,
+      "duration": 3.2,
+      "text": "be looking at what's happening in South"
+    },
+    {
+      "start": 560.24,
+      "duration": 5.52,
+      "text": "America. We'll be looking at the"
+    },
+    {
+      "start": 562.24,
+      "duration": 4.8,
+      "text": "conflict between China and Japan. We'll"
+    },
+    {
+      "start": 565.76,
+      "duration": 3.68,
+      "text": "be looking at the relationship between"
+    },
+    {
+      "start": 567.04,
+      "duration": 6.16,
+      "text": "United States and China. Okay? So this"
+    },
+    {
+      "start": 569.44,
+      "duration": 7.28,
+      "text": "is relevant to your lives because you'll"
+    },
+    {
+      "start": 573.2,
+      "duration": 5.28,
+      "text": "be you will eventually have to work and"
+    },
+    {
+      "start": 576.72,
+      "duration": 5.04,
+      "text": "live in this really screwed up world"
+    },
+    {
+      "start": 578.48,
+      "duration": 5.44,
+      "text": "that we live in. Okay."
+    },
+    {
+      "start": 581.76,
+      "duration": 5.16,
+      "text": "And the third benefit"
+    },
+    {
+      "start": 583.92,
+      "duration": 3.0,
+      "text": "is"
+    },
+    {
+      "start": 587.36,
+      "duration": 6.479,
+      "text": "once you understand the game you will"
+    },
+    {
+      "start": 590.24,
+      "duration": 6.24,
+      "text": "have predictive powers. You'll be able"
+    },
+    {
+      "start": 593.839,
+      "duration": 4.881,
+      "text": "to understand how the world will"
+    },
+    {
+      "start": 596.48,
+      "duration": 5.12,
+      "text": "develop. You'll be able to analyze your"
+    },
+    {
+      "start": 598.72,
+      "duration": 7.76,
+      "text": "own life and understand how you will"
+    },
+    {
+      "start": 601.6,
+      "duration": 8.72,
+      "text": "develop and that gives you control,"
+    },
+    {
+      "start": 606.48,
+      "duration": 5.76,
+      "text": "sovereignty over your own destiny."
+    },
+    {
+      "start": 610.32,
+      "duration": 4.8,
+      "text": "Okay, that's my promise to you. If you"
+    },
+    {
+      "start": 612.24,
+      "duration": 5.12,
+      "text": "actually spend the time to listen"
+    },
+    {
+      "start": 615.12,
+      "duration": 5.6,
+      "text": "carefully in class, to participate"
+    },
+    {
+      "start": 617.36,
+      "duration": 6.32,
+      "text": "fully, to follow the news, uh, and you"
+    },
+    {
+      "start": 620.72,
+      "duration": 5.6,
+      "text": "spend the entire semester doing so, then"
+    },
+    {
+      "start": 623.68,
+      "duration": 5.44,
+      "text": "these three benefits will start to acrue"
+    },
+    {
+      "start": 626.32,
+      "duration": 5.519,
+      "text": "in you. Okay, this is a lifelong"
+    },
+    {
+      "start": 629.12,
+      "duration": 4.399,
+      "text": "struggle to learn game theory. I'm a lot"
+    },
+    {
+      "start": 631.839,
+      "duration": 4.161,
+      "text": "older than you are. I have a lot more"
+    },
+    {
+      "start": 633.519,
+      "duration": 5.921,
+      "text": "experience than you. Okay, but I want to"
+    },
+    {
+      "start": 636.0,
+      "duration": 6.48,
+      "text": "show you how to look at the world"
+    },
+    {
+      "start": 639.44,
+      "duration": 6.639,
+      "text": "through game theory. Another phrase that"
+    },
+    {
+      "start": 642.48,
+      "duration": 6.16,
+      "text": "you you learn in school is I'm going to"
+    },
+    {
+      "start": 646.079,
+      "duration": 4.641,
+      "text": "teach you how to think critically about"
+    },
+    {
+      "start": 648.64,
+      "duration": 4.879,
+      "text": "the world or I'll just teach you how to"
+    },
+    {
+      "start": 650.72,
+      "duration": 7.2,
+      "text": "think. Okay."
+    },
+    {
+      "start": 653.519,
+      "duration": 7.601,
+      "text": "All right. Are we clear? Any questions"
+    },
+    {
+      "start": 657.92,
+      "duration": 5.84,
+      "text": "before I move on? All right. So, this is"
+    },
+    {
+      "start": 661.12,
+      "duration": 4.8,
+      "text": "all very abstract. And so, what what I'm"
+    },
+    {
+      "start": 663.76,
+      "duration": 5.519,
+      "text": "going to do now is I'm going to use an"
+    },
+    {
+      "start": 665.92,
+      "duration": 6.56,
+      "text": "example of a game to show you how game"
+    },
+    {
+      "start": 669.279,
+      "duration": 5.281,
+      "text": "theory works. Okay. All right. So, let's"
+    },
+    {
+      "start": 672.48,
+      "duration": 4.64,
+      "text": "let's use a really simple game. Okay."
+    },
+    {
+      "start": 674.56,
+      "duration": 4.959,
+      "text": "Let's imagine there are five boys and"
+    },
+    {
+      "start": 677.12,
+      "duration": 5.92,
+      "text": "five girls"
+    },
+    {
+      "start": 679.519,
+      "duration": 6.161,
+      "text": "and they want to get married. Okay. So,"
+    },
+    {
+      "start": 683.04,
+      "duration": 4.479,
+      "text": "these are the players"
+    },
+    {
+      "start": 685.68,
+      "duration": 4.32,
+      "text": "and what we're going to do is we're"
+    },
+    {
+      "start": 687.519,
+      "duration": 4.481,
+      "text": "going to divide up them up into male and"
+    },
+    {
+      "start": 690.0,
+      "duration": 3.92,
+      "text": "female."
+    },
+    {
+      "start": 692.0,
+      "duration": 3.44,
+      "text": "Then what we're going to do is we will"
+    },
+    {
+      "start": 693.92,
+      "duration": 4.08,
+      "text": "rank"
+    },
+    {
+      "start": 695.44,
+      "duration": 4.959,
+      "text": "the males and the females. Okay? Okay."
+    },
+    {
+      "start": 698.0,
+      "duration": 5.92,
+      "text": "So, we're going to rank 10 players and"
+    },
+    {
+      "start": 700.399,
+      "duration": 13.041,
+      "text": "to five 4"
+    },
+    {
+      "start": 703.92,
+      "duration": 11.76,
+      "text": "3 2 1 5 4 3 2 1. Okay. And so, how do we"
+    },
+    {
+      "start": 713.44,
+      "duration": 4.88,
+      "text": "rank them? Well, we rank them according"
+    },
+    {
+      "start": 715.68,
+      "duration": 7.279,
+      "text": "to their attractiveness using three"
+    },
+    {
+      "start": 718.32,
+      "duration": 7.84,
+      "text": "criteria. Uh the first is genes,"
+    },
+    {
+      "start": 722.959,
+      "duration": 7.041,
+      "text": "the second is wealth"
+    },
+    {
+      "start": 726.16,
+      "duration": 6.0,
+      "text": "and the third is status."
+    },
+    {
+      "start": 730.0,
+      "duration": 4.8,
+      "text": "Okay. So genes is very simple. It means"
+    },
+    {
+      "start": 732.16,
+      "duration": 4.88,
+      "text": "that you're good-looking."
+    },
+    {
+      "start": 734.8,
+      "duration": 3.839,
+      "text": "It means you're tall. It means you're"
+    },
+    {
+      "start": 737.04,
+      "duration": 4.4,
+      "text": "healthy. You you will live a long time."
+    },
+    {
+      "start": 738.639,
+      "duration": 5.601,
+      "text": "Okay. Genes is pretty simple to"
+    },
+    {
+      "start": 741.44,
+      "duration": 5.199,
+      "text": "understand. Wealth just means that you"
+    },
+    {
+      "start": 744.24,
+      "duration": 4.32,
+      "text": "or your family have a lot of money."
+    },
+    {
+      "start": 746.639,
+      "duration": 5.521,
+      "text": "Status means that you have a lot of"
+    },
+    {
+      "start": 748.56,
+      "duration": 6.32,
+      "text": "friends, you have a high status job,"
+    },
+    {
+      "start": 752.16,
+      "duration": 5.6,
+      "text": "you come from a really"
+    },
+    {
+      "start": 754.88,
+      "duration": 5.759,
+      "text": "powerful family. Okay, so these are the"
+    },
+    {
+      "start": 757.76,
+      "duration": 5.759,
+      "text": "three criteria that we can use to judge"
+    },
+    {
+      "start": 760.639,
+      "duration": 6.801,
+      "text": "a person's attractiveness. And then what"
+    },
+    {
+      "start": 763.519,
+      "duration": 8.081,
+      "text": "we can do is rank them from five to one."
+    },
+    {
+      "start": 767.44,
+      "duration": 8.8,
+      "text": "Five means really the best, one means"
+    },
+    {
+      "start": 771.6,
+      "duration": 8.4,
+      "text": "the worst. Okay? And we can rank all 10"
+    },
+    {
+      "start": 776.24,
+      "duration": 8.399,
+      "text": "according to these metrics."
+    },
+    {
+      "start": 780.0,
+      "duration": 6.88,
+      "text": "So according to biology, what we call"
+    },
+    {
+      "start": 784.639,
+      "duration": 3.921,
+      "text": "evolution biology or ev evolution"
+    },
+    {
+      "start": 786.88,
+      "duration": 4.32,
+      "text": "psychology,"
+    },
+    {
+      "start": 788.56,
+      "duration": 5.92,
+      "text": "we're always trying to find the best"
+    },
+    {
+      "start": 791.2,
+      "duration": 8.72,
+      "text": "genes to procreate because this ensures"
+    },
+    {
+      "start": 794.48,
+      "duration": 8.0,
+      "text": "that our genes pass on. Okay. So um"
+    },
+    {
+      "start": 799.92,
+      "duration": 5.599,
+      "text": "remember that men have a penis which"
+    },
+    {
+      "start": 802.48,
+      "duration": 4.799,
+      "text": "they can stick into anything. Women have"
+    },
+    {
+      "start": 805.519,
+      "duration": 4.481,
+      "text": "to give birth. So the strategies are"
+    },
+    {
+      "start": 807.279,
+      "duration": 5.521,
+      "text": "different. Okay. So basically five"
+    },
+    {
+      "start": 810.0,
+      "duration": 4.639,
+      "text": "number five is trying to have sex with"
+    },
+    {
+      "start": 812.8,
+      "duration": 6.96,
+      "text": "all"
+    },
+    {
+      "start": 814.639,
+      "duration": 7.601,
+      "text": "five women. Right? That's his strategy."
+    },
+    {
+      "start": 819.76,
+      "duration": 5.92,
+      "text": "Um"
+    },
+    {
+      "start": 822.24,
+      "duration": 8.0,
+      "text": "but fear one number five wants to ensure"
+    },
+    {
+      "start": 825.68,
+      "duration": 7.36,
+      "text": "that she only gets five. Okay. So these"
+    },
+    {
+      "start": 830.24,
+      "duration": 4.96,
+      "text": "are different strategies."
+    },
+    {
+      "start": 833.04,
+      "duration": 5.2,
+      "text": "And"
+    },
+    {
+      "start": 835.2,
+      "duration": 6.96,
+      "text": "if this according to evidence psychology"
+    },
+    {
+      "start": 838.24,
+      "duration": 5.44,
+      "text": "all five of these females should try to"
+    },
+    {
+      "start": 842.16,
+      "duration": 4.96,
+      "text": "procreate"
+    },
+    {
+      "start": 843.68,
+      "duration": 7.04,
+      "text": "with number five. Okay. But we know you"
+    },
+    {
+      "start": 847.12,
+      "duration": 6.159,
+      "text": "can't do this. and suicidal."
+    },
+    {
+      "start": 850.72,
+      "duration": 4.239,
+      "text": "Why is it suicidal? Because"
+    },
+    {
+      "start": 853.279,
+      "duration": 3.92,
+      "text": "the human rights couldn't survive,"
+    },
+    {
+      "start": 854.959,
+      "duration": 5.201,
+      "text": "right? It'd be idiotic to do something"
+    },
+    {
+      "start": 857.199,
+      "duration": 5.601,
+      "text": "like this where all five women are just"
+    },
+    {
+      "start": 860.16,
+      "duration": 4.64,
+      "text": "trying to marry this one guy and maybe"
+    },
+    {
+      "start": 862.8,
+      "duration": 4.479,
+      "text": "him. Okay? But these three are"
+    },
+    {
+      "start": 864.8,
+      "duration": 4.479,
+      "text": "eliminated because then your society"
+    },
+    {
+      "start": 867.279,
+      "duration": 4.721,
+      "text": "would collapse. You wouldn't you can"
+    },
+    {
+      "start": 869.279,
+      "duration": 5.36,
+      "text": "have that many children. So this can't"
+    },
+    {
+      "start": 872.0,
+      "duration": 6.079,
+      "text": "possibly be true, right?"
+    },
+    {
+      "start": 874.639,
+      "duration": 7.721,
+      "text": "So let's figure out what rationally what"
+    },
+    {
+      "start": 878.079,
+      "duration": 4.281,
+      "text": "should happen. Okay."
+    },
+    {
+      "start": 882.72,
+      "duration": 4.64,
+      "text": "All right. So let's think about this"
+    },
+    {
+      "start": 885.279,
+      "duration": 4.24,
+      "text": "rationally [snorts]"
+    },
+    {
+      "start": 887.36,
+      "duration": 6.479,
+      "text": "or from an e economics perspective. All"
+    },
+    {
+      "start": 889.519,
+      "duration": 8.161,
+      "text": "right. So again number five,"
+    },
+    {
+      "start": 893.839,
+      "duration": 5.921,
+      "text": "he's trying to maximize the game. So"
+    },
+    {
+      "start": 897.68,
+      "duration": 4.159,
+      "text": "he's trying to sleep with all five"
+    },
+    {
+      "start": 899.76,
+      "duration": 5.84,
+      "text": "women. Okay."
+    },
+    {
+      "start": 901.839,
+      "duration": 6.481,
+      "text": "The problem if he does that is these"
+    },
+    {
+      "start": 905.6,
+      "duration": 5.039,
+      "text": "five know they're all being played and"
+    },
+    {
+      "start": 908.32,
+      "duration": 5.759,
+      "text": "they recognize that this guy is probably"
+    },
+    {
+      "start": 910.639,
+      "duration": 5.921,
+      "text": "an So five"
+    },
+    {
+      "start": 914.079,
+      "duration": 4.0,
+      "text": "the best woman is like you know what"
+    },
+    {
+      "start": 916.56,
+      "duration": 3.519,
+      "text": "there's not much of difference between"
+    },
+    {
+      "start": 918.079,
+      "duration": 5.601,
+      "text": "four and five so I'll just go marry this"
+    },
+    {
+      "start": 920.079,
+      "duration": 7.601,
+      "text": "guy right? So number four is gone and"
+    },
+    {
+      "start": 923.68,
+      "duration": 6.0,
+      "text": "number four is like you know what"
+    },
+    {
+      "start": 927.68,
+      "duration": 5.279,
+      "text": "five is probably making a good decision"
+    },
+    {
+      "start": 929.68,
+      "duration": 7.12,
+      "text": "so I'll just go marry number three right"
+    },
+    {
+      "start": 932.959,
+      "duration": 6.401,
+      "text": "and then what happens now is that five"
+    },
+    {
+      "start": 936.8,
+      "duration": 5.36,
+      "text": "by trying to"
+    },
+    {
+      "start": 939.36,
+      "duration": 4.8,
+      "text": "marry all the women is stuck with the"
+    },
+    {
+      "start": 942.16,
+      "duration": 3.919,
+      "text": "worst choice."
+    },
+    {
+      "start": 944.16,
+      "duration": 3.76,
+      "text": "Right?"
+    },
+    {
+      "start": 946.079,
+      "duration": 4.88,
+      "text": "So that's kind of stupid for him. He's"
+    },
+    {
+      "start": 947.92,
+      "duration": 5.599,
+      "text": "stuck with number one. But guess what?"
+    },
+    {
+      "start": 950.959,
+      "duration": 4.88,
+      "text": "If any of these guys try this crap, the"
+    },
+    {
+      "start": 953.519,
+      "duration": 4.721,
+      "text": "same thing happens to him. Where four is"
+    },
+    {
+      "start": 955.839,
+      "duration": 4.161,
+      "text": "like, you know what? I I can't get five,"
+    },
+    {
+      "start": 958.24,
+      "duration": 3.36,
+      "text": "but I'll but I'll try to get four and"
+    },
+    {
+      "start": 960.0,
+      "duration": 4.399,
+      "text": "three together. And then three is like,"
+    },
+    {
+      "start": 961.6,
+      "duration": 4.32,
+      "text": "screw you. I'm I'm going to go and marry"
+    },
+    {
+      "start": 964.399,
+      "duration": 3.841,
+      "text": "two. Four is going to marry three. Okay."
+    },
+    {
+      "start": 965.92,
+      "duration": 4.4,
+      "text": "Then he's stuck with one as well. Or"
+    },
+    {
+      "start": 968.24,
+      "duration": 6.0,
+      "text": "he's just alone."
+    },
+    {
+      "start": 970.32,
+      "duration": 5.759,
+      "text": "So if they try to individually"
+    },
+    {
+      "start": 974.24,
+      "duration": 4.48,
+      "text": "maximize their outcome, they all get"
+    },
+    {
+      "start": 976.079,
+      "duration": 5.921,
+      "text": "screwed in the end. So the only way out"
+    },
+    {
+      "start": 978.72,
+      "duration": 4.559,
+      "text": "out of this is if they cooperate. Okay?"
+    },
+    {
+      "start": 982.0,
+      "duration": 4.399,
+      "text": "And the best way to cooperate is"
+    },
+    {
+      "start": 983.279,
+      "duration": 4.961,
+      "text": "basically five is like, you know what?"
+    },
+    {
+      "start": 986.399,
+      "duration": 4.0,
+      "text": "Screw this. I'm not going to go after"
+    },
+    {
+      "start": 988.24,
+      "duration": 5.719,
+      "text": "four or three. I'll just I'll just have"
+    },
+    {
+      "start": 990.399,
+      "duration": 3.56,
+      "text": "my five. Okay."
+    },
+    {
+      "start": 994.959,
+      "duration": 6.56,
+      "text": "Right. Four is like, yeah, I'll just go"
+    },
+    {
+      "start": 997.68,
+      "duration": 6.64,
+      "text": "marry four. No dating, no games. I'll"
+    },
+    {
+      "start": 1001.519,
+      "duration": 5.68,
+      "text": "just go marry four. And three marries"
+    },
+    {
+      "start": 1004.32,
+      "duration": 6.16,
+      "text": "three. Two marries two. and one marries"
+    },
+    {
+      "start": 1007.199,
+      "duration": 6.56,
+      "text": "one. Okay. And the world now is perfect."
+    },
+    {
+      "start": 1010.48,
+      "duration": 5.2,
+      "text": "Everyone has a husband and a wife and"
+    },
+    {
+      "start": 1013.759,
+      "duration": 3.921,
+      "text": "they can now just have children and the"
+    },
+    {
+      "start": 1015.68,
+      "duration": 6.079,
+      "text": "world is perfect. And this is actually"
+    },
+    {
+      "start": 1017.68,
+      "duration": 6.8,
+      "text": "the best strategy for all the players,"
+    },
+    {
+      "start": 1021.759,
+      "duration": 4.641,
+      "text": "right? We call this the word in game"
+    },
+    {
+      "start": 1024.48,
+      "duration": 5.959,
+      "text": "theory we call we use for this is called"
+    },
+    {
+      "start": 1026.4,
+      "duration": 4.039,
+      "text": "the Nash equilibrium."
+    },
+    {
+      "start": 1034.4,
+      "duration": 4.639,
+      "text": "Okay. Nash equilibrium just means that"
+    },
+    {
+      "start": 1036.799,
+      "duration": 5.361,
+      "text": "you always reach a state in which all"
+    },
+    {
+      "start": 1039.039,
+      "duration": 6.4,
+      "text": "the players maximize their outcome, the"
+    },
+    {
+      "start": 1042.16,
+      "duration": 6.72,
+      "text": "Nash equilibrium."
+    },
+    {
+      "start": 1045.439,
+      "duration": 5.921,
+      "text": "And so the world makes sense. Now"
+    },
+    {
+      "start": 1048.88,
+      "duration": 6.88,
+      "text": "there's a problem with this though. The"
+    },
+    {
+      "start": 1051.36,
+      "duration": 10.4,
+      "text": "problem is in real life no one does"
+    },
+    {
+      "start": 1055.76,
+      "duration": 8.64,
+      "text": "this. Okay? In real life no one actually"
+    },
+    {
+      "start": 1061.76,
+      "duration": 5.6,
+      "text": "follows this rule. Natural living is"
+    },
+    {
+      "start": 1064.4,
+      "duration": 6.24,
+      "text": "just a theory we made up. But in real"
+    },
+    {
+      "start": 1067.36,
+      "duration": 8.4,
+      "text": "life, that's just not what happens. What"
+    },
+    {
+      "start": 1070.64,
+      "duration": 7.36,
+      "text": "happens in real life is we choose to be"
+    },
+    {
+      "start": 1075.76,
+      "duration": 5.24,
+      "text": "suicidal."
+    },
+    {
+      "start": 1078.0,
+      "duration": 3.0,
+      "text": "Okay."
+    },
+    {
+      "start": 1089.44,
+      "duration": 4.239,
+      "text": "So, let me tell you about a game I"
+    },
+    {
+      "start": 1091.44,
+      "duration": 3.92,
+      "text": "played. So last year I was teaching this"
+    },
+    {
+      "start": 1093.679,
+      "duration": 4.24,
+      "text": "class and I asked the boys and I asked"
+    },
+    {
+      "start": 1095.36,
+      "duration": 5.52,
+      "text": "the girls. Pretend you're now 30 years"
+    },
+    {
+      "start": 1097.919,
+      "duration": 5.361,
+      "text": "old, right? Your parents are pestering"
+    },
+    {
+      "start": 1100.88,
+      "duration": 4.88,
+      "text": "you to get married and you've been on"
+    },
+    {
+      "start": 1103.28,
+      "duration": 4.639,
+      "text": "the dating market for 10 years. There's"
+    },
+    {
+      "start": 1105.76,
+      "duration": 4.08,
+      "text": "really no one that you think is perfect"
+    },
+    {
+      "start": 1107.919,
+      "duration": 6.481,
+      "text": "for you. You've just you you've have"
+    },
+    {
+      "start": 1109.84,
+      "duration": 6.959,
+      "text": "basically give up on love. Imagine"
+    },
+    {
+      "start": 1114.4,
+      "duration": 6.72,
+      "text": "that you want to get married now and"
+    },
+    {
+      "start": 1116.799,
+      "duration": 8.24,
+      "text": "tell me what is the minimum requirement"
+    },
+    {
+      "start": 1121.12,
+      "duration": 6.48,
+      "text": "you need in order to agree to marry"
+    },
+    {
+      "start": 1125.039,
+      "duration": 4.64,
+      "text": "someone else. Okay. What's the minimum?"
+    },
+    {
+      "start": 1127.6,
+      "duration": 5.52,
+      "text": "Okay. And then I have the boys and the"
+    },
+    {
+      "start": 1129.679,
+      "duration": 5.681,
+      "text": "girls write down response. The boys were"
+    },
+    {
+      "start": 1133.12,
+      "duration": 6.559,
+      "text": "pretty simple, right? Well, you know, as"
+    },
+    {
+      "start": 1135.36,
+      "duration": 6.72,
+      "text": "long as she likes me and as long as I"
+    },
+    {
+      "start": 1139.679,
+      "duration": 5.201,
+      "text": "can put her my penis into her, I'm good."
+    },
+    {
+      "start": 1142.08,
+      "duration": 6.24,
+      "text": "Okay, it's that simple. Okay, it really"
+    },
+    {
+      "start": 1144.88,
+      "duration": 5.2,
+      "text": "is. Guys are like, \"Yeah, I'll settle"
+    },
+    {
+      "start": 1148.32,
+      "duration": 4.56,
+      "text": "for anything."
+    },
+    {
+      "start": 1150.08,
+      "duration": 5.76,
+      "text": "That's the That's the boys, right?\""
+    },
+    {
+      "start": 1152.88,
+      "duration": 4.72,
+      "text": "Girls were different. girls who were"
+    },
+    {
+      "start": 1155.84,
+      "duration": 4.48,
+      "text": "like, \"Okay,"
+    },
+    {
+      "start": 1157.6,
+      "duration": 6.319,
+      "text": "if I don't love him, if I'm not even"
+    },
+    {
+      "start": 1160.32,
+      "duration": 5.76,
+      "text": "attracted to him, I need about a million"
+    },
+    {
+      "start": 1163.919,
+      "duration": 2.801,
+      "text": "dollars a month.\""
+    },
+    {
+      "start": 1166.08,
+      "duration": 1.44,
+      "text": ">> Really?"
+    },
+    {
+      "start": 1166.72,
+      "duration": 2.4,
+      "text": ">> Oh my god."
+    },
+    {
+      "start": 1167.52,
+      "duration": 2.8,
+      "text": ">> Yeah. I need about a million dollars."
+    },
+    {
+      "start": 1169.12,
+      "duration": 4.653,
+      "text": ">> Last class."
+    },
+    {
+      "start": 1170.32,
+      "duration": 4.32,
+      "text": ">> Last semester. Okay. All right. So,"
+    },
+    {
+      "start": 1173.773,
+      "duration": 4.227,
+      "text": "[laughter]"
+    },
+    {
+      "start": 1174.64,
+      "duration": 5.76,
+      "text": "this makes no sense, right? So, in"
+    },
+    {
+      "start": 1178.0,
+      "duration": 5.84,
+      "text": "theory,"
+    },
+    {
+      "start": 1180.4,
+      "duration": 7.279,
+      "text": ">> in theory, we should follow natur. In"
+    },
+    {
+      "start": 1183.84,
+      "duration": 8.719,
+      "text": "real life, what happens is this. All the"
+    },
+    {
+      "start": 1187.679,
+      "duration": 6.401,
+      "text": "girls want this one guy."
+    },
+    {
+      "start": 1192.559,
+      "duration": 4.081,
+      "text": "Okay? And maybe number four. Look at"
+    },
+    {
+      "start": 1194.08,
+      "duration": 6.24,
+      "text": "them for number four. But 321 they don't"
+    },
+    {
+      "start": 1196.64,
+      "duration": 5.6,
+      "text": "want. And we know because just look at"
+    },
+    {
+      "start": 1200.32,
+      "duration": 3.68,
+      "text": "the world around you. Look at these"
+    },
+    {
+      "start": 1202.24,
+      "duration": 4.24,
+      "text": "billionaires, right? Like Ellen Mus. How"
+    },
+    {
+      "start": 1204.0,
+      "duration": 6.08,
+      "text": "many wives does does he have? How many"
+    },
+    {
+      "start": 1206.48,
+      "duration": 5.76,
+      "text": "children does he have? Right? All the"
+    },
+    {
+      "start": 1210.08,
+      "duration": 5.76,
+      "text": "women in the world, many, not all, but"
+    },
+    {
+      "start": 1212.24,
+      "duration": 5.28,
+      "text": "many just want to marry actors like Brad"
+    },
+    {
+      "start": 1215.84,
+      "duration": 4.48,
+      "text": "Pitt,"
+    },
+    {
+      "start": 1217.52,
+      "duration": 4.88,
+      "text": "billionaires like Ellen Musk,"
+    },
+    {
+      "start": 1220.32,
+      "duration": 5.28,
+      "text": "right?"
+    },
+    {
+      "start": 1222.4,
+      "duration": 5.12,
+      "text": "And 3, two, and one,"
+    },
+    {
+      "start": 1225.6,
+      "duration": 3.76,
+      "text": "they what do they do? Well, they watch"
+    },
+    {
+      "start": 1227.52,
+      "duration": 3.36,
+      "text": "Netflix, they watch porn, they play"
+    },
+    {
+      "start": 1229.36,
+      "duration": 3.52,
+      "text": "video games. They've given up on life,"
+    },
+    {
+      "start": 1230.88,
+      "duration": 5.36,
+      "text": "okay? They're like, \"We don't care.\" We"
+    },
+    {
+      "start": 1232.88,
+      "duration": 6.0,
+      "text": "call these people incels, right?"
+    },
+    {
+      "start": 1236.24,
+      "duration": 4.4,
+      "text": "involuntary celibates because basically"
+    },
+    {
+      "start": 1238.88,
+      "duration": 4.56,
+      "text": "they have given up on life and life has"
+    },
+    {
+      "start": 1240.64,
+      "duration": 4.56,
+      "text": "given up on them. So this entire"
+    },
+    {
+      "start": 1243.44,
+      "duration": 6.08,
+      "text": "competition is between number five and"
+    },
+    {
+      "start": 1245.2,
+      "duration": 7.2,
+      "text": "four for all the women in the world. And"
+    },
+    {
+      "start": 1249.52,
+      "duration": 6.8,
+      "text": "this is again suicidal. This will lead"
+    },
+    {
+      "start": 1252.4,
+      "duration": 8.08,
+      "text": "to the death of humanity."
+    },
+    {
+      "start": 1256.32,
+      "duration": 7.16,
+      "text": "And the question now is okay why are we"
+    },
+    {
+      "start": 1260.48,
+      "duration": 3.0,
+      "text": "suicidal?"
+    },
+    {
+      "start": 1263.6,
+      "duration": 7.28,
+      "text": "And so let's look at game three"
+    },
+    {
+      "start": 1267.679,
+      "duration": 4.641,
+      "text": "analysis, right? The players, the rules,"
+    },
+    {
+      "start": 1270.88,
+      "duration": 2.799,
+      "text": "and incentives. We know, we know what"
+    },
+    {
+      "start": 1272.32,
+      "duration": 4.719,
+      "text": "the players are. The players are doing"
+    },
+    {
+      "start": 1273.679,
+      "duration": 5.761,
+      "text": "stupid things. The rules, we know, okay,"
+    },
+    {
+      "start": 1277.039,
+      "duration": 4.0,
+      "text": "but incentives"
+    },
+    {
+      "start": 1279.44,
+      "duration": 3.68,
+      "text": "is something that we have to think"
+    },
+    {
+      "start": 1281.039,
+      "duration": 5.281,
+      "text": "about. Why are they behaving like this?"
+    },
+    {
+      "start": 1283.12,
+      "duration": 7.84,
+      "text": "And the answer is because they're not"
+    },
+    {
+      "start": 1286.32,
+      "duration": 8.88,
+      "text": "interested in sex or procaration. What"
+    },
+    {
+      "start": 1290.96,
+      "duration": 6.079,
+      "text": "they're interested in is status."
+    },
+    {
+      "start": 1295.2,
+      "duration": 4.24,
+      "text": "Okay, that's the game they're playing."
+    },
+    {
+      "start": 1297.039,
+      "duration": 5.201,
+      "text": "Status."
+    },
+    {
+      "start": 1299.44,
+      "duration": 4.88,
+      "text": "I don't want to marry someone to have"
+    },
+    {
+      "start": 1302.24,
+      "duration": 3.919,
+      "text": "children. I want to marry someone so I"
+    },
+    {
+      "start": 1304.32,
+      "duration": 4.64,
+      "text": "can take a picture of her and post it on"
+    },
+    {
+      "start": 1306.159,
+      "duration": 5.041,
+      "text": "Instagram so I can get a lot of likes."
+    },
+    {
+      "start": 1308.96,
+      "duration": 3.76,
+      "text": "Oh my god. I want to marry someone so I"
+    },
+    {
+      "start": 1311.2,
+      "duration": 4.0,
+      "text": "can walk with her in the mall and all"
+    },
+    {
+      "start": 1312.72,
+      "duration": 5.12,
+      "text": "the guys are jealous. I want to marry"
+    },
+    {
+      "start": 1315.2,
+      "duration": 5.839,
+      "text": "someone who I can brag about."
+    },
+    {
+      "start": 1317.84,
+      "duration": 6.4,
+      "text": "Okay. It's it's a game about status, not"
+    },
+    {
+      "start": 1321.039,
+      "duration": 4.561,
+      "text": "a game about sex or procreation. Do you"
+    },
+    {
+      "start": 1324.24,
+      "duration": 4.559,
+      "text": "understand? They are not people are not"
+    },
+    {
+      "start": 1325.6,
+      "duration": 6.0,
+      "text": "being rational here. People are trying"
+    },
+    {
+      "start": 1328.799,
+      "duration": 4.961,
+      "text": "to maximize their status in life. And"
+    },
+    {
+      "start": 1331.6,
+      "duration": 5.36,
+      "text": "that's why everyone's behaving like"
+    },
+    {
+      "start": 1333.76,
+      "duration": 4.56,
+      "text": "this. Number"
+    },
+    {
+      "start": 1336.96,
+      "duration": 2.56,
+      "text": "she may be the ugest woman in the world,"
+    },
+    {
+      "start": 1338.32,
+      "duration": 3.04,
+      "text": "but she's still like, you know what?"
+    },
+    {
+      "start": 1339.52,
+      "duration": 3.44,
+      "text": "It's still my choice where not to have"
+    },
+    {
+      "start": 1341.36,
+      "duration": 3.679,
+      "text": "kids. And having kids is a pain in the"
+    },
+    {
+      "start": 1342.96,
+      "duration": 4.4,
+      "text": "ass. So, if I'm if I'm going to make the"
+    },
+    {
+      "start": 1345.039,
+      "duration": 4.88,
+      "text": "sacrifice, this guy better be"
+    },
+    {
+      "start": 1347.36,
+      "duration": 5.76,
+      "text": "good-looking, okay? Or this guy better"
+    },
+    {
+      "start": 1349.919,
+      "duration": 7.201,
+      "text": "be rich. Otherwise, why would I want to"
+    },
+    {
+      "start": 1353.12,
+      "duration": 7.28,
+      "text": "have kids? Okay,"
+    },
+    {
+      "start": 1357.12,
+      "duration": 5.6,
+      "text": "so this is why people behave the way"
+    },
+    {
+      "start": 1360.4,
+      "duration": 5.36,
+      "text": "they do. If you think about this way,"
+    },
+    {
+      "start": 1362.72,
+      "duration": 4.959,
+      "text": "what you recognize is that people are"
+    },
+    {
+      "start": 1365.76,
+      "duration": 4.08,
+      "text": "rational."
+    },
+    {
+      "start": 1367.679,
+      "duration": 5.921,
+      "text": "But to understand why they're rational,"
+    },
+    {
+      "start": 1369.84,
+      "duration": 6.76,
+      "text": "you have to figure out what the game is."
+    },
+    {
+      "start": 1373.6,
+      "duration": 3.0,
+      "text": "Okay."
+    },
+    {
+      "start": 1377.52,
+      "duration": 4.48,
+      "text": "But then this leads to us to a question"
+    },
+    {
+      "start": 1379.44,
+      "duration": 4.4,
+      "text": "which is okay well clearly this is wrong"
+    },
+    {
+      "start": 1382.0,
+      "duration": 3.6,
+      "text": "because if we behave like this"
+    },
+    {
+      "start": 1383.84,
+      "duration": 3.52,
+      "text": "throughout human history we wouldn't be"
+    },
+    {
+      "start": 1385.6,
+      "duration": 4.64,
+      "text": "here today."
+    },
+    {
+      "start": 1387.36,
+      "duration": 6.799,
+      "text": "Okay. How is it that we have this game"
+    },
+    {
+      "start": 1390.24,
+      "duration": 5.12,
+      "text": "today and we're going to die but we must"
+    },
+    {
+      "start": 1394.159,
+      "duration": 3.441,
+      "text": "have come from somewhere. We've been"
+    },
+    {
+      "start": 1395.36,
+      "duration": 4.88,
+      "text": "around for like a long time. So how is"
+    },
+    {
+      "start": 1397.6,
+      "duration": 4.8,
+      "text": "it that humans have survived for so long"
+    },
+    {
+      "start": 1400.24,
+      "duration": 6.559,
+      "text": "doing these stupid things? And the"
+    },
+    {
+      "start": 1402.4,
+      "duration": 6.48,
+      "text": "answer is basic game changes over time"
+    },
+    {
+      "start": 1406.799,
+      "duration": 6.36,
+      "text": "according to the superructure of"
+    },
+    {
+      "start": 1408.88,
+      "duration": 4.279,
+      "text": "society. Okay, the superructure"
+    },
+    {
+      "start": 1418.559,
+      "duration": 4.401,
+      "text": "the superructure is what determines the"
+    },
+    {
+      "start": 1421.12,
+      "duration": 4.559,
+      "text": "nature of the game. Superructure just"
+    },
+    {
+      "start": 1422.96,
+      "duration": 6.16,
+      "text": "think about the big picture, right? How"
+    },
+    {
+      "start": 1425.679,
+      "duration": 6.801,
+      "text": "many people are there? Is society"
+    },
+    {
+      "start": 1429.12,
+      "duration": 5.36,
+      "text": "wealthy or poor? Are there enemies to"
+    },
+    {
+      "start": 1432.48,
+      "duration": 4.24,
+      "text": "the society? Okay, this is the"
+    },
+    {
+      "start": 1434.48,
+      "duration": 4.4,
+      "text": "superructure, the big picture."
+    },
+    {
+      "start": 1436.72,
+      "duration": 4.88,
+      "text": "Demographics, economics, culture,"
+    },
+    {
+      "start": 1438.88,
+      "duration": 6.0,
+      "text": "politics, religion. And these things"
+    },
+    {
+      "start": 1441.6,
+      "duration": 6.4,
+      "text": "together is what determines the nature"
+    },
+    {
+      "start": 1444.88,
+      "duration": 7.0,
+      "text": "of the game. All right. So, let's look"
+    },
+    {
+      "start": 1448.0,
+      "duration": 3.88,
+      "text": "at three examples of superructure."
+    },
+    {
+      "start": 1454.08,
+      "duration": 5.76,
+      "text": "All right."
+    },
+    {
+      "start": 1456.159,
+      "duration": 6.321,
+      "text": "Um example one is you have a low"
+    },
+    {
+      "start": 1459.84,
+      "duration": 4.88,
+      "text": "population society. Okay, low population"
+    },
+    {
+      "start": 1462.48,
+      "duration": 4.96,
+      "text": "is like maybe 200 people, 200 people."
+    },
+    {
+      "start": 1464.72,
+      "duration": 6.16,
+      "text": "Okay, a village basically"
+    },
+    {
+      "start": 1467.44,
+      "duration": 8.479,
+      "text": "they are poor"
+    },
+    {
+      "start": 1470.88,
+      "duration": 6.799,
+      "text": "and um low technology. Low technologies"
+    },
+    {
+      "start": 1475.919,
+      "duration": 4.64,
+      "text": "means they don't have access to clean"
+    },
+    {
+      "start": 1477.679,
+      "duration": 4.401,
+      "text": "water. They don't know what hygiene is."
+    },
+    {
+      "start": 1480.559,
+      "duration": 4.161,
+      "text": "They don't understand what germs are. So"
+    },
+    {
+      "start": 1482.08,
+      "duration": 4.24,
+      "text": "it's very easy for a woman to die in"
+    },
+    {
+      "start": 1484.72,
+      "duration": 6.4,
+      "text": "childbirth."
+    },
+    {
+      "start": 1486.32,
+      "duration": 8.0,
+      "text": "Okay. And um low competition."
+    },
+    {
+      "start": 1491.12,
+      "duration": 4.88,
+      "text": "Low competition just means that"
+    },
+    {
+      "start": 1494.32,
+      "duration": 3.76,
+      "text": "there are no competing villages against"
+    },
+    {
+      "start": 1496.0,
+      "duration": 4.64,
+      "text": "them. Okay. So that's one kind of"
+    },
+    {
+      "start": 1498.08,
+      "duration": 6.4,
+      "text": "superructure, the early superructure of"
+    },
+    {
+      "start": 1500.64,
+      "duration": 6.08,
+      "text": "human society. Okay. Then you have maybe"
+    },
+    {
+      "start": 1504.48,
+      "duration": 3.76,
+      "text": "growing population."
+    },
+    {
+      "start": 1506.72,
+      "duration": 4.64,
+      "text": "Okay. So we're talking about like maybe"
+    },
+    {
+      "start": 1508.24,
+      "duration": 8.08,
+      "text": "10,000 people, 20,000 people. They are"
+    },
+    {
+      "start": 1511.36,
+      "duration": 8.08,
+      "text": "now growing in wealth, growing wealth."
+    },
+    {
+      "start": 1516.32,
+      "duration": 5.68,
+      "text": "Um, they have some technology meaning"
+    },
+    {
+      "start": 1519.44,
+      "duration": 5.839,
+      "text": "they have access to clean water and they"
+    },
+    {
+      "start": 1522.0,
+      "duration": 4.559,
+      "text": "have high competition. Okay, meaning"
+    },
+    {
+      "start": 1525.279,
+      "duration": 3.441,
+      "text": "that they're competing against different"
+    },
+    {
+      "start": 1526.559,
+      "duration": 4.0,
+      "text": "villages and societies around them."
+    },
+    {
+      "start": 1528.72,
+      "duration": 4.079,
+      "text": "Okay, that's another superructure. And"
+    },
+    {
+      "start": 1530.559,
+      "duration": 4.641,
+      "text": "the third superructure is"
+    },
+    {
+      "start": 1532.799,
+      "duration": 3.76,
+      "text": "overpopulation."
+    },
+    {
+      "start": 1535.2,
+      "duration": 3.2,
+      "text": "Okay, which is the world we live in"
+    },
+    {
+      "start": 1536.559,
+      "duration": 4.801,
+      "text": "today. Okay, where in China you have a"
+    },
+    {
+      "start": 1538.4,
+      "duration": 4.879,
+      "text": "billion people. That's a lot of people."
+    },
+    {
+      "start": 1541.36,
+      "duration": 5.4,
+      "text": "Um,"
+    },
+    {
+      "start": 1543.279,
+      "duration": 3.481,
+      "text": "too much wealth."
+    },
+    {
+      "start": 1546.96,
+      "duration": 3.839,
+      "text": "Okay. But with wealth, you have"
+    },
+    {
+      "start": 1548.08,
+      "duration": 4.719,
+      "text": "inequality, right?"
+    },
+    {
+      "start": 1550.799,
+      "duration": 3.841,
+      "text": "And then you have high technology. This"
+    },
+    {
+      "start": 1552.799,
+      "duration": 4.561,
+      "text": "high technology means that every woman"
+    },
+    {
+      "start": 1554.64,
+      "duration": 5.76,
+      "text": "who gives birth will not die and every"
+    },
+    {
+      "start": 1557.36,
+      "duration": 5.12,
+      "text": "child born will live on will live. Okay?"
+    },
+    {
+      "start": 1560.4,
+      "duration": 5.04,
+      "text": "And then you have something called"
+    },
+    {
+      "start": 1562.48,
+      "duration": 4.559,
+      "text": "equilibrium. Equilibrium just means that"
+    },
+    {
+      "start": 1565.44,
+      "duration": 3.2,
+      "text": "yeah, there's competition, but they're"
+    },
+    {
+      "start": 1567.039,
+      "duration": 4.401,
+      "text": "not going to go to war against each"
+    },
+    {
+      "start": 1568.64,
+      "duration": 6.56,
+      "text": "other. The world is basically peaceful."
+    },
+    {
+      "start": 1571.44,
+      "duration": 7.28,
+      "text": "Okay. And according to super structure,"
+    },
+    {
+      "start": 1575.2,
+      "duration": 6.4,
+      "text": "the game is going to change. So let's go"
+    },
+    {
+      "start": 1578.72,
+      "duration": 5.28,
+      "text": "back to the game. Okay. We have"
+    },
+    {
+      "start": 1581.6,
+      "duration": 5.6,
+      "text": "10 people"
+    },
+    {
+      "start": 1584.0,
+      "duration": 5.279,
+      "text": "in a low population, poor society. Guess"
+    },
+    {
+      "start": 1587.2,
+      "duration": 4.24,
+      "text": "what? They're not going to date. What"
+    },
+    {
+      "start": 1589.279,
+      "duration": 3.52,
+      "text": "they're going to do is they might get"
+    },
+    {
+      "start": 1591.44,
+      "duration": 3.28,
+      "text": "married, but they're going to have sex"
+    },
+    {
+      "start": 1592.799,
+      "duration": 5.12,
+      "text": "with each other."
+    },
+    {
+      "start": 1594.72,
+      "duration": 6.0,
+      "text": "Why? Because as a woman, the only way to"
+    },
+    {
+      "start": 1597.919,
+      "duration": 5.521,
+      "text": "ensure that your child survives is if"
+    },
+    {
+      "start": 1600.72,
+      "duration": 7.12,
+      "text": "all the men in the village"
+    },
+    {
+      "start": 1603.44,
+      "duration": 6.16,
+      "text": "want to protect and nurture the child."
+    },
+    {
+      "start": 1607.84,
+      "duration": 5.76,
+      "text": "They will do that if they believe that"
+    },
+    {
+      "start": 1609.6,
+      "duration": 6.72,
+      "text": "the child could be theirs. Okay? So the"
+    },
+    {
+      "start": 1613.6,
+      "duration": 4.0,
+      "text": "woman will maybe have a husband, but the"
+    },
+    {
+      "start": 1616.32,
+      "duration": 5.599,
+      "text": "woman will also choose to sleep with"
+    },
+    {
+      "start": 1617.6,
+      "duration": 5.52,
+      "text": "other men to disguise paternity."
+    },
+    {
+      "start": 1621.919,
+      "duration": 2.801,
+      "text": "Doesn't make sense. So there's no"
+    },
+    {
+      "start": 1623.12,
+      "duration": 4.48,
+      "text": "dating. There's just lots and lots of"
+    },
+    {
+      "start": 1624.72,
+      "duration": 6.88,
+      "text": "sex in order to maintain social"
+    },
+    {
+      "start": 1627.6,
+      "duration": 7.24,
+      "text": "cohesion. Okay. Now, in a superructure"
+    },
+    {
+      "start": 1631.6,
+      "duration": 3.24,
+      "text": "number two,"
+    },
+    {
+      "start": 1635.039,
+      "duration": 4.0,
+      "text": "there's no dating either. Why? Because"
+    },
+    {
+      "start": 1637.36,
+      "duration": 3.439,
+      "text": "this society is in competition with"
+    },
+    {
+      "start": 1639.039,
+      "duration": 4.321,
+      "text": "other societies and they need to have as"
+    },
+    {
+      "start": 1640.799,
+      "duration": 4.961,
+      "text": "many children as possible. So, what the"
+    },
+    {
+      "start": 1643.36,
+      "duration": 4.16,
+      "text": "the solution here is to arrange"
+    },
+    {
+      "start": 1645.76,
+      "duration": 4.08,
+      "text": "marriages."
+    },
+    {
+      "start": 1647.52,
+      "duration": 3.84,
+      "text": "arrange marriages"
+    },
+    {
+      "start": 1649.84,
+      "duration": 3.68,
+      "text": "where"
+    },
+    {
+      "start": 1651.36,
+      "duration": 4.0,
+      "text": "you know who cares who you marry? Just"
+    },
+    {
+      "start": 1653.52,
+      "duration": 3.36,
+      "text": "have lots and lots of kids. Okay,"
+    },
+    {
+      "start": 1655.36,
+      "duration": 3.04,
+      "text": "there's no dating either. Just have lots"
+    },
+    {
+      "start": 1656.88,
+      "duration": 2.799,
+      "text": "and lots of kids. You marry who your"
+    },
+    {
+      "start": 1658.4,
+      "duration": 3.2,
+      "text": "parents tell you to marry. You marry"
+    },
+    {
+      "start": 1659.679,
+      "duration": 3.36,
+      "text": "someone that you know. You marry your"
+    },
+    {
+      "start": 1661.6,
+      "duration": 2.8,
+      "text": "childhood best friend. Who cares? Okay,"
+    },
+    {
+      "start": 1663.039,
+      "duration": 3.601,
+      "text": "but you marry someone. You have lots and"
+    },
+    {
+      "start": 1664.4,
+      "duration": 4.8,
+      "text": "lots of kids. Okay, that's super"
+    },
+    {
+      "start": 1666.64,
+      "duration": 4.96,
+      "text": "structure number two. Superst number"
+    },
+    {
+      "start": 1669.2,
+      "duration": 5.199,
+      "text": "three is the one we live in. And here"
+    },
+    {
+      "start": 1671.6,
+      "duration": 4.48,
+      "text": "you have a dating game, right? Because"
+    },
+    {
+      "start": 1674.399,
+      "duration": 5.841,
+      "text": "why?"
+    },
+    {
+      "start": 1676.08,
+      "duration": 7.599,
+      "text": "because the odds of you obtaining status"
+    },
+    {
+      "start": 1680.24,
+      "duration": 6.559,
+      "text": "is really really low. Okay? And the only"
+    },
+    {
+      "start": 1683.679,
+      "duration": 7.041,
+      "text": "way that you can change your status is"
+    },
+    {
+      "start": 1686.799,
+      "duration": 5.441,
+      "text": "by marrying up. [clears throat]"
+    },
+    {
+      "start": 1690.72,
+      "duration": 3.28,
+      "text": "And that's why you have a dating game. A"
+    },
+    {
+      "start": 1692.24,
+      "duration": 4.64,
+      "text": "dating game is opportunity for you to"
+    },
+    {
+      "start": 1694.0,
+      "duration": 7.279,
+      "text": "find someone better than your social"
+    },
+    {
+      "start": 1696.88,
+      "duration": 10.32,
+      "text": "demographic circumstance can suggest."
+    },
+    {
+      "start": 1701.279,
+      "duration": 8.241,
+      "text": "Okay? And that's why you have low uh"
+    },
+    {
+      "start": 1707.2,
+      "duration": 5.88,
+      "text": "decreasing"
+    },
+    {
+      "start": 1709.52,
+      "duration": 3.56,
+      "text": "uh fertility rate."
+    },
+    {
+      "start": 1713.279,
+      "duration": 5.601,
+      "text": "Okay. Where over time because of the"
+    },
+    {
+      "start": 1715.919,
+      "duration": 5.601,
+      "text": "dating game"
+    },
+    {
+      "start": 1718.88,
+      "duration": 5.519,
+      "text": "society will collapse."
+    },
+    {
+      "start": 1721.52,
+      "duration": 4.8,
+      "text": "Okay. Does that make sense?"
+    },
+    {
+      "start": 1724.399,
+      "duration": 5.361,
+      "text": "All right."
+    },
+    {
+      "start": 1726.32,
+      "duration": 7.359,
+      "text": "So now you're the government and all"
+    },
+    {
+      "start": 1729.76,
+      "duration": 6.96,
+      "text": "around the world women who are wealthy,"
+    },
+    {
+      "start": 1733.679,
+      "duration": 6.801,
+      "text": "well educated are refusing to have"
+    },
+    {
+      "start": 1736.72,
+      "duration": 5.839,
+      "text": "children, especially in East Asia. Right"
+    },
+    {
+      "start": 1740.48,
+      "duration": 3.679,
+      "text": "now the fertility rate in China is about"
+    },
+    {
+      "start": 1742.559,
+      "duration": 4.24,
+      "text": "one."
+    },
+    {
+      "start": 1744.159,
+      "duration": 5.601,
+      "text": "Okay, about one. The replacement rate"
+    },
+    {
+      "start": 1746.799,
+      "duration": 6.0,
+      "text": "that you need is a 2.1. So just to"
+    },
+    {
+      "start": 1749.76,
+      "duration": 4.639,
+      "text": "maintain your current population levels,"
+    },
+    {
+      "start": 1752.799,
+      "duration": 6.561,
+      "text": "every woman in China needs to give birth"
+    },
+    {
+      "start": 1754.399,
+      "duration": 6.961,
+      "text": "to at least two kids. But right now on"
+    },
+    {
+      "start": 1759.36,
+      "duration": 5.12,
+      "text": "average, women are choosing to have one"
+    },
+    {
+      "start": 1761.36,
+      "duration": 7.84,
+      "text": "kid only in China. And the worst thing"
+    },
+    {
+      "start": 1764.48,
+      "duration": 6.799,
+      "text": "is that this trend is increasing. So 5"
+    },
+    {
+      "start": 1769.2,
+      "duration": 3.68,
+      "text": "years ago, the fertility rate was maybe"
+    },
+    {
+      "start": 1771.279,
+      "duration": 6.0,
+      "text": "1.7."
+    },
+    {
+      "start": 1772.88,
+      "duration": 8.56,
+      "text": "Now it's one. Okay. So the trend is very"
+    },
+    {
+      "start": 1777.279,
+      "duration": 6.0,
+      "text": "very negative. Okay. So governments all"
+    },
+    {
+      "start": 1781.44,
+      "duration": 10.479,
+      "text": "around the world are trying to figure"
+    },
+    {
+      "start": 1783.279,
+      "duration": 12.0,
+      "text": "out what to do. How do you convince"
+    },
+    {
+      "start": 1791.919,
+      "duration": 6.48,
+      "text": "women to have more kids?"
+    },
+    {
+      "start": 1795.279,
+      "duration": 5.041,
+      "text": "And what we've discovered is"
+    },
+    {
+      "start": 1798.399,
+      "duration": 4.241,
+      "text": "it's impossible."
+    },
+    {
+      "start": 1800.32,
+      "duration": 4.0,
+      "text": "We can pay you more money like they do"
+    },
+    {
+      "start": 1802.64,
+      "duration": 3.44,
+      "text": "in South Korea. Guess what? It doesn't"
+    },
+    {
+      "start": 1804.32,
+      "duration": 4.239,
+      "text": "work because people don't want money."
+    },
+    {
+      "start": 1806.08,
+      "duration": 6.479,
+      "text": "They want status. And status is a zero-"
+    },
+    {
+      "start": 1808.559,
+      "duration": 7.84,
+      "text": "sum game. Okay? Money is infinite. But"
+    },
+    {
+      "start": 1812.559,
+      "duration": 5.6,
+      "text": "status power is a zero sum game. So when"
+    },
+    {
+      "start": 1816.399,
+      "duration": 3.841,
+      "text": "you have overpopulation, we have too"
+    },
+    {
+      "start": 1818.159,
+      "duration": 4.801,
+      "text": "many people competing for two status too"
+    },
+    {
+      "start": 1820.24,
+      "duration": 4.24,
+      "text": "few status positions, you have"
+    },
+    {
+      "start": 1822.96,
+      "duration": 3.68,
+      "text": "decreasing"
+    },
+    {
+      "start": 1824.48,
+      "duration": 5.12,
+      "text": "fertility rates. And there's nothing you"
+    },
+    {
+      "start": 1826.64,
+      "duration": 6.88,
+      "text": "can do about it. The moment you give"
+    },
+    {
+      "start": 1829.6,
+      "duration": 8.72,
+      "text": "women choice, they choose to improve"
+    },
+    {
+      "start": 1833.52,
+      "duration": 7.6,
+      "text": "their lives by marrying someone better."
+    },
+    {
+      "start": 1838.32,
+      "duration": 5.52,
+      "text": "Okay? Not all but most. And so over"
+    },
+    {
+      "start": 1841.12,
+      "duration": 5.6,
+      "text": "time, what happens is your society"
+    },
+    {
+      "start": 1843.84,
+      "duration": 5.36,
+      "text": "collapses. If you look at history, the"
+    },
+    {
+      "start": 1846.72,
+      "duration": 5.199,
+      "text": "best indicator that a society is about"
+    },
+    {
+      "start": 1849.2,
+      "duration": 4.16,
+      "text": "to collapse is if the woman who are"
+    },
+    {
+      "start": 1851.919,
+      "duration": 3.041,
+      "text": "wealthy and well educated, if they"
+    },
+    {
+      "start": 1853.36,
+      "duration": 3.12,
+      "text": "refuse to have children. This is the"
+    },
+    {
+      "start": 1854.96,
+      "duration": 3.68,
+      "text": "same. This is what happened to the"
+    },
+    {
+      "start": 1856.48,
+      "duration": 4.799,
+      "text": "Romans who collapsed. This is what"
+    },
+    {
+      "start": 1858.64,
+      "duration": 3.919,
+      "text": "happened um to many empires. This is"
+    },
+    {
+      "start": 1861.279,
+      "duration": 3.76,
+      "text": "what's happening around the world today"
+    },
+    {
+      "start": 1862.559,
+      "duration": 5.281,
+      "text": "in America, in Britain, in Europe, in"
+    },
+    {
+      "start": 1865.039,
+      "duration": 6.0,
+      "text": "China. Okay? And this tells us that"
+    },
+    {
+      "start": 1867.84,
+      "duration": 5.04,
+      "text": "society is collapsing. So in other"
+    },
+    {
+      "start": 1871.039,
+      "duration": 4.961,
+      "text": "words,"
+    },
+    {
+      "start": 1872.88,
+      "duration": 4.799,
+      "text": "what this really is, okay, these"
+    },
+    {
+      "start": 1876.0,
+      "duration": 5.12,
+      "text": "superructures,"
+    },
+    {
+      "start": 1877.679,
+      "duration": 5.521,
+      "text": "it tells us the life cycle of a"
+    },
+    {
+      "start": 1881.12,
+      "duration": 4.159,
+      "text": "civilization,"
+    },
+    {
+      "start": 1883.2,
+      "duration": 5.199,
+      "text": "right?"
+    },
+    {
+      "start": 1885.279,
+      "duration": 7.361,
+      "text": "So this is when you when civilization is"
+    },
+    {
+      "start": 1888.399,
+      "duration": 8.76,
+      "text": "young then it mature it grows"
+    },
+    {
+      "start": 1892.64,
+      "duration": 4.519,
+      "text": "and then it collapses."
+    },
+    {
+      "start": 1898.64,
+      "duration": 4.24,
+      "text": "Okay."
+    },
+    {
+      "start": 1900.799,
+      "duration": 5.921,
+      "text": "And if you look at history all"
+    },
+    {
+      "start": 1902.88,
+      "duration": 5.76,
+      "text": "civilizations go through this process of"
+    },
+    {
+      "start": 1906.72,
+      "duration": 5.04,
+      "text": "birth"
+    },
+    {
+      "start": 1908.64,
+      "duration": 6.24,
+      "text": "maturation and then collapse."
+    },
+    {
+      "start": 1911.76,
+      "duration": 5.6,
+      "text": "and there's no way around it. So the"
+    },
+    {
+      "start": 1914.88,
+      "duration": 4.72,
+      "text": "power of game theory is that just by"
+    },
+    {
+      "start": 1917.36,
+      "duration": 4.799,
+      "text": "studying one aspect, okay, if I just"
+    },
+    {
+      "start": 1919.6,
+      "duration": 4.559,
+      "text": "study this game, all right, I figure out"
+    },
+    {
+      "start": 1922.159,
+      "duration": 3.76,
+      "text": "who the players are, the rules and the"
+    },
+    {
+      "start": 1924.159,
+      "duration": 4.081,
+      "text": "incentives, I can figure out what the"
+    },
+    {
+      "start": 1925.919,
+      "duration": 4.64,
+      "text": "super structure"
+    },
+    {
+      "start": 1928.24,
+      "duration": 5.6,
+      "text": "of the civilization is. Okay, and then"
+    },
+    {
+      "start": 1930.559,
+      "duration": 6.48,
+      "text": "once I have these two, I can now figure"
+    },
+    {
+      "start": 1933.84,
+      "duration": 4.8,
+      "text": "out where it came from and where it's"
+    },
+    {
+      "start": 1937.039,
+      "duration": 4.601,
+      "text": "going."
+    },
+    {
+      "start": 1938.64,
+      "duration": 3.0,
+      "text": "Okay,"
+    },
+    {
+      "start": 1942.88,
+      "duration": 6.399,
+      "text": "that's what I want to teach you in this"
+    },
+    {
+      "start": 1945.039,
+      "duration": 6.321,
+      "text": "class. How to analyze a situation so you"
+    },
+    {
+      "start": 1949.279,
+      "duration": 3.681,
+      "text": "understand the players, the rules and"
+    },
+    {
+      "start": 1951.36,
+      "duration": 3.6,
+      "text": "incentives which will give you insight"
+    },
+    {
+      "start": 1952.96,
+      "duration": 3.68,
+      "text": "into the superructure"
+    },
+    {
+      "start": 1954.96,
+      "duration": 3.52,
+      "text": "so that you can figure out where it came"
+    },
+    {
+      "start": 1956.64,
+      "duration": 4.879,
+      "text": "from and then you can also predict where"
+    },
+    {
+      "start": 1958.48,
+      "duration": 4.96,
+      "text": "it's going."
+    },
+    {
+      "start": 1961.519,
+      "duration": 3.201,
+      "text": "All right."
+    },
+    {
+      "start": 1963.44,
+      "duration": 3.28,
+      "text": "So, but you can also look at the"
+    },
+    {
+      "start": 1964.72,
+      "duration": 5.12,
+      "text": "superructure and figure out what the"
+    },
+    {
+      "start": 1966.72,
+      "duration": 3.12,
+      "text": "game is being played."
+    },
+    {
+      "start": 1971.039,
+      "duration": 3.441,
+      "text": "Okay. So, this is one example, but but"
+    },
+    {
+      "start": 1973.2,
+      "duration": 4.4,
+      "text": "throughout the semester, we'll be doing"
+    },
+    {
+      "start": 1974.48,
+      "duration": 6.559,
+      "text": "many many different examples of game"
+    },
+    {
+      "start": 1977.6,
+      "duration": 6.48,
+      "text": "theory. Is this clear so far?"
+    },
+    {
+      "start": 1981.039,
+      "duration": 4.48,
+      "text": "Are there any questions?"
+    },
+    {
+      "start": 1984.08,
+      "duration": 4.319,
+      "text": "Any comments? Any questions before I"
+    },
+    {
+      "start": 1985.519,
+      "duration": 5.88,
+      "text": "move on?"
+    },
+    {
+      "start": 1988.399,
+      "duration": 3.0,
+      "text": "All right."
+    },
+    {
+      "start": 1993.039,
+      "duration": 4.0,
+      "text": "All right."
+    },
+    {
+      "start": 1995.2,
+      "duration": 3.882,
+      "text": "All right. So let's just look at some"
+    },
+    {
+      "start": 1997.039,
+      "duration": 6.52,
+      "text": "basic"
+    },
+    {
+      "start": 1999.082,
+      "duration": 4.477,
+      "text": "[clears throat] facts. Okay."
+    },
+    {
+      "start": 2005.76,
+      "duration": 4.96,
+      "text": "All right. All right. This is a map of"
+    },
+    {
+      "start": 2007.84,
+      "duration": 6.319,
+      "text": "the world. Okay."
+    },
+    {
+      "start": 2010.72,
+      "duration": 7.839,
+      "text": "As you can see. Okay. Oh, sorry. So the"
+    },
+    {
+      "start": 2014.159,
+      "duration": 6.321,
+      "text": "color scheme is this. The red is where"
+    },
+    {
+      "start": 2018.559,
+      "duration": 4.081,
+      "text": "the population"
+    },
+    {
+      "start": 2020.48,
+      "duration": 4.799,
+      "text": "uh the society has an above replacement"
+    },
+    {
+      "start": 2022.64,
+      "duration": 4.96,
+      "text": "fertility rate. Okay. So above 2.1. If"
+    },
+    {
+      "start": 2025.279,
+      "duration": 5.441,
+      "text": "it's dark red like here in the middle of"
+    },
+    {
+      "start": 2027.6,
+      "duration": 4.959,
+      "text": "Africa, it's six to seven or six above."
+    },
+    {
+      "start": 2030.72,
+      "duration": 4.0,
+      "text": "Okay? And why why is it that the case?"
+    },
+    {
+      "start": 2032.559,
+      "duration": 5.281,
+      "text": "Because Africa is in a situation where"
+    },
+    {
+      "start": 2034.72,
+      "duration": 5.12,
+      "text": "it is a growing society with middling"
+    },
+    {
+      "start": 2037.84,
+      "duration": 4.88,
+      "text": "tech. So a lot of people die, lots of"
+    },
+    {
+      "start": 2039.84,
+      "duration": 4.48,
+      "text": "competition. So to survive, families"
+    },
+    {
+      "start": 2042.72,
+      "duration": 3.76,
+      "text": "have to give birth to a lot of kids."
+    },
+    {
+      "start": 2044.32,
+      "duration": 3.839,
+      "text": "Okay? They have no choice in the matter."
+    },
+    {
+      "start": 2046.48,
+      "duration": 4.08,
+      "text": "But then you move to the rest of the"
+    },
+    {
+      "start": 2048.159,
+      "duration": 5.68,
+      "text": "world. Okay? So this is um North"
+    },
+    {
+      "start": 2050.56,
+      "duration": 5.039,
+      "text": "America, Europe, and East Asia. the"
+    },
+    {
+      "start": 2053.839,
+      "duration": 3.601,
+      "text": "three wealthiest parts of the world. And"
+    },
+    {
+      "start": 2055.599,
+      "duration": 4.08,
+      "text": "guess what? The fertility rate is"
+    },
+    {
+      "start": 2057.44,
+      "duration": 5.679,
+      "text": "collapsing because now we've entered the"
+    },
+    {
+      "start": 2059.679,
+      "duration": 5.92,
+      "text": "endgame where it is overpopulation, too"
+    },
+    {
+      "start": 2063.119,
+      "duration": 4.641,
+      "text": "much wealth, so too much inequality. And"
+    },
+    {
+      "start": 2065.599,
+      "duration": 4.32,
+      "text": "so women are forced to pick the best"
+    },
+    {
+      "start": 2067.76,
+      "duration": 4.96,
+      "text": "possible mate or not have children at"
+    },
+    {
+      "start": 2069.919,
+      "duration": 5.44,
+      "text": "all. All right? And here the situation"
+    },
+    {
+      "start": 2072.72,
+      "duration": 5.04,
+      "text": "is very very dire. North America and"
+    },
+    {
+      "start": 2075.359,
+      "duration": 4.961,
+      "text": "Europe are kind of okay. Why? Because"
+    },
+    {
+      "start": 2077.76,
+      "duration": 4.399,
+      "text": "immigration. because even though their"
+    },
+    {
+      "start": 2080.32,
+      "duration": 4.319,
+      "text": "women are not having children, they can"
+    },
+    {
+      "start": 2082.159,
+      "duration": 6.0,
+      "text": "choose to import"
+    },
+    {
+      "start": 2084.639,
+      "duration": 8.561,
+      "text": "people for their labor force."
+    },
+    {
+      "start": 2088.159,
+      "duration": 10.041,
+      "text": "But East Asia is really really screwed"
+    },
+    {
+      "start": 2093.2,
+      "duration": 5.0,
+      "text": "guys. Okay, so just look at this region."
+    },
+    {
+      "start": 2098.4,
+      "duration": 7.199,
+      "text": "Okay, so China is one but the worst is"
+    },
+    {
+      "start": 2102.8,
+      "duration": 5.76,
+      "text": "North Korea. Sorry, South Korea. South"
+    },
+    {
+      "start": 2105.599,
+      "duration": 5.121,
+      "text": "Korea has the lowest population"
+    },
+    {
+      "start": 2108.56,
+      "duration": 4.4,
+      "text": "uh rate in sorry the lowest fertility"
+    },
+    {
+      "start": 2110.72,
+      "duration": 5.359,
+      "text": "rate in the world. They're at between"
+    },
+    {
+      "start": 2112.96,
+      "duration": 5.84,
+      "text": "0.6 to 0.8. So they're probably gone in"
+    },
+    {
+      "start": 2116.079,
+      "duration": 4.561,
+      "text": "50 years time. It's so bad that when you"
+    },
+    {
+      "start": 2118.8,
+      "duration": 4.799,
+      "text": "go to South Korea, they have signs"
+    },
+    {
+      "start": 2120.64,
+      "duration": 6.32,
+      "text": "outside restaurants that says no dogs"
+    },
+    {
+      "start": 2123.599,
+      "duration": 7.841,
+      "text": "and no kids. They think that kids are a"
+    },
+    {
+      "start": 2126.96,
+      "duration": 9.04,
+      "text": "problem. Okay. So you look at the these"
+    },
+    {
+      "start": 2131.44,
+      "duration": 6.56,
+      "text": "areas again they are poorer so women are"
+    },
+    {
+      "start": 2136.0,
+      "duration": 5.44,
+      "text": "forced to have more children in order to"
+    },
+    {
+      "start": 2138.0,
+      "duration": 6.0,
+      "text": "survive. Okay but you look at wealthy"
+    },
+    {
+      "start": 2141.44,
+      "duration": 4.639,
+      "text": "areas well they'll probably be gone in"
+    },
+    {
+      "start": 2144.0,
+      "duration": 6.64,
+      "text": "100 years time."
+    },
+    {
+      "start": 2146.079,
+      "duration": 6.241,
+      "text": "Okay you it's total total collapse."
+    },
+    {
+      "start": 2150.64,
+      "duration": 6.08,
+      "text": "The solution the governments are"
+    },
+    {
+      "start": 2152.32,
+      "duration": 6.32,
+      "text": "choosing right now is to import"
+    },
+    {
+      "start": 2156.72,
+      "duration": 4.72,
+      "text": "immigrants."
+    },
+    {
+      "start": 2158.64,
+      "duration": 4.88,
+      "text": "Okay? Especi So these are the trends"
+    },
+    {
+      "start": 2161.44,
+      "duration": 4.24,
+      "text": "right now and it's causing a lot of"
+    },
+    {
+      "start": 2163.52,
+      "duration": 5.44,
+      "text": "disruption in society because guess why"
+    },
+    {
+      "start": 2165.68,
+      "duration": 5.12,
+      "text": "guys people don't like outsiders people"
+    },
+    {
+      "start": 2168.96,
+      "duration": 3.92,
+      "text": "don't like immigrants but they don't"
+    },
+    {
+      "start": 2170.8,
+      "duration": 5.84,
+      "text": "have a choice of matter because along"
+    },
+    {
+      "start": 2172.88,
+      "duration": 6.239,
+      "text": "with the fertility crisis is the aging"
+    },
+    {
+      "start": 2176.64,
+      "duration": 7.6,
+      "text": "crisis where your population is getting"
+    },
+    {
+      "start": 2179.119,
+      "duration": 7.521,
+      "text": "older and older. Okay. So life the world"
+    },
+    {
+      "start": 2184.24,
+      "duration": 4.16,
+      "text": "is not that simple. If you want to know"
+    },
+    {
+      "start": 2186.64,
+      "duration": 3.439,
+      "text": "who will rule the world in 100 year"
+    },
+    {
+      "start": 2188.4,
+      "duration": 4.959,
+      "text": "time, 100 years time, just figure out"
+    },
+    {
+      "start": 2190.079,
+      "duration": 6.881,
+      "text": "which society in which society do"
+    },
+    {
+      "start": 2193.359,
+      "duration": 5.281,
+      "text": "wealthy educated women choose to have"
+    },
+    {
+      "start": 2196.96,
+      "duration": 4.0,
+      "text": "children and then that society will rule"
+    },
+    {
+      "start": 2198.64,
+      "duration": 5.12,
+      "text": "the world. Okay, it's that simple,"
+    },
+    {
+      "start": 2200.96,
+      "duration": 6.24,
+      "text": "right? [snorts] Well, unfortunately, if"
+    },
+    {
+      "start": 2203.76,
+      "duration": 7.44,
+      "text": "you do it that way, you get a really"
+    },
+    {
+      "start": 2207.2,
+      "duration": 5.76,
+      "text": "really disturbing answer. Okay. So this"
+    },
+    {
+      "start": 2211.2,
+      "duration": 5.6,
+      "text": "is"
+    },
+    {
+      "start": 2212.96,
+      "duration": 6.24,
+      "text": "per capita G uh GDP. Okay. So how much"
+    },
+    {
+      "start": 2216.8,
+      "duration": 4.799,
+      "text": "people people make. All right. So"
+    },
+    {
+      "start": 2219.2,
+      "duration": 6.32,
+      "text": "obviously if you're zero you're very"
+    },
+    {
+      "start": 2221.599,
+      "duration": 5.041,
+      "text": "poor and um if you move to over here"
+    },
+    {
+      "start": 2225.52,
+      "duration": 3.44,
+      "text": "you're very wealthy. Okay. So United"
+    },
+    {
+      "start": 2226.64,
+      "duration": 4.4,
+      "text": "States is the wealthiest society in the"
+    },
+    {
+      "start": 2228.96,
+      "duration": 5.119,
+      "text": "world. Right? Sure we can understand"
+    },
+    {
+      "start": 2231.04,
+      "duration": 7.68,
+      "text": "that. Then this is the fertility rate"
+    },
+    {
+      "start": 2234.079,
+      "duration": 9.121,
+      "text": "which tells us how many children women"
+    },
+    {
+      "start": 2238.72,
+      "duration": 6.639,
+      "text": "have on average. Okay, so again 2.1"
+    },
+    {
+      "start": 2243.2,
+      "duration": 3.6,
+      "text": "is replacement rate. Okay, 2.1 is"
+    },
+    {
+      "start": 2245.359,
+      "duration": 2.801,
+      "text": "replacement rate. So United States is"
+    },
+    {
+      "start": 2246.8,
+      "duration": 2.24,
+      "text": "actually below replacement rate, but the"
+    },
+    {
+      "start": 2248.16,
+      "duration": 4.56,
+      "text": "United States doesn't really care"
+    },
+    {
+      "start": 2249.04,
+      "duration": 7.6,
+      "text": "because it can import immigrants. Okay,"
+    },
+    {
+      "start": 2252.72,
+      "duration": 6.56,
+      "text": "um China is probably around here"
+    },
+    {
+      "start": 2256.64,
+      "duration": 7.12,
+      "text": "somewhere somewhere. Okay."
+    },
+    {
+      "start": 2259.28,
+      "duration": 6.72,
+      "text": "Um, Angola is up here, but it's poor."
+    },
+    {
+      "start": 2263.76,
+      "duration": 4.8,
+      "text": "So, what this map tells us is a country"
+    },
+    {
+      "start": 2266.0,
+      "duration": 6.32,
+      "text": "that is most likely to be dominant for"
+    },
+    {
+      "start": 2268.56,
+      "duration": 7.36,
+      "text": "the next 50 years is"
+    },
+    {
+      "start": 2272.32,
+      "duration": 9.279,
+      "text": "this country, Israel. Okay? Is it is the"
+    },
+    {
+      "start": 2275.92,
+      "duration": 10.24,
+      "text": "only wealthy western high-tech society"
+    },
+    {
+      "start": 2281.599,
+      "duration": 7.841,
+      "text": "in which women choose to have more than"
+    },
+    {
+      "start": 2286.16,
+      "duration": 4.959,
+      "text": "two kids."
+    },
+    {
+      "start": 2289.44,
+      "duration": 3.6,
+      "text": "Okay, this is what game theory teaches"
+    },
+    {
+      "start": 2291.119,
+      "duration": 5.841,
+      "text": "us. And yeah, I know there are people"
+    },
+    {
+      "start": 2293.04,
+      "duration": 6.48,
+      "text": "like, \"Yeah, but Israel, it's um it has"
+    },
+    {
+      "start": 2296.96,
+      "duration": 5.84,
+      "text": "9 million people"
+    },
+    {
+      "start": 2299.52,
+      "duration": 5.04,
+      "text": "and um it's in the middle of a desert"
+    },
+    {
+      "start": 2302.8,
+      "duration": 4.0,
+      "text": "and everyone hates Israel. I understand"
+    },
+    {
+      "start": 2304.56,
+      "duration": 5.2,
+      "text": "that. Thank you very much.\" Okay, I"
+    },
+    {
+      "start": 2306.8,
+      "duration": 6.0,
+      "text": "understand that. But if you just analyze"
+    },
+    {
+      "start": 2309.76,
+      "duration": 6.56,
+      "text": "how the game works,"
+    },
+    {
+      "start": 2312.8,
+      "duration": 5.84,
+      "text": "okay, if you just look at it objectively"
+    },
+    {
+      "start": 2316.32,
+      "duration": 4.88,
+      "text": "from a game theory perspective, you are"
+    },
+    {
+      "start": 2318.64,
+      "duration": 4.479,
+      "text": "forced to conclude that Israel right now"
+    },
+    {
+      "start": 2321.2,
+      "duration": 5.68,
+      "text": "has the major advantage over everyone"
+    },
+    {
+      "start": 2323.119,
+      "duration": 6.881,
+      "text": "else. Now, it is possible that societies"
+    },
+    {
+      "start": 2326.88,
+      "duration": 5.52,
+      "text": "will change the fertility rate as the as"
+    },
+    {
+      "start": 2330.0,
+      "duration": 5.52,
+      "text": "the world changes. Okay? But I'm saying"
+    },
+    {
+      "start": 2332.4,
+      "duration": 6.48,
+      "text": "that given the current state of things,"
+    },
+    {
+      "start": 2335.52,
+      "duration": 5.839,
+      "text": "Israel their growth trae trajectory is"
+    },
+    {
+      "start": 2338.88,
+      "duration": 6.479,
+      "text": "very very high."
+    },
+    {
+      "start": 2341.359,
+      "duration": 7.281,
+      "text": "But then the question then is okay"
+    },
+    {
+      "start": 2345.359,
+      "duration": 7.521,
+      "text": "why is it that Israel"
+    },
+    {
+      "start": 2348.64,
+      "duration": 7.12,
+      "text": "they are different from everyone else?"
+    },
+    {
+      "start": 2352.88,
+      "duration": 4.959,
+      "text": "And the answer is because the world"
+    },
+    {
+      "start": 2355.76,
+      "duration": 5.76,
+      "text": "hates them. Okay? Because they think"
+    },
+    {
+      "start": 2357.839,
+      "duration": 8.481,
+      "text": "they are different from everyone else."
+    },
+    {
+      "start": 2361.52,
+      "duration": 8.4,
+      "text": "and they must unite together to survive."
+    },
+    {
+      "start": 2366.32,
+      "duration": 6.48,
+      "text": "So in Israel, fertility"
+    },
+    {
+      "start": 2369.92,
+      "duration": 5.919,
+      "text": "is status."
+    },
+    {
+      "start": 2372.8,
+      "duration": 5.6,
+      "text": "Okay? If you are a woman and you give"
+    },
+    {
+      "start": 2375.839,
+      "duration": 6.321,
+      "text": "birth to a lot of kids, that means that"
+    },
+    {
+      "start": 2378.4,
+      "duration": 6.959,
+      "text": "you love Israel. That means that you are"
+    },
+    {
+      "start": 2382.16,
+      "duration": 5.199,
+      "text": "doing what you can in this war"
+    },
+    {
+      "start": 2385.359,
+      "duration": 4.641,
+      "text": "for survival."
+    },
+    {
+      "start": 2387.359,
+      "duration": 4.321,
+      "text": "It means you are a patriot."
+    },
+    {
+      "start": 2390.0,
+      "duration": 5.96,
+      "text": "Okay?"
+    },
+    {
+      "start": 2391.68,
+      "duration": 4.28,
+      "text": "Um but this has to do with religion."
+    },
+    {
+      "start": 2396.079,
+      "duration": 7.441,
+      "text": "So what the west has done is not only um"
+    },
+    {
+      "start": 2401.599,
+      "duration": 4.401,
+      "text": "has it created a dating game where women"
+    },
+    {
+      "start": 2403.52,
+      "duration": 4.559,
+      "text": "can choose to have kids but the western"
+    },
+    {
+      "start": 2406.0,
+      "duration": 4.24,
+      "text": "world has also given up on religion and"
+    },
+    {
+      "start": 2408.079,
+      "duration": 4.321,
+      "text": "embraced materialism."
+    },
+    {
+      "start": 2410.24,
+      "duration": 4.879,
+      "text": "Right?"
+    },
+    {
+      "start": 2412.4,
+      "duration": 6.16,
+      "text": "So what is valued"
+    },
+    {
+      "start": 2415.119,
+      "duration": 4.96,
+      "text": "in our world in the west? It's not"
+    },
+    {
+      "start": 2418.56,
+      "duration": 5.84,
+      "text": "patriotism"
+    },
+    {
+      "start": 2420.079,
+      "duration": 6.721,
+      "text": "or love of family or religious duty."
+    },
+    {
+      "start": 2424.4,
+      "duration": 3.84,
+      "text": "It's just how many Instagram followers"
+    },
+    {
+      "start": 2426.8,
+      "duration": 4.72,
+      "text": "you have. It's how many YouTube"
+    },
+    {
+      "start": 2428.24,
+      "duration": 5.119,
+      "text": "subscribers you have. It's how many how"
+    },
+    {
+      "start": 2431.52,
+      "duration": 4.24,
+      "text": "much money you have. Okay? That's all"
+    },
+    {
+      "start": 2433.359,
+      "duration": 4.081,
+      "text": "that matters."
+    },
+    {
+      "start": 2435.76,
+      "duration": 5.839,
+      "text": "So given the current state of state of"
+    },
+    {
+      "start": 2437.44,
+      "duration": 8.399,
+      "text": "events, it's very hard for the Western"
+    },
+    {
+      "start": 2441.599,
+      "duration": 6.321,
+      "text": "world and really for China to survive"
+    },
+    {
+      "start": 2445.839,
+      "duration": 3.601,
+      "text": "for the next 50 years. Okay. And I and I"
+    },
+    {
+      "start": 2447.92,
+      "duration": 4.4,
+      "text": "know like well China has a billion"
+    },
+    {
+      "start": 2449.44,
+      "duration": 4.8,
+      "text": "people. So even though"
+    },
+    {
+      "start": 2452.32,
+      "duration": 4.72,
+      "text": "um"
+    },
+    {
+      "start": 2454.24,
+      "duration": 4.64,
+      "text": "you know we're only giving birth to 10"
+    },
+    {
+      "start": 2457.04,
+      "duration": 4.0,
+      "text": "million kids a year which will still be"
+    },
+    {
+      "start": 2458.88,
+      "duration": 4.64,
+      "text": "around for a long long time. Okay. So at"
+    },
+    {
+      "start": 2461.04,
+      "duration": 4.16,
+      "text": "this rate by 2100"
+    },
+    {
+      "start": 2463.52,
+      "duration": 3.28,
+      "text": "China will be will be at a population"
+    },
+    {
+      "start": 2465.2,
+      "duration": 4.08,
+      "text": "about 600 million. That's still a lot of"
+    },
+    {
+      "start": 2466.8,
+      "duration": 5.36,
+      "text": "people man."
+    },
+    {
+      "start": 2469.28,
+      "duration": 5.839,
+      "text": "Um okay"
+    },
+    {
+      "start": 2472.16,
+      "duration": 4.8,
+      "text": "here's the problem though. Okay. This is"
+    },
+    {
+      "start": 2475.119,
+      "duration": 4.24,
+      "text": "South Korea. Okay. South Korea is like"
+    },
+    {
+      "start": 2476.96,
+      "duration": 3.84,
+      "text": "the worst case scenario and for South"
+    },
+    {
+      "start": 2479.359,
+      "duration": 4.321,
+      "text": "Korea this is actually the best case"
+    },
+    {
+      "start": 2480.8,
+      "duration": 4.88,
+      "text": "scenario where okay given current trends"
+    },
+    {
+      "start": 2483.68,
+      "duration": 4.159,
+      "text": "and let's let's just pretend that"
+    },
+    {
+      "start": 2485.68,
+      "duration": 4.72,
+      "text": "nothing bad happens to South Korea."
+    },
+    {
+      "start": 2487.839,
+      "duration": 4.321,
+      "text": "Well, by the year 2100 you you have a"
+    },
+    {
+      "start": 2490.4,
+      "duration": 4.56,
+      "text": "situation like this where the vast"
+    },
+    {
+      "start": 2492.16,
+      "duration": 7.439,
+      "text": "majority of people are over 65 and you"
+    },
+    {
+      "start": 2494.96,
+      "duration": 6.879,
+      "text": "have no kids. Okay, that is a zombie"
+    },
+    {
+      "start": 2499.599,
+      "duration": 4.641,
+      "text": "society where no one works and everyone"
+    },
+    {
+      "start": 2501.839,
+      "duration": 4.0,
+      "text": "just I don't know walks around the park"
+    },
+    {
+      "start": 2504.24,
+      "duration": 3.119,
+      "text": "every day."
+    },
+    {
+      "start": 2505.839,
+      "duration": 4.161,
+      "text": "No one works. So the economy has"
+    },
+    {
+      "start": 2507.359,
+      "duration": 5.76,
+      "text": "collapsed. Okay. So look look look at"
+    },
+    {
+      "start": 2510.0,
+      "duration": 4.8,
+      "text": "this trend where we are now in here."
+    },
+    {
+      "start": 2513.119,
+      "duration": 3.521,
+      "text": "Okay. Where where the majority it's"
+    },
+    {
+      "start": 2514.8,
+      "duration": 4.24,
+      "text": "still a working population which is"
+    },
+    {
+      "start": 2516.64,
+      "duration": 5.04,
+      "text": "good. You need that for the economy. But"
+    },
+    {
+      "start": 2519.04,
+      "duration": 5.12,
+      "text": "by the time you hit 2040"
+    },
+    {
+      "start": 2521.68,
+      "duration": 4.48,
+      "text": "okay you got this huge dependency and a"
+    },
+    {
+      "start": 2524.16,
+      "duration": 5.6,
+      "text": "creating population. Okay. Do you guys"
+    },
+    {
+      "start": 2526.16,
+      "duration": 6.72,
+      "text": "see this where we are in um Okay. So"
+    },
+    {
+      "start": 2529.76,
+      "duration": 5.599,
+      "text": "we're at 2020, right? Okay. All right."
+    },
+    {
+      "start": 2532.88,
+      "duration": 5.36,
+      "text": "So, it's still not too bad, but by the"
+    },
+    {
+      "start": 2535.359,
+      "duration": 4.801,
+      "text": "time you have 2040, look at this. Okay,"
+    },
+    {
+      "start": 2538.24,
+      "duration": 4.16,
+      "text": "look at this. M look at this. Where you"
+    },
+    {
+      "start": 2540.16,
+      "duration": 5.919,
+      "text": "have absolutely no kids and then you"
+    },
+    {
+      "start": 2542.4,
+      "duration": 6.56,
+      "text": "have lots and lots of retirees. Okay?"
+    },
+    {
+      "start": 2546.079,
+      "duration": 4.561,
+      "text": "And then by the time you hit 60, oh my"
+    },
+    {
+      "start": 2548.96,
+      "duration": 3.28,
+      "text": "god,"
+    },
+    {
+      "start": 2550.64,
+      "duration": 4.08,
+      "text": "right?"
+    },
+    {
+      "start": 2552.24,
+      "duration": 7.28,
+      "text": "Your population, your working population"
+    },
+    {
+      "start": 2554.72,
+      "duration": 6.56,
+      "text": "has decreased by half, by 50%."
+    },
+    {
+      "start": 2559.52,
+      "duration": 3.52,
+      "text": "All right?"
+    },
+    {
+      "start": 2561.28,
+      "duration": 4.64,
+      "text": "So"
+    },
+    {
+      "start": 2563.04,
+      "duration": 5.44,
+      "text": "if things are stay the same, if nothing"
+    },
+    {
+      "start": 2565.92,
+      "duration": 6.8,
+      "text": "happens, South Korea will be will be"
+    },
+    {
+      "start": 2568.48,
+      "duration": 6.56,
+      "text": "dead in I don't know by"
+    },
+    {
+      "start": 2572.72,
+      "duration": 5.2,
+      "text": "20"
+    },
+    {
+      "start": 2575.04,
+      "duration": 5.52,
+      "text": "150. Okay, best case scenario. But what"
+    },
+    {
+      "start": 2577.92,
+      "duration": 4.64,
+      "text": "we know from history is that societies"
+    },
+    {
+      "start": 2580.56,
+      "duration": 5.039,
+      "text": "will not die naturally."
+    },
+    {
+      "start": 2582.56,
+      "duration": 6.24,
+      "text": "Eventually South Korea will be forced"
+    },
+    {
+      "start": 2585.599,
+      "duration": 7.681,
+      "text": "into wars, new economic crisis. So this"
+    },
+    {
+      "start": 2588.8,
+      "duration": 7.12,
+      "text": "trend will just increase. And so if"
+    },
+    {
+      "start": 2593.28,
+      "duration": 4.799,
+      "text": "North Korea get got past 2080, I'd be"
+    },
+    {
+      "start": 2595.92,
+      "duration": 4.56,
+      "text": "very surprised. Okay? I would be"
+    },
+    {
+      "start": 2598.079,
+      "duration": 5.28,
+      "text": "surprised by 2040,"
+    },
+    {
+      "start": 2600.48,
+      "duration": 4.879,
+      "text": "South Korea were to face collapse as a"
+    },
+    {
+      "start": 2603.359,
+      "duration": 4.801,
+      "text": "nation state."
+    },
+    {
+      "start": 2605.359,
+      "duration": 4.24,
+      "text": "Okay? Because you need these people to"
+    },
+    {
+      "start": 2608.16,
+      "duration": 3.36,
+      "text": "work. But guess what? You also need them"
+    },
+    {
+      "start": 2609.599,
+      "duration": 5.52,
+      "text": "to fight wars. So if North Korea ever"
+    },
+    {
+      "start": 2611.52,
+      "duration": 6.319,
+      "text": "threatens South Korea, most of your"
+    },
+    {
+      "start": 2615.119,
+      "duration": 5.441,
+      "text": "adult population will be dead."
+    },
+    {
+      "start": 2617.839,
+      "duration": 6.161,
+      "text": "Okay. So, South Korea cannot fight a"
+    },
+    {
+      "start": 2620.56,
+      "duration": 5.759,
+      "text": "war. Now, the prospects for South Korea"
+    },
+    {
+      "start": 2624.0,
+      "duration": 6.4,
+      "text": "is utterly hopeless. There's nothing"
+    },
+    {
+      "start": 2626.319,
+      "duration": 5.441,
+      "text": "South Korea can do about this because"
+    },
+    {
+      "start": 2630.4,
+      "duration": 4.8,
+      "text": "South Korea is an extremely"
+    },
+    {
+      "start": 2631.76,
+      "duration": 6.48,
+      "text": "materialistic society where"
+    },
+    {
+      "start": 2635.2,
+      "duration": 5.52,
+      "text": "the only way only way to get ahead is by"
+    },
+    {
+      "start": 2638.24,
+      "duration": 4.4,
+      "text": "making a lot of money. Okay? And if"
+    },
+    {
+      "start": 2640.72,
+      "duration": 4.72,
+      "text": "you're a middle class person in South"
+    },
+    {
+      "start": 2642.64,
+      "duration": 4.56,
+      "text": "Korea, it makes no sense for you to have"
+    },
+    {
+      "start": 2645.44,
+      "duration": 4.08,
+      "text": "three kids. makes sense for you to have"
+    },
+    {
+      "start": 2647.2,
+      "duration": 5.119,
+      "text": "one kid and put all your resources into"
+    },
+    {
+      "start": 2649.52,
+      "duration": 5.36,
+      "text": "this one kid in the hopes that he passes"
+    },
+    {
+      "start": 2652.319,
+      "duration": 4.321,
+      "text": "the college examination, gets in a good"
+    },
+    {
+      "start": 2654.88,
+      "duration": 3.52,
+      "text": "university and then gets a good job at"
+    },
+    {
+      "start": 2656.64,
+      "duration": 5.199,
+      "text": "Samsung, which is the only company in"
+    },
+    {
+      "start": 2658.4,
+      "duration": 5.919,
+      "text": "South Korea. Okay, Samsung,"
+    },
+    {
+      "start": 2661.839,
+      "duration": 5.441,
+      "text": "right? So, the situation is pretty dire"
+    },
+    {
+      "start": 2664.319,
+      "duration": 8.241,
+      "text": "in South Korea."
+    },
+    {
+      "start": 2667.28,
+      "duration": 7.52,
+      "text": "All right. Okay, that's it for"
+    },
+    {
+      "start": 2672.56,
+      "duration": 3.68,
+      "text": "today. Any questions, guys, about what"
+    },
+    {
+      "start": 2674.8,
+      "duration": 2.0,
+      "text": "we've learned?"
+    },
+    {
+      "start": 2676.24,
+      "duration": 3.56,
+      "text": "Yeah."
+    },
+    {
+      "start": 2676.8,
+      "duration": 3.0,
+      "text": ">> Okay."
+    },
+    {
+      "start": 2681.2,
+      "duration": 5.68,
+      "text": ">> Yeah. Speaking of mic, please."
+    },
+    {
+      "start": 2683.92,
+      "duration": 5.679,
+      "text": ">> So, so for the last graph that uh we"
+    },
+    {
+      "start": 2686.88,
+      "duration": 6.16,
+      "text": "talked about Israel and I've noticed"
+    },
+    {
+      "start": 2689.599,
+      "duration": 9.041,
+      "text": "that the Saudi Arabia that is also like"
+    },
+    {
+      "start": 2693.04,
+      "duration": 8.24,
+      "text": "uh at uh have not bad GDP per capita and"
+    },
+    {
+      "start": 2698.64,
+      "duration": 4.479,
+      "text": "fertility rate. So, but for Saudi"
+    },
+    {
+      "start": 2701.28,
+      "duration": 5.12,
+      "text": "Arabia, maybe I'm wrong, like uh"
+    },
+    {
+      "start": 2703.119,
+      "duration": 6.401,
+      "text": "stereotypically that they didn't receive"
+    },
+    {
+      "start": 2706.4,
+      "duration": 5.679,
+      "text": "uh much hate as Israel. So, so why did"
+    },
+    {
+      "start": 2709.52,
+      "duration": 3.52,
+      "text": "they like at the similar position as"
+    },
+    {
+      "start": 2712.079,
+      "duration": 2.641,
+      "text": "Israel?"
+    },
+    {
+      "start": 2713.04,
+      "duration": 4.4,
+      "text": ">> Okay. That's actually really good"
+    },
+    {
+      "start": 2714.72,
+      "duration": 4.56,
+      "text": "question. Okay. All right."
+    },
+    {
+      "start": 2717.44,
+      "duration": 4.24,
+      "text": "So,"
+    },
+    {
+      "start": 2719.28,
+      "duration": 5.36,
+      "text": "South Saudi Arabia, as you can see from"
+    },
+    {
+      "start": 2721.68,
+      "duration": 5.2,
+      "text": "this map, has it's a very wealthy"
+    },
+    {
+      "start": 2724.64,
+      "duration": 6.0,
+      "text": "society."
+    },
+    {
+      "start": 2726.88,
+      "duration": 5.92,
+      "text": "um and families have about 4K on"
+    },
+    {
+      "start": 2730.64,
+      "duration": 4.16,
+      "text": "average. All right. So, South Saudi"
+    },
+    {
+      "start": 2732.8,
+      "duration": 4.319,
+      "text": "Arabia is actually an outlier. And the"
+    },
+    {
+      "start": 2734.8,
+      "duration": 4.799,
+      "text": "reason why is that it gets all the money"
+    },
+    {
+      "start": 2737.119,
+      "duration": 3.921,
+      "text": "from oil revenues. Okay? So, it sells"
+    },
+    {
+      "start": 2739.599,
+      "duration": 3.681,
+      "text": "with oil around the world. What what"
+    },
+    {
+      "start": 2741.04,
+      "duration": 4.559,
+      "text": "does it do? It creates a welfare state"
+    },
+    {
+      "start": 2743.28,
+      "duration": 6.72,
+      "text": "using this oil."
+    },
+    {
+      "start": 2745.599,
+      "duration": 5.601,
+      "text": "Um so, you're incentivized to have um"
+    },
+    {
+      "start": 2750.0,
+      "duration": 2.8,
+      "text": "many children as possible because the"
+    },
+    {
+      "start": 2751.2,
+      "duration": 3.36,
+      "text": "government will pay for it. free"
+    },
+    {
+      "start": 2752.8,
+      "duration": 4.64,
+      "text": "schooling, free health care, free"
+    },
+    {
+      "start": 2754.56,
+      "duration": 5.36,
+      "text": "housing, and then a guaranteed job. So,"
+    },
+    {
+      "start": 2757.44,
+      "duration": 4.56,
+      "text": "it's basically like socialism. Uh it's"
+    },
+    {
+      "start": 2759.92,
+      "duration": 4.0,
+      "text": "also a Muslim country. So, you have this"
+    },
+    {
+      "start": 2762.0,
+      "duration": 4.72,
+      "text": "religious duty imperative to have have"
+    },
+    {
+      "start": 2763.92,
+      "duration": 4.72,
+      "text": "as many children as possible."
+    },
+    {
+      "start": 2766.72,
+      "duration": 6.08,
+      "text": "Okay. But the problem with Saudi Arabia"
+    },
+    {
+      "start": 2768.64,
+      "duration": 8.479,
+      "text": "is the idea of human capital"
+    },
+    {
+      "start": 2772.8,
+      "duration": 6.24,
+      "text": "where it is not really a Mar society in"
+    },
+    {
+      "start": 2777.119,
+      "duration": 3.281,
+      "text": "which people are well educated and"
+    },
+    {
+      "start": 2779.04,
+      "duration": 4.079,
+      "text": "they're contributing to the to the"
+    },
+    {
+      "start": 2780.4,
+      "duration": 4.16,
+      "text": "economy. Okay. Saudi Arabia just just"
+    },
+    {
+      "start": 2783.119,
+      "duration": 4.321,
+      "text": "gets all its money from oil and that's"
+    },
+    {
+      "start": 2784.56,
+      "duration": 7.039,
+      "text": "it. It's trying to grow terrorism. It's"
+    },
+    {
+      "start": 2787.44,
+      "duration": 6.48,
+      "text": "trying to develop its uh human capital,"
+    },
+    {
+      "start": 2791.599,
+      "duration": 5.281,
+      "text": "but it doesn't really work. Okay. So, so"
+    },
+    {
+      "start": 2793.92,
+      "duration": 6.48,
+      "text": "you're right in that Saudi Arabia"
+    },
+    {
+      "start": 2796.88,
+      "duration": 6.0,
+      "text": "um it is uh it seems to be doing well,"
+    },
+    {
+      "start": 2800.4,
+      "duration": 4.8,
+      "text": "but it's not really. Okay."
+    },
+    {
+      "start": 2802.88,
+      "duration": 4.479,
+      "text": "Um but also like people will argue about"
+    },
+    {
+      "start": 2805.2,
+      "duration": 3.36,
+      "text": "Israel as well. We're like, well, Israel"
+    },
+    {
+      "start": 2807.359,
+      "duration": 3.441,
+      "text": "gets all its money from the United"
+    },
+    {
+      "start": 2808.56,
+      "duration": 5.44,
+      "text": "States and it's the American military"
+    },
+    {
+      "start": 2810.8,
+      "duration": 4.559,
+      "text": "that supports Israel. Um, that's true to"
+    },
+    {
+      "start": 2814.0,
+      "duration": 3.2,
+      "text": "a certain extent, but I would argue that"
+    },
+    {
+      "start": 2815.359,
+      "duration": 4.72,
+      "text": "you actually go to Israel, you will see"
+    },
+    {
+      "start": 2817.2,
+      "duration": 4.56,
+      "text": "that it's an open dynamic society in"
+    },
+    {
+      "start": 2820.079,
+      "duration": 2.801,
+      "text": "which you're allowed to ask questions,"
+    },
+    {
+      "start": 2821.76,
+      "duration": 4.24,
+      "text": "which you're allowed to criticize the"
+    },
+    {
+      "start": 2822.88,
+      "duration": 4.32,
+      "text": "government, uh, in which you are given a"
+    },
+    {
+      "start": 2826.0,
+      "duration": 4.16,
+      "text": "lots of opportunities for social"
+    },
+    {
+      "start": 2827.2,
+      "duration": 5.119,
+      "text": "mobility. Okay. So, Israel has"
+    },
+    {
+      "start": 2830.16,
+      "duration": 8.4,
+      "text": "democracy,"
+    },
+    {
+      "start": 2832.319,
+      "duration": 9.681,
+      "text": "it has uh innovation, okay, it has um"
+    },
+    {
+      "start": 2838.56,
+      "duration": 5.84,
+      "text": "um technology,"
+    },
+    {
+      "start": 2842.0,
+      "duration": 4.4,
+      "text": "okay? And Saudi Arabia doesn't have"
+    },
+    {
+      "start": 2844.4,
+      "duration": 4.4,
+      "text": "these things. If you want to be a really"
+    },
+    {
+      "start": 2846.4,
+      "duration": 4.0,
+      "text": "strong nation, then you need innovation,"
+    },
+    {
+      "start": 2848.8,
+      "duration": 3.76,
+      "text": "you need openness, you need you need"
+    },
+    {
+      "start": 2850.4,
+      "duration": 4.48,
+      "text": "technology, okay? It's also um really"
+    },
+    {
+      "start": 2852.56,
+      "duration": 4.799,
+      "text": "highly educated,"
+    },
+    {
+      "start": 2854.88,
+      "duration": 5.439,
+      "text": "right? Okay. Does that make sense? Okay."
+    },
+    {
+      "start": 2857.359,
+      "duration": 5.601,
+      "text": "So Saudi Arabia is really an outlier"
+    },
+    {
+      "start": 2860.319,
+      "duration": 4.721,
+      "text": "here. All right. But the problem is what"
+    },
+    {
+      "start": 2862.96,
+      "duration": 4.48,
+      "text": "happens if"
+    },
+    {
+      "start": 2865.04,
+      "duration": 3.68,
+      "text": "Saudi Saud runs out of oil, right? Or"
+    },
+    {
+      "start": 2867.44,
+      "duration": 3.679,
+      "text": "there's a war in the Middle East and"
+    },
+    {
+      "start": 2868.72,
+      "duration": 4.48,
+      "text": "Saudi Arabia is kind of screwed. All"
+    },
+    {
+      "start": 2871.119,
+      "duration": 3.841,
+      "text": "right."
+    },
+    {
+      "start": 2873.2,
+      "duration": 3.76,
+      "text": "All right. But you can also argue, no,"
+    },
+    {
+      "start": 2874.96,
+      "duration": 5.68,
+      "text": "well, you know, Saudi Arabia, it has a"
+    },
+    {
+      "start": 2876.96,
+      "duration": 6.32,
+      "text": "lot of money and maybe Okay. So, so game"
+    },
+    {
+      "start": 2880.64,
+      "duration": 5.6,
+      "text": "theory doesn't give us the answers. Game"
+    },
+    {
+      "start": 2883.28,
+      "duration": 4.96,
+      "text": "theory we it just gives us a guide to"
+    },
+    {
+      "start": 2886.24,
+      "duration": 4.96,
+      "text": "ask questions and do research. Okay."
+    },
+    {
+      "start": 2888.24,
+      "duration": 6.72,
+      "text": "Does that make sense? Uh yeah."
+    },
+    {
+      "start": 2891.2,
+      "duration": 6.639,
+      "text": ">> I have a question about"
+    },
+    {
+      "start": 2894.96,
+      "duration": 7.2,
+      "text": "I have a question about like when is"
+    },
+    {
+      "start": 2897.839,
+      "duration": 6.961,
+      "text": "this data? It's it's rose about 2009,"
+    },
+    {
+      "start": 2902.16,
+      "duration": 6.64,
+      "text": "right? So how about now? Did it change a"
+    },
+    {
+      "start": 2904.8,
+      "duration": 6.799,
+      "text": "lot or like is there anything change?"
+    },
+    {
+      "start": 2908.8,
+      "duration": 5.44,
+      "text": ">> Um okay."
+    },
+    {
+      "start": 2911.599,
+      "duration": 5.52,
+      "text": "Okay. Yeah. So you ask you asked about"
+    },
+    {
+      "start": 2914.24,
+      "duration": 4.48,
+      "text": "the sourcing of the data. Okay. And"
+    },
+    {
+      "start": 2917.119,
+      "duration": 3.921,
+      "text": "you're right in that there there will be"
+    },
+    {
+      "start": 2918.72,
+      "duration": 9.2,
+      "text": "fluctuation. Okay."
+    },
+    {
+      "start": 2921.04,
+      "duration": 12.319,
+      "text": "But the um but this is 2024. Okay. 2024."
+    },
+    {
+      "start": 2927.92,
+      "duration": 7.6,
+      "text": "And this is Israel right here. Okay. All"
+    },
+    {
+      "start": 2933.359,
+      "duration": 4.0,
+      "text": "right. So if it's red, it's above"
+    },
+    {
+      "start": 2935.52,
+      "duration": 5.2,
+      "text": "replacement."
+    },
+    {
+      "start": 2937.359,
+      "duration": 6.48,
+      "text": "All right. And if you just Google Israel"
+    },
+    {
+      "start": 2940.72,
+      "duration": 4.8,
+      "text": "population fertility rate, Israel is the"
+    },
+    {
+      "start": 2943.839,
+      "duration": 4.24,
+      "text": "only wealthy nation in the world that"
+    },
+    {
+      "start": 2945.52,
+      "duration": 4.799,
+      "text": "has an above replacement fertility rate."
+    },
+    {
+      "start": 2948.079,
+      "duration": 5.321,
+      "text": "Okay."
+    },
+    {
+      "start": 2950.319,
+      "duration": 3.081,
+      "text": "All right."
+    },
+    {
+      "start": 2953.429,
+      "duration": 2.011,
+      "text": "[snorts]"
+    },
+    {
+      "start": 2954.739,
+      "duration": 2.221,
+      "text": "[clears throat]"
+    },
+    {
+      "start": 2955.44,
+      "duration": 5.399,
+      "text": "Okay."
+    },
+    {
+      "start": 2956.96,
+      "duration": 3.879,
+      "text": "Any any more questions, guys?"
+    },
+    {
+      "start": 2961.68,
+      "duration": 5.48,
+      "text": "All right. Great. So, I will see you"
+    },
+    {
+      "start": 2963.76,
+      "duration": 3.4,
+      "text": "guys next class."
+    }
+  ]
+}

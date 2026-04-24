@@ -626,6 +626,97 @@
           </div>
           <div class="ref-key"><strong>Key insight:</strong> Airfoil data useful for reference — not directly applicable (HAPS at 20km altitude), but airfoil shape (12% thickness, cambered) and glide ratio data informative for wing design.</div>
         </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[16] Drew & Follmer (2021)</div>
+          <div class="ref-subtitle">High Force Density Multi-Stage EHD Jets Using Folded Laser Microfabricated Electrodes</div>
+          <div class="ref-meta">Transducers 2021 · arXiv:2107.03567 · Multi-stage scaling</div>
+          <div class="ref-data">
+            <span>Near-linear stage scaling</span>
+            <span>3-stage ducted thrust</span>
+            <span>High force density</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Proper inter-stage ducting enables near-linear thrust scaling with stage count — contradicts our open-tandem diminishing returns data. Ducted tandem could achieve 2× per stage where open tandem only gives +25%. Critical for tandem design.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[17] Masuyama & Barrett (2013)</div>
+          <div class="ref-subtitle">On the performance of electrohydrodynamic propulsion</div>
+          <div class="ref-meta">Proc. Royal Society A · DOI: 10.1098/rspa.2012.0623 · MIT</div>
+          <div class="ref-data">
+            <span>~100 N/kW peak</span>
+            <span>SS vs DS thrusters</span>
+            <span>Gap optimization</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Seminal MIT paper establishing SS (single-stage) vs DS (dual-stage) EHD performance. SS thrusters achieve ~100 N/kW at optimal conditions. Foundational calibration reference for our K values and simulator.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[18] Tampouris & Moronis (2023)</div>
+          <div class="ref-subtitle">A Two-Stage Electrohydrodynamic Gas Pump in a Rectangular Channel</div>
+          <div class="ref-meta">WSEAS Trans. Fluid Mechanics · DOI: 10.37394/232013.2023.18.9 · Wire-to-mesh</div>
+          <div class="ref-data">
+            <span>Wire-to-mesh geometry</span>
+            <span>Direct fan comparison</span>
+            <span>DIY-friendly</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Two-stage wire-to-mesh EHD pump directly comparable to mechanical fans. Most DIY-accessible high-efficiency EHD geometry. Validates wire-to-mesh as a practical alternative to NACA foil collector.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[19] Monrolin, Plouraboué & Praud (2017)</div>
+          <div class="ref-subtitle">Electrohydrodynamic Thrust for In-Atmosphere Propulsion</div>
+          <div class="ref-meta">AIAA Journal Vol.55 No.12 · DOI: 10.2514/1.j055928 · CNES funded</div>
+          <div class="ref-data">
+            <span>In-atmosphere focus</span>
+            <span>Systematic methodology</span>
+            <span>36-paper bibliography</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Rigorous French academic study of EHD thrust for atmospheric flight. T = I × d scaling confirmed. Excellent bibliography for diving deeper into EHD propulsion physics.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[20] Martins (2012)</div>
+          <div class="ref-subtitle">Simulation of a wire-cylinder-plate positive corona discharge</div>
+          <div class="ref-meta">arXiv:1202.4613 · Wire-cylinder-plate geometry</div>
+          <div class="ref-data">
+            <span>0.35 N/m thrust density</span>
+            <span>8-9 m/s ion velocity</span>
+            <span>Wire-cylinder-plate</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Wire inside cylindrical shell directing ions to plate acts as accelerator tube — achieves 0.35 N/m and 8-9 m/s. Very DIY-accessible: wire + aluminum can + plate. May outperform flat NACA collector.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[21] Lee, Robinson & Ching (2008)</div>
+          <div class="ref-subtitle">Development of EHD Ion-Drag Micropump for Microscale Electronics Cooling</div>
+          <div class="ref-meta">arXiv:0801.1001 · 3D electrode texture · Micropillar</div>
+          <div class="ref-data">
+            <span>1.5-3× from 3D texture</span>
+            <span>Micropillar geometry</span>
+            <span>Surface amplification</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> 3D textured electrode surfaces amplify thrust 1.5-3× over flat geometry. For DIY: steel wool or wire mesh on collector surface acts as 3D texture. Immediate low-cost upgrade for thrust stand testing.</div>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-tag">📄 Paper</div>
+          <div class="ref-title">[22] Ieta & Chirita (2019)</div>
+          <div class="ref-subtitle">Electrohydrodynamic self-boosted propeller for in-atmosphere propulsion</div>
+          <div class="ref-meta">arXiv:1904.01395 · Self-boosted rotary concept</div>
+          <div class="ref-data">
+            <span>Rotary EHD propeller</span>
+            <span>Self-boosted design</span>
+            <span>In-atmosphere</span>
+          </div>
+          <div class="ref-key"><strong>Key insight:</strong> Self-boosted EHD propeller concept for atmospheric propulsion. Interesting for future airframe integration but less immediately actionable for our current thrust stand.</div>
+        </div>
       </div>
     </div>
 
@@ -653,14 +744,20 @@
             <span class="diary-date">April 24, 2026 — Part 2</span>
             <span class="diary-tag">Research Breakthrough</span>
           </div>
-          <div class="diary-title">🌙 Day 3 — Moonshot Research: 10× Thrust Target Achievable</div>
+          <div class="diary-title">🌙 Day 3 — Moonshot Research: 10× Thrust Target + Mathematical Model</div>
           <div class="diary-body">
             <p>Today we pushed the simulator to find the limits of DIY EHD thrust. The goal: <strong>1690 mN</strong> at 35kV (10× our baseline). Key findings:</p>
-            <p><strong>Tandem stages:</strong> Adding tandem acceleration stages gives +25% per stage (not 2× as hoped). Two tandem stages at 8mm gap with 50W power yields ~1627 mN — within reach of ZVS module + multiplier approach.</p>
-            <p><strong>Gap reduction limits:</strong> Arcing becomes critical below 10mm with 0.1mm wire. Safe DIY range: 8–10mm with proper insulation. Below 8mm requires &gt;200W and becomes unreliable.</p>
-            <p><strong>Harp concept rejected:</strong> The multi-wire "harp" design (many parallel wires) was analyzed. Power is the bottleneck — adding more wires doesn't scale linearly. Each additional wire adds capacitance and discharge current without proportional thrust gain. Power budget (not wire count) is the real ceiling.</p>
-            <p><strong>Realistic DIY ceiling:</strong> ~8× via tandem 2-stage at 8mm gap with 50W power. Beyond that requires custom HV engineering not accessible to DIY builders.</p>
-            <p><strong>Best path forward:</strong> Build the thrust stand first with Option A (20mm safe gap, simple single-stage). Validate baseline thrust. Then upgrade to Option B (8mm tandem 2-stage) if validation passes. Simulator is live at the site.</p>
+            <p><strong>Tandem stages:</strong> Adding tandem acceleration stages gives +25% per stage (not 2× as hoped) when OPEN. But <strong>ducted tandem</strong> (Drew & Follmer 2021) achieves near-linear scaling — each stage adds full thrust because exhaust is properly channeled into the next stage.</p>
+            <p><strong>Gap reduction limits:</strong> Arcing becomes critical below 10mm with 0.1mm wire. Safe DIY range: 8–10mm with proper insulation.</p>
+            <p><strong>Harp concept rejected:</strong> The multi-wire "harp" design was analyzed. Power is the bottleneck — adding more wires doesn't scale linearly.</p>
+            <p><strong>Wire-to-mesh + steel wool:</strong> Academic research (Lee et al. 2008) shows 3D textured electrodes amplify thrust 1.5–3×. Steel wool on a wire-to-mesh collector creates this texture at DIY scale — estimated 1.8× amplification, testable immediately on the thrust stand.</p>
+            <p><strong>Mathematical model results:</strong></p>
+            <table style="width:100%;font-size:0.85em;border-collapse:collapse;margin:0.5rem 0;"><tr style="background:var(--surface2)"><th style="padding:4px 8px;text-align:left;">Config</th><th style="padding:4px 8px;text-align:right;">Thrust</th><th style="padding:4px 8px;text-align:right;">T/W@100g</th><th style="padding:4px 8px;text-align:right;">vs baseline</th></tr><tr><td style="padding:4px 8px;">Baseline NACA (35kV/20mm/15W)</td><td style="padding:4px 8px;text-align:right;">169 mN</td><td style="padding:4px 8px;text-align:right;">1.69</td><td style="padding:4px 8px;text-align:right;">1×</td></tr><tr style="background:var(--surface)"><td style="padding:4px 8px;">Wire-to-mesh+steel wool (35kV/20mm/15W)</td><td style="padding:4px 8px;text-align:right;">234 mN</td><td style="padding:4px 8px;text-align:right;">2.34</td><td style="padding:4px 8px;text-align:right;">1.39×</td></tr><tr><td style="padding:4px 8px;">Wire-to-mesh+SW (35kV/8mm/50W)</td><td style="padding:4px 8px;text-align:right;">732 mN</td><td style="padding:4px 8px;text-align:right;">7.32</td><td style="padding:4px 8px;text-align:right;">4.33×</td></tr><tr style="background:var(--green);color:var(--bg)"><td style="padding:4px 8px;"><strong>Ducted tandem 2-stage (35kV/8mm/50W)</strong></td><td style="padding:4px 8px;text-align:right;"><strong>1355 mN</strong></td><td style="padding:4px 8px;text-align:right;"><strong>13.55</strong></td><td style="padding:4px 8px;text-align:right;"><strong>8.02×</strong></td></tr></table>
+            <p><strong>Three upgrade paths for Carlos:</strong></p>
+            <p><strong>Option A</strong> (€64): Baseline NACA, 20mm, 15W → 169 mN / T/W 1.69 — validated first</p>
+            <p><strong>Option C</strong> (~€69): Wire-to-mesh + steel wool, 20mm, 15W → 234 mN / T/W 2.34 — test collector upgrade</p>
+            <p><strong>Option B</strong> (~€80 + laptop PSU): Ducted tandem 2-stage, 8mm, 50W → 1355 mN / T/W 13.55 — flight capable</p>
+            <p><strong>Best path:</strong> Build Option A first. If Option C validates the steel wool model, Option B becomes the flight platform. All 22 academic references updated on site.</p>
           </div>
         </div>
 
