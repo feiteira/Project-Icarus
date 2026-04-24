@@ -1,3 +1,5 @@
+![Project Icarus — Ion Wind Aircraft](ion-wind-plane/hero_corona.jpg)
+
 # Ion Wind Aircraft — 3D Model Files
 
 Parametric STL generator for an electrohydrodynamic (ion wind) thrust aircraft,
